@@ -1,4 +1,4 @@
-package com.example.testapp;
+package com.app;
 
 import com.loopj.android.http.*;
 

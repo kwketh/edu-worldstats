@@ -1,11 +1,11 @@
-package com.example.testapp.examples;
+package com.app.examples;
 
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
-import com.example.testapp.CountryIndicatorResults;
-import com.example.testapp.Indicator;
+import com.app.CountryIndicatorResults;
+import com.app.Indicator;
 
 public class CountryPopulation implements Observer
 {

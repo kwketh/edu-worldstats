@@ -1,6 +1,7 @@
-package com.example.testapp;
+package com.app;
 
-import com.example.testapp.examples.CountryPopulation;
+import com.example.testapp.R;
+import com.app.examples.CountryPopulation;
 
 import android.os.Bundle;
 import android.app.Activity;

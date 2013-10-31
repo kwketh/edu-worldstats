@@ -1,4 +1,4 @@
-package com.example.testapp;
+package com.app;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
