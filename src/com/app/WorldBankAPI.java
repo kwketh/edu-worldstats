@@ -11,7 +11,7 @@ import com.loopj.android.http.RequestParams;
 
 public class WorldBankAPI
 {
-    private static final String defaultDateRange = "1960:2009";
+    private static final String defaultDateRange = "1960:2013";
     
     static void getCountryDataPoints(String countryCode, Indicator indicator, final CountryIndicatorResults out_results) 
     {
