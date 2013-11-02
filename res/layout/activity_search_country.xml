@@ -6,26 +6,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    tools:context=".SearchCountry" >
 
-    <Button
-        android:id="@+id/btn_compare_countries"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btn_choose_a_country"
-        android:layout_below="@+id/btn_choose_a_country"
-        android:layout_marginTop="18dp"
-        android:onClick="showCompareCountries"
-        android:text="@string/compare_countries" />
-
-    <Button
-        android:id="@+id/btn_choose_a_country"
+    <TextView
+        android:id="@+id/txtEnterACountryName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="31dp"
-        android:onClick="showChooseACountry"
-        android:text="@string/choose_a_country" />
+        android:layout_marginTop="53dp"
+        android:text="@string/enter_a_country_name"
+        android:textStyle="bold" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteSearchCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtEnterACountryName"
+        android:layout_marginTop="33dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </AutoCompleteTextView>
 
 </RelativeLayout>
