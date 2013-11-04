@@ -1,7 +1,7 @@
 package com.app;
 
 import com.app.adapter.TabsPagerAdapter;
-import com.example.testapp.R;
+import com.app.R;
 
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;

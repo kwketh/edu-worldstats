@@ -1,6 +1,6 @@
 package com.app;
 
-import com.example.testapp.R;
+import com.app.R;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
