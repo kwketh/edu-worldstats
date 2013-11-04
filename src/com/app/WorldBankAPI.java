@@ -1,10 +1,7 @@
 package com.app;
 
-import java.text.SimpleDateFormat;
-import java.util.Locale;
 
 import org.json.JSONArray;
-import org.json.JSONObject;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;

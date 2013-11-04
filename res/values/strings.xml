@@ -13,5 +13,19 @@
     <string name="gni_per_capita">GNI Per Capita</string>
     <string name="growth">Growth</string>
     <string name="change_date">Change Date</string>
+    <string name="choose_a_country">Choose A Country</string>
+    <string name="compare_countries">Compare Countries</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="select_country">Countries</string>
+    <string name="title_activity_choose_country">Choose Country</string>
+    <string name="title_activity_compare_countries">Compare Countries</string>
+    <string name="select_a_country">Select A Country</string>
+    <string name="select_another_country">Select Another Country</string>
+    <string name="compare">Compare!</string>
+    <string name="country_name">Country Name</string>
+    <string name="title_activity_search_country">SearchCountry</string>
+    <string name="enter_a_country_name">Enter A Country Name</string>
+    <string name="title_activity_compare_country_with">CompareCountryWith</string>
+    <string name="compare_country_with">Enter The Name Of The Country To Compare With</string>
 
 </resources>

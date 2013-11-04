@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.testapp"
+    package="com.app"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="18" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -22,6 +23,38 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.app.ChooseCountry"
+            android:label="@string/title_activity_choose_country"
+            android:parentActivityName="com.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.app.CompareCountries"
+            android:label="@string/title_activity_compare_countries"
+            android:parentActivityName="com.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.app.SearchCountry"
+            android:label="@string/title_activity_search_country"
+            android:parentActivityName="com.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.app.CompareCountryWith"
+            android:label="@string/title_activity_compare_country_with"
+            android:parentActivityName="com.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.MainActivity" />
         </activity>
     </application>
 
