@@ -5,6 +5,7 @@ import com.app.examples.CountryPopulation;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 
 public class MainActivity extends Activity 
@@ -14,7 +15,11 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new CountryPopulation().run();
+        Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
+        startActivity(intent);
+        
+        
+       // new CountryPopulation().run();
     }
 
 
