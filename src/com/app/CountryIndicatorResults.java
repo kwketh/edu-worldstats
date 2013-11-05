@@ -1,12 +1,7 @@
 package com.app;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
 import java.util.Observable;
-import java.util.Observer;
 
 import org.json.JSONArray;
 import org.json.JSONException;

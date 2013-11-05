@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- French -->
+    <string name="app_name">TestApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="basic_info">Basic Info</string>
+    <string name="education">Education</string>
+    <string name="industry">Industry</string>
+    <string name="social_development">Social Development</string>
+    <string name="population">Population</string>
+    <string name="population_composition">Population Composition</string>
+    <string name="gdp">GDP</string>
+    <string name="gni_per_capita">GNI Per Capita</string>
+    <string name="growth">Growth</string>
+
+</resources>
