@@ -22,6 +22,7 @@ public class CountryIndicatorResults extends Observable
     String m_countryCode;
     Indicator m_indicator;
     
+    /* todo: allow array of countryCodes for plotting values */
     public CountryIndicatorResults(String countryCode, Indicator indicator) 
     {
         /* Default values */
