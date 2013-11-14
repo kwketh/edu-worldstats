@@ -27,7 +27,7 @@
         android:layout_below="@+id/txtSelectFirstCountry"
         android:layout_marginTop="27dp"
         android:ems="10"
-        android:text="@string/country_name" />
+        android:hint="@string/country_name" />
 
     <TextView
         android:id="@+id/txtSelectSecondCountry"
@@ -48,7 +48,7 @@
         android:layout_below="@+id/txtSelectSecondCountry"
         android:layout_marginTop="35dp"
         android:ems="10"
-        android:text="@string/country_name" />
+        android:hint="@string/country_name" />
 
     <Button
         android:id="@+id/btnCompare"
