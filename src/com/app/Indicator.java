@@ -15,6 +15,8 @@ public enum Indicator {
 
     /* Education */
 
+    // Ratio of Female to Male (Primary Enrollment)
+    RATIO_F_M_PRIMARY("SE.ENR.PRIM.FM.ZS"),
     // Ratio of Female to Male (Secondary Enrollment)
     RATIO_F_M_SECONDARY("SE.ENR.SECO.FM.ZS"),
     // Ratio of Female to Male (Tertiary Enrollment)
