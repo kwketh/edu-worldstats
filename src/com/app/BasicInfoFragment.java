@@ -38,9 +38,10 @@ public class BasicInfoFragment extends Fragment
         growth = (TextView) rootView.findViewById(R.id.growth);
         yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar1);
 
-        yearSeek.setMax((2013 - 1960));
-        yearSeek.setProgress(0);
-
+        yearSeek.setMax((53));
+        yearSeek.setProgress(53);
+        updateValues(yearSeek.getProgress());
+        
         yearSeek.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
@@ -49,7 +50,6 @@ public class BasicInfoFragment extends Fragment
 
             @Override
             public void onStartTrackingTouch(SeekBar arg0) {
-                updateValues(arg0.getProgress());
             }
 
             @Override
@@ -58,12 +58,11 @@ public class BasicInfoFragment extends Fragment
             }
         });
 
-        updateValues(0);
         return rootView;
     }
 
-    public void updateValues(int yearB) {
-        year.setText(Integer.toString(yearB));
+    public void updateValues(int value) {
+        year.setText((value + 1960) + "");
         population.setText("");
         populationComposition.setText("");
         gdp.setText("");
