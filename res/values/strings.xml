@@ -27,5 +27,12 @@
     <string name="enter_a_country_name">Enter A Country Name</string>
     <string name="title_activity_compare_country_with">CompareCountryWith</string>
     <string name="compare_country_with">Enter The Name Of The Country To Compare With</string>
+    <string name="ratio_of_school_enrollment">Ratio of boys to girls in:</string>
+    <string name="primary_enrollment">Primary Enrollment</string>
+    <string name="secondary_enrollment">Secondary Enrollment</string>
+    <string name="tertiary_enrollment">Tertiary Enrollment</string>
+    <string name="literacy_rate">Literacy Rate</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
 
 </resources>
