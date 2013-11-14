@@ -3,8 +3,8 @@ package com.app.examples;
 import java.util.Observable;
 import java.util.Observer;
 
-import com.app.CountryIndicatorResults;
-import com.app.Indicator;
+import com.app.worldbankapi.CountryIndicatorResults;
+import com.app.worldbankapi.Indicator;
 
 public class CountryPopulation implements Observer
 {

@@ -1,5 +1,4 @@
-package com.app;
-
+package com.app.worldbankapi;
 
 import org.json.JSONArray;
 
