@@ -56,6 +56,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.MainActivity" />
         </activity>
+        <activity android:name="com.app.DisplayActivity"></activity>
     </application>
 
 </manifest>

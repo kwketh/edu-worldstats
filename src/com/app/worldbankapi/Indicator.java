@@ -1,4 +1,4 @@
-package com.app;
+package com.app.worldbankapi;
 
 public enum Indicator {
 
