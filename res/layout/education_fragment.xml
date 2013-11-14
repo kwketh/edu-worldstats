@@ -1,94 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textViewCountry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="28sp" />
-
-    <TextView
         android:id="@+id/tv1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
         android:text="@string/ratio_of_school_enrollment"
-        android:textAlignment="center"
         android:textSize="16sp" />
 
     <TextView
         android:id="@+id/tv2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="10dp"
         android:text="@string/primary_enrollment"
-        android:textAlignment="center"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/primaryEnrollment"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textAlignment="center"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_below="@+id/tv2"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tv3"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_below="@+id/primaryEnrollment"
+        android:layout_marginTop="10dp"
         android:text="@string/secondary_enrollment"
-        android:textAlignment="center"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/secondaryEnrollment"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textAlignment="center"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_below="@+id/tv3"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tv4"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_below="@+id/secondaryEnrollment"
+        android:layout_marginTop="10dp"
         android:text="@string/tertiary_enrollment"
-        android:textAlignment="center"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tertiaryEnrollment"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textAlignment="center"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_below="@+id/tv4"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tv5"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:text="@string/literacy_rate" />
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_below="@+id/tertiaryEnrollment"
+        android:layout_marginTop="10dp"
+        android:text="@string/literacy_rate"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/tv6"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_below="@+id/tv5"
         android:text="@string/male"
-        android:textAlignment="center"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv6"
+        android:layout_below="@+id/tv5"
+        android:layout_marginLeft="90dp"
+        android:text="@string/female"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/maleLiteracyRate"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textAlignment="center"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_below="@+id/tv6"
         android:textSize="14sp" />
 
+    <TextView
+        android:id="@+id/femaleLiteracyRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv7"
+        android:layout_below="@+id/tv7"
+        android:textSize="14sp" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_below="@+id/maleLiteracyRate"
+        android:text="@string/change_date"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/year"
+        android:max="53"
+        android:progress="53" />
+
+</RelativeLayout>
