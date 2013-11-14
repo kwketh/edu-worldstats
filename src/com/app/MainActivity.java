@@ -10,8 +10,7 @@ import android.widget.Button;
 import com.app.examples.CountryPopulation;
 
 public class MainActivity extends Activity 
-{
-    
+{    
     Button btnChooseCountry;
     Button btnCompareCountries;
     
@@ -19,11 +18,13 @@ public class MainActivity extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        btnChooseCountry = (Button) findViewById(R.id.btn_choose_a_country);
+        btnCompareCountries = (Button) findViewById(R.id.btn_compare_countries);        
 
         Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
         startActivity(intent);
-        
-        
+         
        // new CountryPopulation().run();
     }
 
