@@ -65,11 +65,7 @@ public class EducationFragment extends Fragment
     
     private void updateValues(int value) {
         year.setText((value + 1960) + "");
-        primaryEnrollment.setText((value + 1960) + "");
-        secondaryEnrollment.setText((value + 1960) + "");
-        tertiaryEnrollment.setText((value + 1960) + "");
-        maleLiteracyRate.setText((value + 1960) + "");
-        femaleLiteracyRate.setText((value + 1960) + "");
+        // Update all fields here
     }
 
 }

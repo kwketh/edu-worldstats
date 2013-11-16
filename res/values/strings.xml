@@ -34,5 +34,11 @@
     <string name="literacy_rate">Literacy Rate</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+    <string name="unemployed">% of Labour Force Unemployed</string>
+    <string name="labour_participation">Labour Participation Rate (% of gender population)</string>
+    <string name="employers">Employers (% of employed gender population)</string>
+    <string name="self_employed">Self-Employed (% of employed gender population)</string>
+    
+    
 
 </resources>
