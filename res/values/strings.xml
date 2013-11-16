@@ -38,7 +38,9 @@
     <string name="labour_participation">Labour Participation Rate (% of gender population)</string>
     <string name="employers">Employers (% of employed gender population)</string>
     <string name="self_employed">Self-Employed (% of employed gender population)</string>
-    
-    
+    <string name="life_expectancy">Life Expectancy at Birth (years)</string>
+    <string name="parliament_seats">Proportion of National Parliament Seats held by Women (%)</string>
+    <string name="fertility_rate">Fertility Rate</string>
+    <string name="cpia_rating">CPIA Gender Equality Rating</string>
 
 </resources>

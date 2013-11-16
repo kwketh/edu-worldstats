@@ -1,13 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/textViewCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="3dp"
+        android:textSize="28sp" />
+    
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_alignLeft="@+id/textViewCountry"
+        android:layout_below="@+id/textViewCountry"
+        android:textAlignment="center"
+        android:text="@string/life_expectancy" />
+    
+     <TextView
+        android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="social development" />
+        android:layout_alignLeft="@+id/textViewCountry"
+        android:layout_below="@+id/tv1"
+        android:text="@string/male"
+        android:textSize="14sp" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewCountry"
+        android:layout_below="@+id/tv1"
+        android:layout_marginLeft="90dp"
+        android:text="@string/female"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/maleLifeExpectancy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewCountry"
+        android:layout_below="@+id/tv2"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/femaleLifeExpectancy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv3"
+        android:layout_below="@+id/tv3"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewCountry"
+        android:layout_below="@+id/maleLifeExpectancy"
+        android:layout_marginTop="10dp"
+        android:text="@string/parliament_seats"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/proportionOfSeats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewCountry"
+        android:layout_below="@+id/tv4"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewCountry"
+        android:layout_below="@+id/proportionOfSeats"
+        android:layout_marginTop="10dp"
+        android:text="@string/fertility_rate"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/fertilityRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewCountry"
+        android:layout_below="@+id/tv5"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewCountry"
+        android:layout_below="@+id/fertilityRate"
+        android:layout_marginTop="10dp"
+        android:text="@string/cpia_rating"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/cpiaRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewCountry"
+        android:layout_below="@+id/tv6"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_below="@+id/cpiaRating"
+        android:text="@string/change_date"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/year"
+        android:max="53"
+        android:progress="53" />
+    
+
+</RelativeLayout>
