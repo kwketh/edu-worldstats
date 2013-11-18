@@ -46,4 +46,16 @@ public class CountryListAdapter extends ArrayAdapter<Country>
         return view;
     }
     
+    public boolean areAllItemsEnabled() {
+        return false;
+    }
+
+    public boolean isEnabled(int position) {
+        Country country = getItem(position);
+        if (country != null && country.getCode() != "placeholder") {
+            return true;
+        }
+        return false;
+    }    
+    
 }
