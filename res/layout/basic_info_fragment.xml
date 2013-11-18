@@ -2,126 +2,95 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-    <TextView
-        android:id="@+id/textViewCountry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"  
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="3dp"
-        android:textSize="28sp" />
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp" >
 
     <TextView
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_alignLeft="@+id/textViewCountry"
-        android:layout_below="@+id/textViewCountry"
+        android:paddingTop="12dp"
+        android:text="@string/population"
         android:textAlignment="center"
-        android:text="@string/population" />
-    
+        android:textSize="16sp" />
+
     <TextView
         android:id="@+id/population"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewCountry"
         android:layout_below="@+id/tv1"
-        android:textSize="14sp"
+        android:text=""
         android:textAlignment="center"
-        android:text="" />
-    
-    <TextView
-        android:id="@+id/tv2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"        
-        android:layout_alignLeft="@+id/textViewCountry"
-        android:layout_below="@+id/population"
-        android:textSize="16sp"
-        android:textAlignment="center"
-        android:text="@string/population_composition" />
-    
-    <TextView
-        android:id="@+id/populationComposition"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewCountry"
-        android:layout_below="@+id/tv2"
-        android:textSize="14sp"
-        android:textAlignment="center"
-        android:text="" />
-    
+        android:textSize="14sp" />
+
     <TextView
         android:id="@+id/tv3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewCountry"
-        android:layout_below="@+id/populationComposition"
-        android:textSize="16sp"
+        android:layout_below="@+id/population"
+        android:paddingTop="12dp"
+        android:text="@string/gdp"
         android:textAlignment="center"
-        android:text="@string/gdp" />
-    
+        android:textSize="16sp" />
+
     <TextView
         android:id="@+id/GDP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewCountry"
         android:layout_below="@+id/tv3"
-        android:textSize="14sp"
+        android:text=""
         android:textAlignment="center"
-        android:text="" />
-    
+        android:textSize="14sp" />
+
     <TextView
         android:id="@+id/tv4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewCountry"
         android:layout_below="@+id/GDP"
-        android:textSize="16sp"
+        android:paddingTop="12dp"
+        android:text="@string/gni_per_capita"
         android:textAlignment="center"
-        android:text="@string/gni_per_capita" />
-    
+        android:textSize="16sp" />
+
     <TextView
         android:id="@+id/GNIPerCapita"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewCountry"
         android:layout_below="@+id/tv4"
-        android:textSize="14sp"
+        android:text=""
         android:textAlignment="center"
-        android:text="" />
-    
+        android:textSize="14sp" />
+
     <TextView
         android:id="@+id/tv5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewCountry"
         android:layout_below="@+id/GNIPerCapita"
-        android:textSize="16sp"
+        android:paddingTop="12dp"
+        android:text="@string/growth"
         android:textAlignment="center"
-        android:text="@string/growth" />
-    
+        android:textSize="16sp" />
+
     <TextView
         android:id="@+id/growth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewCountry"
         android:layout_below="@+id/tv5"
-        android:textSize="14sp"
+        android:text=""
         android:textAlignment="center"
-        android:text="" />
-    
+        android:textSize="14sp" />
+
     <TextView
         android:id="@+id/year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewCountry"
         android:layout_below="@+id/growth"
-        android:textSize="12sp"
+        android:paddingTop="12dp"
+        android:text="@string/change_date"
         android:textAlignment="center"
-        android:text="@string/change_date" />
-    
+        android:textSize="12sp" />
+
     <SeekBar
         android:id="@+id/seekBar1"
         android:layout_width="match_parent"
