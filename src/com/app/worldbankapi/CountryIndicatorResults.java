@@ -25,14 +25,17 @@ public class CountryIndicatorResults extends Results
     {
         super.fromJSON(response);
         
-        JSONArray dataPoints = response.getJSONArray(1);        
+        JSONArray dataPoints = response.optJSONArray(1);        
         m_dataPoints.clear();
         
-        for (int i = 0; i < dataPoints.length(); i++) 
+        if (dataPoints != null)
         {
-            TimeseriesDataPoint dataPoint = new TimeseriesDataPoint();
-            dataPoint.fromJSON(dataPoints.getJSONObject(i));
-            m_dataPoints.add(dataPoint);
+            for (int i = 0; i < dataPoints.length(); i++) 
+            {
+                TimeseriesDataPoint dataPoint = new TimeseriesDataPoint();
+                dataPoint.fromJSON(dataPoints.getJSONObject(i));
+                m_dataPoints.add(dataPoint);
+            }
         }
 
         setChanged();           
