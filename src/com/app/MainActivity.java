@@ -1,5 +1,8 @@
 package com.app;
 
+import com.app.examples.CountryListExample;
+import com.app.examples.CountryPopulationExample;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,15 +18,11 @@ public class MainActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
         setContentView(R.layout.activity_main);
         
         btnChooseCountry = (Button) findViewById(R.id.btn_choose_a_country);
-        btnCompareCountries = (Button) findViewById(R.id.btn_compare_countries);        
-
-        Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
-        startActivity(intent);
-         
-       // new CountryPopulation().run();
+        btnCompareCountries = (Button) findViewById(R.id.btn_compare_countries);           
     }
 
 

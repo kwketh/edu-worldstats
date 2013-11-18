@@ -3,21 +3,22 @@ package com.app.examples;
 import java.util.Observable;
 import java.util.Observer;
 
+import com.app.worldbankapi.Country;
 import com.app.worldbankapi.CountryIndicatorResults;
+import com.app.worldbankapi.CountryList;
+import com.app.worldbankapi.CountryListResults;
 import com.app.worldbankapi.Indicator;
+import com.app.worldbankapi.WorldBankAPI;
 
-public class CountryPopulation implements Observer
+public class CountryListExample implements Observer
 {
     public void run()
     {
         /* Construct the results with a country code and indicator */
-        CountryIndicatorResults results = new CountryIndicatorResults("GB", Indicator.POPULATION);
+        CountryListResults results = WorldBankAPI.fetchCountryList();
         
         /* Lets observe for any changes to the results */
-        results.addObserver(this);        
-        
-        /* And finally fetch the results */
-        results.fetch();
+        results.addObserver(this);     
     }
 
     /**
@@ -36,15 +37,15 @@ public class CountryPopulation implements Observer
     @Override
     public void update(Observable eventSource, Object eventName) 
     {
-        if (eventName == "fetchComplete") 
+        if (eventName.equals("fetchComplete")) 
         {
             /* Retrieve the results object from the event source */
-            CountryIndicatorResults results = (CountryIndicatorResults)eventSource;
+            CountryListResults results = (CountryListResults)eventSource;
             
             /* Iterate through the data points */
-            for (Object dataPoint : results.getDataPoints()) 
+            for (Country country : results.getCountries()) 
             {
-                System.out.println(dataPoint);
+                System.out.println(country);
             }
         }
     }

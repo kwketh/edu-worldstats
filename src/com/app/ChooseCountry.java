@@ -1,6 +1,16 @@
 package com.app;
 
+import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
+
+import com.app.worldbankapi.Country;
+import com.app.worldbankapi.CountryIndicatorResults;
+import com.app.worldbankapi.CountryListResults;
+import com.app.worldbankapi.WorldBankAPI;
+
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,65 +22,107 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 
-public class ChooseCountry extends Activity
-{
+public class ChooseCountry extends Activity implements Observer
+{   
+    /**
+     * An array of last loaded countries. 
+     */
+    ArrayList<String> countries = new ArrayList<String>();    
+
+    /**
+     * An adapter for the list referenced to countries array.
+     */    
+    CountryListAdapter countriesAdapter;
     
+    /**
+     * Country results.
+     */
+    CountryListResults results;     
+    
+    /**
+     * The view listing all the countries. 
+     */
     ListView listView;
+    
+    void loadCountries() 
+    {    
+        /* Attempt to restore most recent list of countries */
+        results = (CountryListResults)((MainApp) getApplication()).getData("countryListResults");
+        if (results == null) {
+            results = WorldBankAPI.fetchCountryList();
+        }
+        results.addObserver(this);             
+    }
+    
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+       super.onSaveInstanceState(outState);
+       
+       /* Save ListView state */
+       Parcelable listViewState = listView.onSaveInstanceState();
+       outState.putParcelable("listView", listViewState);       
+       
+       /* Save list of countries for future use */
+       ((MainApp) getApplication()).storeData("countryListResults", results);
+    }    
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) 
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_country);
         
-        // Show the Up button in the action bar.
-        setupActionBar();
-
-        // Get ListView object from xml
+        /* Get ListView object from the XML layouts */
         listView = (ListView) findViewById(R.id.country_list);
 
-        // Defined Array values to show in ListView
-        String[] values = new String[] { "Afghanistan",
-                "Albania", "Algeria",
-                "American Samoa", "Andorra",
-                "Angola", "Antigua & Barbuda",
-                "Argentina" };
+        /* Show the Up button in the action bar. */
+        setupActionBar();
         
-        // Retrieve List of all Countries
+        /* Retrieve list of all countries */
+        loadCountries();     
+        
+        /**
+         * ArrayAdapter constructor parameters:
+         *   @param context - the context
+         *   @param layout - the layout for the row
+         *   @param id - an id of the TextView to which the data is written
+         *   @param data - the array of data
+         */    
+        countriesAdapter = new CountryListAdapter(this, android.R.layout.simple_list_item_1, android.R.id.text1, results.getCountries());
 
-        // Define a new Adapter
-        // First parameter - Context
-        // Second parameter - Layout for the row
-        // Third parameter - ID of the TextView to which the data is written
-        // Forth - the Array of data
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values);
-
-        // Assign adapter to ListView
-        listView.setAdapter(adapter);
-
-        // ListView Item Click Listener
+        /* Assign adapter to ListView */
+        listView.setAdapter(countriesAdapter);
+                
+        /* Restore ListView state after adapter is set */
+        if (savedInstanceState != null) {
+            Parcelable listViewState = savedInstanceState.getParcelable("listView");
+            listView.onRestoreInstanceState(listViewState);
+        }        
+        
+        /* ListView item click event */
         listView.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
 
-                // ListView Clicked item index
-                int itemPosition = position;
-
                 // ListView Clicked item value
-                String itemValue = (String) listView
-                        .getItemAtPosition(position);
+                Country country = (Country)listView.getItemAtPosition(position);
 
                 // Show Alert
                 Toast.makeText(
                         getApplicationContext(),
-                        "Position :" + itemPosition + "  ListItem : "
-                                + itemValue, Toast.LENGTH_LONG).show();
-
+                        "You have selected country " + country.getName(), Toast.LENGTH_LONG).show();
+                
+                Intent intent = new Intent(getApplicationContext(), DisplayActivity.class);
+                intent.putExtra("countryCode", country.getCode());
+                intent.putExtra("countryName", country.getName());
+                startActivity(intent);
+                
             }
 
         });
@@ -96,18 +148,32 @@ public class ChooseCountry extends Activity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-        case android.R.id.home:
-            // This ID represents the Home or Up button. In the case of this
-            // activity, the Up button is shown. Use NavUtils to allow users
-            // to navigate up one level in the application structure. For
-            // more details, see the Navigation pattern on Android Design:
-            //
-            // http://developer.android.com/design/patterns/navigation.html#up-vs-back
-            //
-            NavUtils.navigateUpFromSameTask(this);
-            return true;
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
-
+    
+    /**
+     * This method is called whenever the observed object has changed.
+     * (in this case the CountryIndicatorResults object)
+     * 
+     * @param eventSource 
+     *      the observable object triggering the event.
+     * 
+     * @param eventName
+     *      an argument passed from the observable object.
+     *      the value will always be an instance of String.
+     * 
+     * @see Observer#update
+     */    
+    @Override
+    public void update(Observable eventSource, Object eventName) 
+    {
+        if (eventName.equals("fetchComplete")) 
+        {
+            countriesAdapter.notifyDataSetChanged();
+        }
+    }
 }

@@ -1,29 +1,52 @@
 package com.app.worldbankapi;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
+
 public class WorldBankAPI
 {
-    private static final String defaultDateRange = "1960:2013";
-    
-    static void getCountryDataPoints(String countryCode, Indicator indicator, final CountryIndicatorResults out_results) 
+    /**
+     * Returns an object with results about a country (or multiple
+     * countries).
+     * 
+     * The object returned will inform any observers of the object
+     * as soon as the data has been successfully fetched and parsed.
+     * 
+     * @param countryCode
+     * @param indicator
+     * @param dateRange
+     *   format 1960:2013
+     * @return
+     */
+    public static CountryIndicatorResults fetchCountriesIndicatorResults(CountryList countries, Indicator indicator, String dateRange) 
     {
-        String url = "/countries/" + countryCode + "/indicators/" + indicator.getId();
+        String url = "/countries/" + countries.getQueryData() + "/indicators/" + indicator.getId();
         
         RequestParams params = new RequestParams();
-        params.put("date", defaultDateRange);
         params.put("format", "json");
+        params.put("date", dateRange);
+                       
+        CountryIndicatorResults results = new CountryIndicatorResults();         
+        WorldBankClient.get(url, params, new WorldBankResponseHandler(results));
         
-        WorldBankClient.get(url, params, new JsonHttpResponseHandler() 
-        {
-            @Override
-            public void onSuccess(JSONArray response) 
-            {
-                out_results.fromJSON(response);
-            }
-        });
+        return results;
     }
+    
+    public static CountryListResults fetchCountryList() 
+    {
+        String url = "/countries";
+        
+        RequestParams params = new RequestParams();        
+        params.put("format", "json");
+        params.put("per_page", "1000");
+                       
+        CountryListResults results = new CountryListResults();         
+        WorldBankClient.get(url, params, new WorldBankResponseHandler(results));
+        
+        return results;
+    }    
 }

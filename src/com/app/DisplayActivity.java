@@ -3,12 +3,16 @@ package com.app;
 import com.app.adapter.TabsPagerAdapter;
 import com.app.R;
 
+import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
+import android.view.MenuItem;
 
 public class DisplayActivity extends FragmentActivity implements ActionBar.TabListener {
 
@@ -22,6 +26,8 @@ public class DisplayActivity extends FragmentActivity implements ActionBar.TabLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
+        
+        setupActionBar();
  
         // Initialization
         viewPager = (ViewPager) findViewById(R.id.pager);
@@ -56,19 +62,38 @@ public class DisplayActivity extends FragmentActivity implements ActionBar.TabLi
         });
     }
     
+    /**
+     * Set up the {@link android.app.ActionBar}, if the API is available.
+     */
+    private void setupActionBar() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+        
+        String countryName = getIntent().getStringExtra("countryName");
+        getActionBar().setTitle(countryName);
+    }  
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }    
+    
     @Override
     public void onTabReselected(Tab arg0, FragmentTransaction arg1) {        
     }
+    
     @Override
     public void onTabUnselected(Tab arg0, FragmentTransaction arg1) {        
     }
+    
     @Override
     public void onTabSelected(Tab arg0, FragmentTransaction arg1) {
         viewPager.setCurrentItem(arg0.getPosition());
     }
-    
-    
-    
-   
-
 }
