@@ -9,45 +9,37 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class TimeseriesDataPoint extends DataPoint
-{   
+{
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy", Locale.ENGLISH);
     Date m_date;
-    
-    TimeseriesDataPoint() 
-    {
+
+    TimeseriesDataPoint() {
         super();
     }
 
-    TimeseriesDataPoint(Date date, Double value) 
-    {
+    TimeseriesDataPoint(Date date, Double value) {
         m_date = date;
         m_value = value;
-    }    
-    
-    public Date getDate()
-    {
+    }
+
+    public Date getDate() {
         return m_date;
     }
-    
-    public String toString()
-    {
-        return "[DataPoint value=" + prettyFormat.format(m_value) + " date=" + m_date + "]";
-    }    
-    
-    public void fromJSON(JSONObject json) throws JSONException
-    {
+
+    public String toString() {
+        return "[DataPoint value=" + prettyValueFormat.format(m_value) + " date=" + m_date + "]";
+    }
+
+    public void fromJSON(JSONObject json) throws JSONException {
         super.fromJSON(json);
         String date = json.getString("date");
-        try 
-        {
+        try {
             m_date = dateFormat.parse(date);
-        } 
-        catch (ParseException e) 
-        {
+        } catch (ParseException e) {
             e.printStackTrace();
             System.out.println("fromJSON failed parsing date from string:");
-            
+
             System.out.println(date);
         }
-    }        
+    }
 }
