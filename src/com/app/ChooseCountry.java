@@ -29,11 +29,6 @@ import android.os.Build;
 public class ChooseCountry extends Activity implements Observer
 {   
     /**
-     * An array of last loaded countries. 
-     */
-    ArrayList<String> countries = new ArrayList<String>();    
-
-    /**
      * An adapter for the list referenced to countries array.
      */    
     CountryListAdapter countriesAdapter;
@@ -50,25 +45,9 @@ public class ChooseCountry extends Activity implements Observer
     
     void loadCountries() 
     {    
-        /* Attempt to restore most recent list of countries */
-        results = (CountryListResults)((MainApp) getApplication()).getData("countryListResults");
-        if (results == null) {
-            results = WorldBankAPI.fetchCountryList();
-        }
+        results = WorldBankAPI.fetchCountryList();
         results.addObserver(this);             
     }
-    
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-       super.onSaveInstanceState(outState);
-       
-       /* Save ListView state */
-       Parcelable listViewState = listView.onSaveInstanceState();
-       outState.putParcelable("listView", listViewState);       
-       
-       /* Save list of countries for future use */
-       ((MainApp) getApplication()).storeData("countryListResults", results);
-    }    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) 
@@ -97,12 +76,6 @@ public class ChooseCountry extends Activity implements Observer
         /* Assign adapter to ListView */
         listView.setAdapter(countriesAdapter);
                 
-        /* Restore ListView state after adapter is set */
-        if (savedInstanceState != null) {
-            Parcelable listViewState = savedInstanceState.getParcelable("listView");
-            listView.onRestoreInstanceState(listViewState);
-        }        
-        
         /* ListView item click event */
         listView.setOnItemClickListener(new OnItemClickListener() {
 
