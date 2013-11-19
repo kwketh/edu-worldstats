@@ -6,10 +6,21 @@
     android:orientation="vertical"
     tools:context=".ChooseCountry" >
 
+    <EditText
+        android:id="@+id/textSearchCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.16"
+        android:ems="10"
+        android:hint="Search..."
+        android:inputType="text|textImeMultiLine|textNoSuggestions|textFilter" />
+
     <ListView
         android:id="@+id/country_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="367dp"
+        android:layout_weight="0.76" >
+
     </ListView>
 
 </LinearLayout>

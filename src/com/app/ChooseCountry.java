@@ -10,10 +10,13 @@ import com.app.worldbankapi.WorldBankAPI;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
@@ -37,6 +40,11 @@ public class ChooseCountry extends Activity implements Observer
      * The view listing all the countries. 
      */
     ListView listView;
+    
+    /**
+     * Text field used for searching country by name. 
+     */
+    EditText textSearchCountry;
     
     /*
      * Loading progress dialog.
@@ -75,7 +83,8 @@ public class ChooseCountry extends Activity implements Observer
         setContentView(R.layout.activity_choose_country);
         
         /* Get ListView object from the XML layouts */
-        listView = (ListView) findViewById(R.id.country_list);
+        listView = (ListView)findViewById(R.id.country_list);                
+        textSearchCountry = (EditText)findViewById(R.id.textSearchCountry);
 
         /* Show the Up button in the action bar. */
         setupActionBar();
@@ -115,6 +124,31 @@ public class ChooseCountry extends Activity implements Observer
             }
 
         });
+        
+        TextWatcher watcher = new TextWatcher() 
+        {
+            @Override
+            public void afterTextChanged(Editable arg0) { }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String constraint = s.toString();
+                
+                /* Trim the white-spaces around the constraint */
+                constraint = constraint.trim();
+                
+                /* Remove any duplicate white spaces */
+                constraint = constraint.replaceAll("\\s+", " ");
+                
+                /* Apply the filter */
+                countriesAdapter.getFilter().filter(constraint);
+            }
+        };
+        
+        textSearchCountry.addTextChangedListener(watcher);
     }
 
     /**
