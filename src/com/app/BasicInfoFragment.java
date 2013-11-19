@@ -25,6 +25,8 @@ import android.widget.TextView;
 public class BasicInfoFragment extends Fragment implements Observer
 {
     SeekBar yearSeek;
+    
+    TextView capitalCity;
     TextView population;
     TextView gdp;
     TextView gniPerCapita;
@@ -57,6 +59,7 @@ public class BasicInfoFragment extends Fragment implements Observer
         Intent intent = getActivity().getIntent();
         final String countryCode = intent.getStringExtra("countryCode");
 
+        capitalCity = (TextView) rootView.findViewById(R.id.capitalCity);
         year = (TextView) rootView.findViewById(R.id.year);
         population = (TextView) rootView.findViewById(R.id.population);
         gdp = (TextView) rootView.findViewById(R.id.GDP);
@@ -65,7 +68,10 @@ public class BasicInfoFragment extends Fragment implements Observer
         yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar1);
 
         yearSeek.setMax(YEAR_MAX - YEAR_MIN);
-        yearSeek.setProgress(m_currentYear - YEAR_MIN);
+        yearSeek.setProgress(m_currentYear - YEAR_MIN);        
+        
+        capitalCity.setText(intent.getStringExtra("capitalCity"));        
+        
         updateValues();
         
         yearSeek.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
@@ -87,6 +93,8 @@ public class BasicInfoFragment extends Fragment implements Observer
         });
 
         loadCountryIndicators(countryCode);
+        
+        
 
         return rootView;
     }
@@ -110,7 +118,7 @@ public class BasicInfoFragment extends Fragment implements Observer
         m_resultsGrowth.addObserver(this);
     }
 
-    public void updateValues() {
+    public void updateValues() {      
         year.setText("Change year: " + m_currentYear);
         population.setText("(loading...)");
         gdp.setText("(loading...)");

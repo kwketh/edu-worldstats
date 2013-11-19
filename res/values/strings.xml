@@ -43,5 +43,6 @@
     <string name="fertility_rate">Fertility Rate</string>
     <string name="cpia_rating">CPIA Gender Equality Rating</string>
     <string name="select_country2">Select country</string>
+    <string name="capital_city">Capital city</string>
 
 </resources>

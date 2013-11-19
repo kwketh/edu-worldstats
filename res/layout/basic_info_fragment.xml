@@ -7,9 +7,31 @@
     android:paddingRight="20dp" >
 
     <TextView
+        android:id="@+id/tv0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="12dp"
+        android:text="@string/capital_city"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/capitalCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv0"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+    <TextView
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/capitalCity"
+        android:layout_below="@+id/capitalCity"
         android:paddingTop="12dp"
         android:text="@string/population"
         android:textAlignment="center"
@@ -19,8 +41,8 @@
         android:id="@+id/population"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/tv1"
-        android:text=""
         android:textAlignment="center"
         android:textSize="14sp" />
 
@@ -28,6 +50,7 @@
         android:id="@+id/tv3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/population"
         android:paddingTop="12dp"
         android:text="@string/gdp"
@@ -38,8 +61,8 @@
         android:id="@+id/GDP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/tv3"
-        android:text=""
         android:textAlignment="center"
         android:textSize="14sp" />
 
@@ -47,6 +70,7 @@
         android:id="@+id/tv4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/GDP"
         android:paddingTop="12dp"
         android:text="@string/gni_per_capita"
@@ -57,8 +81,8 @@
         android:id="@+id/GNIPerCapita"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/tv4"
-        android:text=""
         android:textAlignment="center"
         android:textSize="14sp" />
 
@@ -66,6 +90,7 @@
         android:id="@+id/tv5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/GNIPerCapita"
         android:paddingTop="12dp"
         android:text="@string/growth"
@@ -76,8 +101,8 @@
         android:id="@+id/growth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/tv5"
-        android:text=""
         android:textAlignment="center"
         android:textSize="14sp" />
 
@@ -85,6 +110,7 @@
         android:id="@+id/year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/growth"
         android:paddingTop="12dp"
         android:text="@string/change_date"
@@ -95,7 +121,7 @@
         android:id="@+id/seekBar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/year"
-        android:layout_gravity="bottom" />
+        android:layout_alignLeft="@+id/capitalCity"
+        android:layout_below="@+id/year" />
 
 </RelativeLayout>
