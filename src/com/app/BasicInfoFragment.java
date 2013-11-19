@@ -93,14 +93,15 @@ public class BasicInfoFragment extends Fragment implements Observer
     
     public void loadCountryIndicators(String countryCode)
     {
-        /* Construct the results with the country code and indicators */
-        String yearRange = m_currentYear + ":" + m_currentYear;
-        CountryList country = new CountryList(countryCode);
+        String fetchDate = String.valueOf(m_currentYear);
         
-        m_resultsPopulation = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.POPULATION, yearRange);        
-        m_resultsGdp = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.GDP, yearRange);
-        m_resultsGniPerCapita = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.GNI_PER_CAPITA, yearRange);
-        m_resultsGrowth = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.GROWTH, yearRange);
+        /* Construct the results with the country code and indicators */
+        CountryList country = new CountryList(countryCode);
+                
+        m_resultsPopulation = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.POPULATION, fetchDate);        
+        m_resultsGdp = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.GDP, fetchDate);
+        m_resultsGniPerCapita = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.GNI_PER_CAPITA, fetchDate);
+        m_resultsGrowth = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.GROWTH, fetchDate);
                 
         /* Observe for any changes to the results */
         m_resultsPopulation.addObserver(this);
