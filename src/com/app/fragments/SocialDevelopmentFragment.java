@@ -1,9 +1,6 @@
 package com.app.fragments;
 
 import com.app.R;
-import com.app.R.id;
-import com.app.R.layout;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;

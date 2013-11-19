@@ -1,9 +1,6 @@
 package com.app.activities;
 
 import com.app.R;
-import com.app.R.layout;
-import com.app.R.menu;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;

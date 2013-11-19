@@ -5,10 +5,6 @@ import java.util.Observer;
 
 import com.app.MainApp;
 import com.app.R;
-import com.app.R.anim;
-import com.app.R.id;
-import com.app.R.layout;
-import com.app.R.menu;
 import com.app.adapters.CountryListAdapter;
 import com.app.worldbankapi.Country;
 import com.app.worldbankapi.CountryListResults;

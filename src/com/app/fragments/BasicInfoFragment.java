@@ -1,13 +1,10 @@
 package com.app.fragments;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
 import com.app.R;
-import com.app.R.id;
-import com.app.R.layout;
 import com.app.worldbankapi.CountryIndicatorResults;
 import com.app.worldbankapi.CountryList;
 import com.app.worldbankapi.Indicator;
