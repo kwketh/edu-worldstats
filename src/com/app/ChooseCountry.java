@@ -12,6 +12,7 @@ import com.app.worldbankapi.WorldBankAPI;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -43,10 +44,20 @@ public class ChooseCountry extends Activity implements Observer
      */
     ListView listView;
     
+    /*
+     * Loading progress dialog.
+     */
+    ProgressDialog progressDialog = null;
+    
     void loadCountries() 
     {    
         results = WorldBankAPI.fetchCountryList();
-        results.addObserver(this);             
+        results.addObserver(this);
+        
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Loading");
+        progressDialog.setMessage("Waiting for country list...");
+        progressDialog.show();        
     }
 
     @Override
@@ -147,6 +158,10 @@ public class ChooseCountry extends Activity implements Observer
         if (eventName.equals("fetchComplete")) 
         {
             countriesAdapter.notifyDataSetChanged();
+            if (progressDialog != null) {
+                progressDialog.dismiss();
+                progressDialog = null;
+            }
         }
     }
 }

@@ -23,10 +23,6 @@ public class CountryListAdapter extends ArrayAdapter<Country>
         super(context, resource, textViewResourceId, countries);
         this.context = context;
         this.countries = countries;
-        
-        Country placeholder = new Country("placeholder");
-        placeholder.setName("Loading countries...");
-        add(placeholder);
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
