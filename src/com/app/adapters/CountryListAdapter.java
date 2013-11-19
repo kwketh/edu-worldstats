@@ -91,7 +91,7 @@ public class CountryListAdapter extends FilterableAdapter<Country, String>
         /* Allow searching by capital city.
          * The constraint is required to be long enough to
          * not display too many unrelated countries */
-        if (constraint.length() >= Math.min(5, country.getCapitalCity().length()) && country.getCapitalCity().toLowerCase().startsWith(constraint))
+        if (constraint.length() >= Math.min(3, country.getCapitalCity().length()) && country.getCapitalCity().toLowerCase().startsWith(constraint))
             return true;
         
         /* Allow searching using any constraint that matches any word in the country name */
