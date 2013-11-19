@@ -12,15 +12,21 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView.OnEditorActionListener;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
@@ -66,7 +72,7 @@ public class ChooseCountry extends Activity implements Observer
         }
         
         results.addObserver(this);        
-        
+
         if (!results.isLoaded())
         {
             progressDialog = new ProgressDialog(this);
@@ -117,15 +123,19 @@ public class ChooseCountry extends Activity implements Observer
                 Toast.makeText(getApplicationContext(), "You have selected country " + country.getName(), Toast.LENGTH_LONG).show();
                 
                 Intent intent = new Intent(getApplicationContext(), DisplayActivity.class);
+                
+                // todo: pass the country instance in the intent  
                 intent.putExtra("countryCode", country.getCode());
                 intent.putExtra("countryName", country.getName());
+                intent.putExtra("capitalCity", country.getCapitalCity());
+                
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);                
             }
 
         });
-        
-        TextWatcher watcher = new TextWatcher() 
+
+        textSearchCountry.addTextChangedListener(new TextWatcher() 
         {
             @Override
             public void afterTextChanged(Editable arg0) { }
@@ -146,9 +156,23 @@ public class ChooseCountry extends Activity implements Observer
                 /* Apply the filter */
                 countriesAdapter.getFilter().filter(constraint);
             }
-        };
-        
-        textSearchCountry.addTextChangedListener(watcher);
+        });
+
+        textSearchCountry.setOnEditorActionListener(new OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    textSearchCountry.clearFocus();
+                    
+                    /* Hide the keyboard */
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(textSearchCountry.getWindowToken(), 0);
+                    
+                    return false;
+                }
+                return true;                
+            }
+         });
     }
 
     /**
@@ -202,6 +226,8 @@ public class ChooseCountry extends Activity implements Observer
         if (eventName.equals("fetchComplete")) 
         {
             countriesAdapter.notifyDataSetChanged();
+            
+            /* Hide the progress dialog */
             if (progressDialog != null) {
                 progressDialog.dismiss();
                 progressDialog = null;
