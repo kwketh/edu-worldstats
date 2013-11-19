@@ -50,14 +50,28 @@ public class ChooseCountry extends Activity implements Observer
     ProgressDialog progressDialog = null;
     
     void loadCountries() 
-    {    
-        results = WorldBankAPI.fetchCountryList();
-        results.addObserver(this);
+    {   
+        MainApp app = (MainApp)this.getApplication();
+       
+        if (!app.hasData("countries")) 
+        {
+            results = WorldBankAPI.fetchCountryList();            
+            app.storeData("countries", results);                 
+        } 
+        else
+        {
+            results = (CountryListResults)app.getData("countries"); 
+        }
         
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Loading");
-        progressDialog.setMessage("Waiting for country list...");
-        progressDialog.show();        
+        results.addObserver(this);        
+        
+        if (!results.isLoaded())
+        {
+            progressDialog = new ProgressDialog(this);
+            progressDialog.setTitle("Loading");
+            progressDialog.setMessage("Waiting for country list...");
+            progressDialog.show();
+        }
     }
 
     @Override
