@@ -133,32 +133,51 @@ public class BasicInfoFragment extends Fragment implements Observer
     @Override
     public void update(Observable eventSource, Object eventName) 
     {
+        CountryIndicatorResults results = (CountryIndicatorResults)eventSource;
+        TextView labelValue;
+    
+        if (results == m_resultsPopulation) {
+            labelValue = population;
+        } else
+        if (results == m_resultsGdp) {
+            labelValue = gdp;
+        } else
+        if (results == m_resultsGniPerCapita) {
+            labelValue = gniPerCapita;
+        } else
+        if (results == m_resultsGrowth) {
+            labelValue = growth;
+        } else {
+            return;
+        }
+        
         if (eventName.equals("fetchComplete")) 
         {
             /* Retrieve the results object from the event source */
-            CountryIndicatorResults results = (CountryIndicatorResults)eventSource;
-            
-        
             ArrayList<TimeseriesDataPoint> points = results.getDataPoints();
             boolean hasData = points.size() > 0; 
             
             TimeseriesDataPoint point = hasData ? points.get(0) : null;
             String value = (point != null && !point.isNullValue()) ? point.getFormattedValue() : "(no data)";
             
-            if (results == m_resultsPopulation) {
-                population.setText(value);
-            } else
-            if (results == m_resultsGdp) {
-                gdp.setText(value);
-            } else
-            if (results == m_resultsGniPerCapita) {
-                gniPerCapita.setText(value);
-            } else
-            if (results == m_resultsGrowth) {
-                growth.setText(value);
-            }
-
+            labelValue.setText(value);
+        } else
+        if (eventName.equals("errorTimeout")) 
+        {
+            labelValue.setText("(timeout)");
+        } else
+        if (eventName.equals("errorTimeout")) 
+        {
+            labelValue.setText("(timeout)");
+        } else
+        if (eventName.equals("errorJson")) 
+        {
+            labelValue.setText("(json error)");
+        } else
+        if (eventName.equals("errorNetwork")) 
+        {
+            labelValue.setText("(network error)");
+        }            
             
-        }
     }    
 }

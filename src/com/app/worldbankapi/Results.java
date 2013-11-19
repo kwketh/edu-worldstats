@@ -39,6 +39,9 @@ public class Results extends Observable
     {
         m_loaded = loaded;
     }
-
     
+    public void setChanged()
+    {
+        super.setChanged();
+    }   
 }
