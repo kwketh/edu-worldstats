@@ -27,7 +27,7 @@
         </activity>
         <activity
             android:name="com.app.ChooseCountry"
-            android:label="@string/title_activity_choose_country"
+            android:label="@string/select_country"
             android:parentActivityName="com.app.MainActivity" 
             android:windowSoftInputMode="adjustPan" >
             <meta-data

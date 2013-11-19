@@ -19,7 +19,7 @@
         android:layout_marginTop="156dp"
         android:onClick="showChooseACountry"
         android:padding="20dp"
-        android:text="@string/select_country2"
+        android:text="@string/select_country"
         android:textSize="20sp" />
 
     <Button
