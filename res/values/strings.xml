@@ -13,8 +13,8 @@
     <string name="gni_per_capita">GNI Per Capita</string>
     <string name="growth">Growth</string>
     <string name="change_date">Change Date</string>
-    <string name="choose_a_country">Choose A Country</string>
-    <string name="compare_countries">Compare Countries</string>
+    <string name="choose_a_country">Choose a country</string>
+    <string name="compare_countries">Compare countries</string>
     <string name="hello_world">Hello world!</string>
     <string name="select_country">Countries</string>
     <string name="title_activity_choose_country">Choose Country</string>
@@ -42,5 +42,6 @@
     <string name="parliament_seats">Proportion of National Parliament Seats held by Women (%)</string>
     <string name="fertility_rate">Fertility Rate</string>
     <string name="cpia_rating">CPIA Gender Equality Rating</string>
+    <string name="select_country2">Select country</string>
 
 </resources>
