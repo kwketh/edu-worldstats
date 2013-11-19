@@ -21,6 +21,7 @@ public class CountryListAdapter extends ArrayAdapter<Country>
     public CountryListAdapter(Context context, int resource,
             int textViewResourceId, CountryList countries) {
         super(context, resource, textViewResourceId, countries);
+        setNotifyOnChange(false);
         this.context = context;
         this.countries = countries;
     }
@@ -53,5 +54,16 @@ public class CountryListAdapter extends ArrayAdapter<Country>
         }
         return false;
     }    
-    
+
+    @Override
+    public void notifyDataSetChanged() 
+    {
+        /* First sort using default comparator. The default 
+         * comparator is obj1.compareTo(obj2) which class
+         * Country implements. */
+        this.sort(null);
+        
+        /* Then notify data has changed */ 
+        super.notifyDataSetChanged();
+    }
 }

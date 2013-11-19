@@ -1,6 +1,6 @@
 package com.app.worldbankapi;
 
-public class Country
+public class Country implements Comparable<Country>
 {
     private String m_name;
     private String m_capitalCity;
@@ -25,7 +25,7 @@ public class Country
     public String getCode() {
         return m_countryCode;
     }
-        
+ 
     /**
      * Returns a representation of the object country code.
      */ 
@@ -64,5 +64,17 @@ public class Country
 
     public double getLongitude() {
         return m_longitude;
+    }
+
+    @Override
+    public int compareTo(Country country) 
+    {
+        Country country1 = this;
+        Country country2 = country;
+        
+        String name1 = country1.getName();
+        String name2 = country2.getName();
+        
+        return name1.compareToIgnoreCase(name2);
     }
 }
