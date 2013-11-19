@@ -25,7 +25,7 @@ public class Country
     public String getCode() {
         return m_countryCode;
     }
-    
+        
     /**
      * Returns a representation of the object country code.
      */ 

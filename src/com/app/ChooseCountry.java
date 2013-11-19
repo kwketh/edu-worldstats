@@ -102,19 +102,16 @@ public class ChooseCountry extends Activity implements Observer
         listView.setAdapter(countriesAdapter);
                 
         /* ListView item click event */
-        listView.setOnItemClickListener(new OnItemClickListener() {
-
+        listView.setOnItemClickListener(new OnItemClickListener() 
+        {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                    int position, long id) {
-
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
+            {
                 // ListView Clicked item value
                 Country country = (Country)listView.getItemAtPosition(position);
 
                 // Show Alert
-                Toast.makeText(
-                        getApplicationContext(),
-                        "You have selected country " + country.getName(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "You have selected country " + country.getName(), Toast.LENGTH_LONG).show();
                 
                 Intent intent = new Intent(getApplicationContext(), DisplayActivity.class);
                 intent.putExtra("countryCode", country.getCode());
@@ -130,22 +127,27 @@ public class ChooseCountry extends Activity implements Observer
      * Set up the {@link android.app.ActionBar}, if the API is available.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    private void setupActionBar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+    private void setupActionBar() 
+    {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) 
+        {
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) 
+    {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.choose_country, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+    public boolean onOptionsItemSelected(MenuItem item) 
+    {
+        switch (item.getItemId()) 
+        {
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
                 return true;

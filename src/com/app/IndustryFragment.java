@@ -13,7 +13,6 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class IndustryFragment extends Fragment
 {
-
     SeekBar yearSeek;
     TextView year;
     TextView maleUnemployed;

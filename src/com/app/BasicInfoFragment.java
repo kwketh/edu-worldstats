@@ -157,7 +157,7 @@ public class BasicInfoFragment extends Fragment implements Observer
             } else
             if (results == m_resultsGrowth) {
                 growth.setText(value);
-            }            
+            }
 
             
         }
