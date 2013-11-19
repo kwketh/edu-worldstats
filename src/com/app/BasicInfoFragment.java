@@ -37,9 +37,9 @@ public class BasicInfoFragment extends Fragment implements Observer
     CountryIndicatorResults m_resultsGrowth;
     
     final static int YEAR_MIN = 1960;
-    final static int YEAR_MAX = 2012;    
+    final static int YEAR_MAX = 2013;    
     
-    private int m_currentYear = 2012;
+    private int m_currentYear = 2010;
 
     static public String formatValue(String pattern, double value) {
         DecimalFormat myFormatter = new DecimalFormat(pattern);
