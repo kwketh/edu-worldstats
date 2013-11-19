@@ -1,6 +1,9 @@
-package com.app;
+package com.app.activities;
 
-import com.app.adapter.TabsPagerAdapter;
+import com.app.R.anim;
+import com.app.R.id;
+import com.app.R.layout;
+import com.app.adapters.TabsPagerAdapter;
 import com.app.R;
 
 import android.app.ActionBar;

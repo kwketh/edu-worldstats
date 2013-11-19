@@ -1,4 +1,4 @@
-package com.app;
+package com.app.adapters;
 
 /*
  * The MIT License

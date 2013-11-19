@@ -1,4 +1,9 @@
-package com.app;
+package com.app.activities;
+
+import com.app.R;
+import com.app.R.id;
+import com.app.R.layout;
+import com.app.R.menu;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.app;
+package com.app.fragments;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -6,6 +6,8 @@ import java.util.Observable;
 import java.util.Observer;
 
 import com.app.R;
+import com.app.R.id;
+import com.app.R.layout;
 import com.app.worldbankapi.CountryIndicatorResults;
 import com.app.worldbankapi.CountryList;
 import com.app.worldbankapi.Indicator;
@@ -42,12 +44,6 @@ public class BasicInfoFragment extends Fragment implements Observer
     final static int YEAR_MAX = 2013;    
     
     private int m_currentYear = 2010;
-
-    static public String formatValue(String pattern, double value) {
-        DecimalFormat myFormatter = new DecimalFormat(pattern);
-        String output = myFormatter.format(value);
-        return output;
-    }    
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -93,8 +89,6 @@ public class BasicInfoFragment extends Fragment implements Observer
         });
 
         loadCountryIndicators(countryCode);
-        
-        
 
         return rootView;
     }

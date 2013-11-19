@@ -1,4 +1,4 @@
-package com.app;
+package com.app.adapters;
 
 import java.util.ArrayList;
 import java.util.Arrays;

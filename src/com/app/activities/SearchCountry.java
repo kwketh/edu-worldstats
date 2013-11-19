@@ -1,4 +1,8 @@
-package com.app;
+package com.app.activities;
+
+import com.app.R;
+import com.app.R.layout;
+import com.app.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -8,13 +12,13 @@ import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.os.Build;
 
-public class CompareCountryWith extends Activity
+public class SearchCountry extends Activity
 {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_compare_country_with);
+        setContentView(R.layout.activity_search_country);
         // Show the Up button in the action bar.
         setupActionBar();
     }
@@ -32,7 +36,7 @@ public class CompareCountryWith extends Activity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.compare_country_with, menu);
+        getMenuInflater().inflate(R.menu.search_country, menu);
         return true;
     }
 
