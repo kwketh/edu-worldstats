@@ -19,7 +19,8 @@ public class WorldBankResponseHandler extends JsonHttpResponseHandler
     {
         try 
         {
-            m_results.fromJSON(response);                
+            m_results.fromJSON(response);
+            m_results.setLoaded(true);
             m_results.notifyObservers("fetchComplete");
         } 
         catch (JSONException e) 
