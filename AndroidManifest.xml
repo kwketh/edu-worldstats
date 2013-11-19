@@ -29,7 +29,7 @@
             android:name="com.app.ChooseCountry"
             android:label="@string/title_activity_choose_country"
             android:parentActivityName="com.app.MainActivity" 
-            android:windowSoftInputMode="adjustPan|stateVisible" >
+            android:windowSoftInputMode="adjustPan" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.MainActivity" />
