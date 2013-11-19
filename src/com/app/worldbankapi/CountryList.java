@@ -23,7 +23,7 @@ public class CountryList extends ArrayList<Country>
      */
     public CountryList() {
         super();
-    }
+    }   
     
     /**
      * Constructor to initialize with a single country.

@@ -32,7 +32,7 @@ public class Country implements Comparable<Country>
     public String toString() {
         return "[code: " + getCode() + ", name: " + getName() + ", capital: " + getCapitalCity() + "]";
     }
-    
+
     /* Setters */
     
     public void setName(String name) {
