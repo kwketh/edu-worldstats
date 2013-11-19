@@ -32,18 +32,24 @@ public class CountryListResults extends Results
         {            
             JSONObject countryData = results.getJSONObject(i);
             
+            /* Read the JSON object attributes */
             String name = countryData.getString("name");
             String code = countryData.getString("iso2Code");            
             String capitalCity = countryData.optString("capitalCity");
             double latitude = countryData.optDouble("latitude");
             double longitude = countryData.optDouble("longitude");
             
-            Country country = new Country(code);
-            country.setName(name);
-            country.setCapitalCity(capitalCity);
-            country.setCoordinates(longitude, latitude);
-            
-            countries.add(country);
+            /* An actual country must have a capital city, otherwise
+             * it is not a country, therefore ignore the result. */
+            if (!capitalCity.isEmpty())
+            {            
+                Country country = new Country(code);
+                country.setName(name);
+                country.setCapitalCity(capitalCity);
+                country.setCoordinates(longitude, latitude);
+                
+                countries.add(country);
+            }
         }
 
         setChanged();           
