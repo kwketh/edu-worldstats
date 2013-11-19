@@ -11,6 +11,14 @@ import java.util.ArrayList;
 public class CountryList extends ArrayList<Country> 
 {    
     /**
+     * Used to specify a class version used to ensure serializing and
+     * deserializing is compatible.
+     * 
+     * @see http://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html
+     */
+    private static final long serialVersionUID = 1L;
+
+    /**
      * Constructor to initialize an empty list.
      */
     public CountryList() {
