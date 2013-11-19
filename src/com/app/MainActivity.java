@@ -1,8 +1,5 @@
 package com.app;
 
-import com.app.examples.CountryListExample;
-import com.app.examples.CountryPopulationExample;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

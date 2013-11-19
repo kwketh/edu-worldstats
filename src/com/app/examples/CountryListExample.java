@@ -4,10 +4,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 import com.app.worldbankapi.Country;
-import com.app.worldbankapi.CountryIndicatorResults;
-import com.app.worldbankapi.CountryList;
 import com.app.worldbankapi.CountryListResults;
-import com.app.worldbankapi.Indicator;
 import com.app.worldbankapi.WorldBankAPI;
 
 public class CountryListExample implements Observer

@@ -1,8 +1,5 @@
 package com.app.worldbankapi;
 
-import java.util.ArrayList;
-import java.util.Observable;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,9 +1,5 @@
 package com.app.worldbankapi;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-
-import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 

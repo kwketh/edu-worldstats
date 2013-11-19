@@ -3,7 +3,6 @@ package com.app.worldbankapi;
 import java.util.ArrayList;
 
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.json.JSONException;
 
 public class CountryIndicatorResults extends Results
