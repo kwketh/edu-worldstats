@@ -1,16 +1,14 @@
-package com.app;
+package com.app.activities;
 
-import com.app.adapter.TabsPagerAdapter;
+import com.app.adapters.TabsPagerAdapter;
 import com.app.R;
 
-import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
 
@@ -75,10 +73,17 @@ public class DisplayActivity extends FragmentActivity implements ActionBar.TabLi
     }  
     
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+    
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 return true;
         }
         return super.onOptionsItemSelected(item);

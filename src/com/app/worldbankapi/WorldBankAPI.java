@@ -1,9 +1,5 @@
 package com.app.worldbankapi;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-
-import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 
@@ -18,17 +14,19 @@ public class WorldBankAPI
      * 
      * @param countryCode
      * @param indicator
-     * @param dateRange
-     *   format 1960:2013
+     * @param date
+     *   Format:
+     *   single date (i.e. 1980)
+     *   date range accepted (i.e. 1960:2013)
      * @return
      */
-    public static CountryIndicatorResults fetchCountriesIndicatorResults(CountryList countries, Indicator indicator, String dateRange) 
+    public static CountryIndicatorResults fetchCountriesIndicatorResults(CountryList countries, Indicator indicator, String date) 
     {
         String url = "/countries/" + countries.getQueryData() + "/indicators/" + indicator.getId();
         
         RequestParams params = new RequestParams();
         params.put("format", "json");
-        params.put("date", dateRange);
+        params.put("date", date);        
                        
         CountryIndicatorResults results = new CountryIndicatorResults();         
         WorldBankClient.get(url, params, new WorldBankResponseHandler(results));

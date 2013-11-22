@@ -1,9 +1,9 @@
-package com.app.adapter;
+package com.app.adapters;
 
-import com.app.BasicInfoFragment;
-import com.app.EducationFragment;
-import com.app.IndustryFragment;
-import com.app.SocialDevelopmentFragment;
+import com.app.fragments.BasicInfoFragment;
+import com.app.fragments.EducationFragment;
+import com.app.fragments.IndustryFragment;
+import com.app.fragments.SocialDevelopmentFragment;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

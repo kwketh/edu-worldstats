@@ -1,10 +1,9 @@
-package com.app;
+package com.app.activities;
 
-import com.app.examples.CountryListExample;
-import com.app.examples.CountryPopulationExample;
-
+import com.app.R;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -20,6 +19,8 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         
         setContentView(R.layout.activity_main);
+        
+        getWindow().setFormat(PixelFormat.RGBA_8888); 
         
         btnChooseCountry = (Button) findViewById(R.id.btn_choose_a_country);
         btnCompareCountries = (Button) findViewById(R.id.btn_compare_countries);           

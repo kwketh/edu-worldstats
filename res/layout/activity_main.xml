@@ -10,23 +10,27 @@
     tools:context=".MainActivity" >
 
     <Button
-        android:id="@+id/btn_compare_countries"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btn_choose_a_country"
-        android:layout_below="@+id/btn_choose_a_country"
-        android:layout_marginTop="18dp"
-        android:onClick="showCompareCountries"
-        android:text="@string/compare_countries" />
-
-    <Button
         android:id="@+id/btn_choose_a_country"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignLeft="@+id/btn_compare_countries"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="31dp"
+        android:layout_alignRight="@+id/btn_compare_countries"
+        android:layout_marginTop="156dp"
         android:onClick="showChooseACountry"
-        android:text="@string/choose_a_country" />
+        android:padding="20dp"
+        android:text="@string/select_country"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_compare_countries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_choose_a_country"
+        android:layout_centerHorizontal="true"
+        android:onClick="showCompareCountries"
+        android:padding="20dp"
+        android:text="@string/compare_countries"
+        android:textSize="20sp" />
 
 </RelativeLayout>

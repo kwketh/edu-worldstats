@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.app.MainActivity"
+            android:name="com.app.activities.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,43 +26,44 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.app.ChooseCountry"
-            android:label="@string/title_activity_choose_country"
-            android:parentActivityName="com.app.MainActivity" >
+            android:name="com.app.activities.ChooseCountry"
+            android:label="@string/select_country"
+            android:parentActivityName="com.app.activities.MainActivity" 
+            android:windowSoftInputMode="adjustPan" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.MainActivity" />
+                android:value="com.app.activities.MainActivity" />
         </activity>
         <activity
-            android:name="com.app.CompareCountries"
+            android:name="com.app.activities.CompareCountries"
             android:label="@string/title_activity_compare_countries"
-            android:parentActivityName="com.app.MainActivity" >
+            android:parentActivityName="com.app.activities.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.MainActivity" />
+                android:value="com.app.activities.MainActivity" />
         </activity>
         <activity
-            android:name="com.app.SearchCountry"
+            android:name="com.app.activities.SearchCountry"
             android:label="@string/title_activity_search_country"
-            android:parentActivityName="com.app.MainActivity" >
+            android:parentActivityName="com.app.activities.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.MainActivity" />
+                android:value="com.app.activities.MainActivity" />
         </activity>
         <activity
-            android:name="com.app.CompareCountryWith"
+            android:name="com.app.activities.CompareCountryWith"
             android:label="@string/title_activity_compare_country_with"
-            android:parentActivityName="com.app.MainActivity" >
+            android:parentActivityName="com.app.activities.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.MainActivity" />
+                android:value="com.app.activities.MainActivity" />
         </activity>
         <activity 
-            android:name="com.app.DisplayActivity"
-            android:parentActivityName="com.app.ChooseCountry" >            
+            android:name="com.app.activities.DisplayActivity"
+            android:parentActivityName="com.app.activities.ChooseCountry" >            
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.ChooseCountry" />
+                android:value="com.app.activities.ChooseCountry" />
         </activity>
     </application>
 
