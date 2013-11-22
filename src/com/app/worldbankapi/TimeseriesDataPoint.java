@@ -31,7 +31,7 @@ public class TimeseriesDataPoint extends DataPoint
     
     public String toString()
     {
-        return "[DataPoint value=" + prettyFormat.format(m_value) + " date=" + m_date + "]";
+        return "[DataPoint value=" + prettyValueFormat.format(m_value) + " date=" + m_date + "]";
     }    
     
     public void fromJSON(JSONObject json) throws JSONException
