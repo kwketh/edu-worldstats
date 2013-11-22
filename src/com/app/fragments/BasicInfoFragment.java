@@ -26,31 +26,31 @@ import android.widget.TextView;
 public class BasicInfoFragment extends Fragment implements Observer
 {
     SeekBar yearSeek;
-    
+
     TextView capitalCity;
     TextView population;
     TextView gdp;
     TextView gniPerCapita;
     TextView growth;
     TextView year;
-    
+
     CountryIndicatorResults m_resultsPopulation;
     CountryIndicatorResults m_resultsGdp;
     CountryIndicatorResults m_resultsGniPerCapita;
     CountryIndicatorResults m_resultsGrowth;
-    
+
     final static int YEAR_MIN = 1960;
-    final static int YEAR_MAX = 2013;    
-    
+    final static int YEAR_MAX = 2013;
+
     private int m_currentYear = 2010;
-    
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.basic_info_fragment,
                 container, false);
-        
+
         Intent intent = getActivity().getIntent();
         final String countryCode = intent.getStringExtra("countryCode");
 
@@ -63,18 +63,18 @@ public class BasicInfoFragment extends Fragment implements Observer
         yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar1);
 
         yearSeek.setMax(YEAR_MAX - YEAR_MIN);
-        yearSeek.setProgress(m_currentYear - YEAR_MIN);        
-        
-        capitalCity.setText(intent.getStringExtra("capitalCity"));        
-        
+        yearSeek.setProgress(m_currentYear - YEAR_MIN);
+
+        capitalCity.setText(intent.getStringExtra("capitalCity"));
+
         updateValues();
-        
+
         yearSeek.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
                 m_currentYear = YEAR_MIN + arg1;
                 updateValues();
-                loadCountryIndicators(countryCode);                
+                loadCountryIndicators(countryCode);
             }
 
             @Override
@@ -91,19 +91,22 @@ public class BasicInfoFragment extends Fragment implements Observer
 
         return rootView;
     }
-    
-    public void loadCountryIndicators(String countryCode)
-    {
+
+    public void loadCountryIndicators(String countryCode) {
         String fetchDate = String.valueOf(m_currentYear);
-        
+
         /* Construct the results with the country code and indicators */
         CountryList country = new CountryList(countryCode);
-                
-        m_resultsPopulation = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.POPULATION, fetchDate);        
-        m_resultsGdp = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.GDP, fetchDate);
-        m_resultsGniPerCapita = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.GNI_PER_CAPITA, fetchDate);
-        m_resultsGrowth = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.GROWTH, fetchDate);
-                
+
+        m_resultsPopulation = WorldBankAPI.fetchCountriesIndicatorResults(
+                country, Indicator.POPULATION, fetchDate);
+        m_resultsGdp = WorldBankAPI.fetchCountriesIndicatorResults(country,
+                Indicator.GDP, fetchDate);
+        m_resultsGniPerCapita = WorldBankAPI.fetchCountriesIndicatorResults(
+                country, Indicator.GNI_PER_CAPITA, fetchDate);
+        m_resultsGrowth = WorldBankAPI.fetchCountriesIndicatorResults(country,
+                Indicator.GROWTH, fetchDate);
+
         /* Observe for any changes to the results */
         m_resultsPopulation.addObserver(this);
         m_resultsGdp.addObserver(this);
@@ -111,96 +114,81 @@ public class BasicInfoFragment extends Fragment implements Observer
         m_resultsGrowth.addObserver(this);
     }
 
-    public void updateValues() {      
+    public void updateValues() {
         year.setText("Change year: " + m_currentYear);
         population.setText("(loading...)");
         gdp.setText("(loading...)");
         gniPerCapita.setText("(loading...)");
         growth.setText("(loading...)");
     }
-    
+
     /**
-     * This method is called whenever the observed object has changed.
-     * (in this case the CountryIndicatorResults object)
+     * This method is called whenever the observed object has changed. (in this
+     * case the CountryIndicatorResults object)
      * 
-     * @param eventSource 
-     *      the observable object triggering the event.
+     * @param eventSource
+     *            the observable object triggering the event.
      * 
      * @param eventName
-     *      an argument passed from the observable object.
-     *      the value will always be an instance of String.
+     *            an argument passed from the observable object. the value will
+     *            always be an instance of String.
      * 
      * @see Observer#update
-     */    
+     */
     @Override
-    public void update(Observable eventSource, Object eventName) 
-    {
-        CountryIndicatorResults results = (CountryIndicatorResults)eventSource;
+    public void update(Observable eventSource, Object eventName) {
+        CountryIndicatorResults results = (CountryIndicatorResults) eventSource;
         TextView labelValue;
-    
+
         if (results == m_resultsPopulation) {
             labelValue = population;
-        } else
-        if (results == m_resultsGdp) {
+        } else if (results == m_resultsGdp) {
             labelValue = gdp;
-        } else
-        if (results == m_resultsGniPerCapita) {
+        } else if (results == m_resultsGniPerCapita) {
             labelValue = gniPerCapita;
-        } else
-        if (results == m_resultsGrowth) {
+        } else if (results == m_resultsGrowth) {
             labelValue = growth;
         } else {
             return;
         }
-        
-        if (eventName.equals("fetchComplete")) 
-        {
+
+        if (eventName.equals("fetchComplete")) {
             /* Retrieve the results object from the event source */
             ArrayList<TimeseriesDataPoint> points = results.getDataPoints();
-            boolean hasData = points.size() > 0; 
-            
+            boolean hasData = points.size() > 0;
+
             TimeseriesDataPoint point = hasData ? points.get(0) : null;
-            String value = (point != null && !point.isNullValue()) ? point.getFormattedValue() : "(no data)";
-            
-<<<<<<< HEAD:src/com/app/BasicInfoFragment.java
+            String value = (point != null && !point.isNullValue()) ? point
+                    .getFormattedValue() : "(no data)";
+
             if (results == m_resultsPopulation) {
                 population.setText(value);
-            } else
-            if (results == m_resultsGdp) {
+            } else if (results == m_resultsGdp) {
                 gdp.setText(value);
-            } else
-            if (results == m_resultsGniPerCapita) {
+            } else if (results == m_resultsGniPerCapita) {
                 gniPerCapita.setText(value);
-            } else
-            if (results == m_resultsGrowth) {
+            } else if (results == m_resultsGrowth) {
                 growth.setText(value);
-            }            
-        }
-=======
+            }
+
             labelValue.setText(value);
-        } else
-        if (eventName.equals("errorTimeout")) 
-        {
-            labelValue.setText("(timeout)");
-        } else
-        if (eventName.equals("errorTimeout")) 
-        {
-            labelValue.setText("(timeout)");
-        } else
-        if (eventName.equals("errorJson")) 
-        {
-            labelValue.setText("(json error)");
-        } else
-        if (eventName.equals("errorNetwork")) 
-        {
-            labelValue.setText("(network error)");
-        }            
-            
->>>>>>> aaec1ff6f6e7ccd29452be75b07f1c26de6f5b18:src/com/app/fragments/BasicInfoFragment.java
-    }    
-    
+        } else {
+            if (eventName.equals("errorTimeout")) {
+                labelValue.setText("(timeout)");
+            } else if (eventName.equals("errorTimeout")) {
+                labelValue.setText("(timeout)");
+            } else if (eventName.equals("errorJson")) {
+                labelValue.setText("(json error)");
+            } else if (eventName.equals("errorNetwork")) {
+                labelValue.setText("(network error)");
+            }
+        }
+    }
+
     public void getDefinition(View view) {
-        IndicatorDefinitionResults results = WorldBankAPI.fetchIndicatorDefinition(Indicator.POPULATION);
-        Toast.makeText(getActivity(), results.getName(), Toast.LENGTH_LONG).show();
+        IndicatorDefinitionResults results = WorldBankAPI
+                .fetchIndicatorDefinition(Indicator.POPULATION);
+        Toast.makeText(getActivity(), results.getName(), Toast.LENGTH_LONG)
+                .show();
     }
 }
