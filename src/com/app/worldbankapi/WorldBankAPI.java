@@ -36,8 +36,8 @@ public class WorldBankAPI
         return results;
     }
     
-    public static CountryListResults fetchCountryList() 
-    {
+   public static CountryListResults fetchCountryList() 
+     {
         String url = "/countries";
         
         RequestParams params = new RequestParams();        
@@ -48,5 +48,18 @@ public class WorldBankAPI
         WorldBankClient.get(url, params, new WorldBankResponseHandler(results));
         
         return results;
-    }    
+    }   
+   
+   public static IndicatorDefinitionResults fetchIndicatorDefinition(Indicator indicator) 
+   {
+      String url = "/indicator/" + indicator.getId();
+      
+      RequestParams params = new RequestParams();        
+      params.put("format", "json");
+                     
+      IndicatorDefinitionResults results = new IndicatorDefinitionResults();         
+      WorldBankClient.get(url, params, new WorldBankResponseHandler(results));
+      
+      return results;
+  }   
 }

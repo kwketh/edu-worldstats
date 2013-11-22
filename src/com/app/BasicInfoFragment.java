@@ -9,6 +9,7 @@ import com.app.R;
 import com.app.worldbankapi.CountryIndicatorResults;
 import com.app.worldbankapi.CountryList;
 import com.app.worldbankapi.Indicator;
+import com.app.worldbankapi.IndicatorDefinitionResults;
 import com.app.worldbankapi.TimeseriesDataPoint;
 import com.app.worldbankapi.WorldBankAPI;
 
@@ -19,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
+import android.widget.Toast;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
@@ -157,8 +159,11 @@ public class BasicInfoFragment extends Fragment implements Observer
             if (results == m_resultsGrowth) {
                 growth.setText(value);
             }            
-
-            
         }
     }    
+    
+    public void getDefinition(View view) {
+        IndicatorDefinitionResults results = WorldBankAPI.fetchIndicatorDefinition(Indicator.POPULATION);
+        Toast.makeText(getActivity(), results.getName(), Toast.LENGTH_LONG).show();
+    }
 }
