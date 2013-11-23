@@ -11,6 +11,7 @@ import com.app.worldbankapi.Indicator;
 import com.app.worldbankapi.TimeseriesDataPoint;
 import com.app.worldbankapi.WorldBankAPI;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -49,6 +50,9 @@ public class EducationFragment extends Fragment implements Observer
 
         View rootView = inflater.inflate(R.layout.education_fragment,
                 container, false);
+        
+        Intent intent = getActivity().getIntent();
+        final String countryCode = intent.getStringExtra("countryCode");
 
         year = (TextView) rootView.findViewById(R.id.year);
         primaryEnrollment = (TextView) rootView
@@ -62,12 +66,15 @@ public class EducationFragment extends Fragment implements Observer
         femaleLiteracyRate = (TextView) rootView
                 .findViewById(R.id.femaleLiteracyRate);
         yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar);
+        
         updateValues();
         
         yearSeek.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
+                m_currentYear = YEAR_MIN + arg1;
                 updateValues();
+                loadCountryIndicators(countryCode);        
             }
 
             @Override
@@ -80,6 +87,7 @@ public class EducationFragment extends Fragment implements Observer
             }
         });
         
+        loadCountryIndicators(countryCode);
 
         return rootView;
     }
@@ -91,6 +99,7 @@ public class EducationFragment extends Fragment implements Observer
         /* Construct the results with the country code and indicators */
         CountryList country = new CountryList(countryCode);
 
+        System.out.println("1. Fetching data");
                 
         m_resultsPrimaryEnrollment = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.RATIO_F_M_PRIMARY, fetchDate);        
         m_resultsSecondaryEnrollment = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.RATIO_F_M_SECONDARY, fetchDate);
@@ -106,7 +115,10 @@ public class EducationFragment extends Fragment implements Observer
         m_resultsLiteracyRateFemale.addObserver(this);
     }
     
-    public void updateValues() {      
+    public void updateValues() {    
+        
+        System.out.println("2. Updating Values");
+        
         primaryEnrollment.setText("(loading...)");
         secondaryEnrollment.setText("(loading...)");
         tertiaryEnrollment.setText("(loading...)");
@@ -118,6 +130,9 @@ public class EducationFragment extends Fragment implements Observer
     @Override
     public void update(Observable eventSource, Object eventName) 
     {
+        
+        System.out.println("3. Calling Update()");
+        
         CountryIndicatorResults results = (CountryIndicatorResults)eventSource;
         TextView labelValue;
     
