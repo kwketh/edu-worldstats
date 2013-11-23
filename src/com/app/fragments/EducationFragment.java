@@ -98,8 +98,6 @@ public class EducationFragment extends Fragment implements Observer
         
         /* Construct the results with the country code and indicators */
         CountryList country = new CountryList(countryCode);
-
-        System.out.println("1. Fetching data");
                 
         m_resultsPrimaryEnrollment = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.RATIO_F_M_PRIMARY, fetchDate);        
         m_resultsSecondaryEnrollment = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.RATIO_F_M_SECONDARY, fetchDate);
@@ -117,8 +115,6 @@ public class EducationFragment extends Fragment implements Observer
     
     public void updateValues() {    
         
-        System.out.println("2. Updating Values");
-        
         primaryEnrollment.setText("(loading...)");
         secondaryEnrollment.setText("(loading...)");
         tertiaryEnrollment.setText("(loading...)");
@@ -130,8 +126,6 @@ public class EducationFragment extends Fragment implements Observer
     @Override
     public void update(Observable eventSource, Object eventName) 
     {
-        
-        System.out.println("3. Calling Update()");
         
         CountryIndicatorResults results = (CountryIndicatorResults)eventSource;
         TextView labelValue;

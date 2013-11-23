@@ -6,8 +6,12 @@ import java.util.Observer;
 
 import com.app.R;
 import com.app.worldbankapi.CountryIndicatorResults;
+import com.app.worldbankapi.CountryList;
+import com.app.worldbankapi.Indicator;
 import com.app.worldbankapi.TimeseriesDataPoint;
+import com.app.worldbankapi.WorldBankAPI;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -51,6 +55,9 @@ public class IndustryFragment extends Fragment implements Observer
         View rootView = inflater.inflate(R.layout.industry_fragment, container,
                 false);
 
+        Intent intent = getActivity().getIntent();
+        final String countryCode = intent.getStringExtra("countryCode");
+
         maleUnemployed = (TextView) rootView.findViewById(R.id.maleUnemployed);
         femaleUnemployed = (TextView) rootView
                 .findViewById(R.id.femaleUnemployed);
@@ -72,7 +79,9 @@ public class IndustryFragment extends Fragment implements Observer
         yearSeek.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
+                m_currentYear = YEAR_MIN + arg1;
                 updateValues();
+                loadCountryIndicators(countryCode);  
             }
 
             @Override
@@ -84,8 +93,37 @@ public class IndustryFragment extends Fragment implements Observer
 
             }
         });
+        
+        loadCountryIndicators(countryCode);
 
         return rootView;
+    }
+    
+    public void loadCountryIndicators(String countryCode)
+    {
+        String fetchDate = String.valueOf(m_currentYear);
+        
+        /* Construct the results with the country code and indicators */
+        CountryList country = new CountryList(countryCode);
+                
+        m_resultsMaleUnemployed = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.MALE_UNEMPLOYMENT, fetchDate);        
+        m_resultsFemaleUnemployed = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.FEMALE_UNEMPLOYMENT, fetchDate);
+        m_resultsMaleLabourParticipation = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.LABOUR_PARTICIPATION_MALE, fetchDate);
+        m_resultsFemaleLabourParticipation = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.LABOUR_PARTICIPATION_FEMALE, fetchDate);
+        m_resultsMaleEmployers = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.EMPLOYERS_MALE, fetchDate);
+        m_resultsFemaleEmployers = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.EMPLOYERS_FEMALE, fetchDate);
+        m_resultsMaleSelfEmployed = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.SELF_EMPLOYED_MALE, fetchDate);
+        m_resultsFemaleSelfEmployed = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.SELF_EMPLOYED_FEMALE, fetchDate);
+                
+        /* Observe for any changes to the results */
+        m_resultsMaleUnemployed.addObserver(this);
+        m_resultsFemaleUnemployed.addObserver(this);
+        m_resultsMaleLabourParticipation.addObserver(this);
+        m_resultsFemaleLabourParticipation.addObserver(this);
+        m_resultsMaleEmployers.addObserver(this);
+        m_resultsFemaleEmployers.addObserver(this);
+        m_resultsMaleSelfEmployed.addObserver(this);
+        m_resultsFemaleSelfEmployed.addObserver(this);
     }
 
     public void updateValues() {      
