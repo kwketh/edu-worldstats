@@ -1,6 +1,13 @@
 package com.app.fragments;
 
+import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
+
 import com.app.R;
+import com.app.worldbankapi.CountryIndicatorResults;
+import com.app.worldbankapi.TimeseriesDataPoint;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,7 +17,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
-public class IndustryFragment extends Fragment
+public class IndustryFragment extends Fragment implements Observer
 {
     SeekBar yearSeek;
     TextView year;
@@ -70,5 +77,78 @@ public class IndustryFragment extends Fragment
         year.setText((value + 1960) + "");
         // Update all fields here
     }
+
+    /**
+     * This method is called whenever the observed object has changed.
+     * (in this case the CountryIndicatorResults object)
+     * 
+     * @param eventSource 
+     *      the observable object triggering the event.
+     * 
+     * @param eventName
+     *      an argument passed from the observable object.
+     *      the value will always be an instance of String.
+     * 
+     * @see Observer#update
+     */    
+    @Override
+    public void update(Observable eventSource, Object eventName) 
+    {
+        CountryIndicatorResults results = (CountryIndicatorResults)eventSource;
+        TextView labelValue;
+    
+        if (results == m_resultsPopulation) {
+            labelValue = population;
+        } else
+        if (results == m_resultsGdp) {
+            labelValue = gdp;
+        } else
+        if (results == m_resultsCountryArea) {
+            labelValue = countryArea;
+        } else
+        if (results == m_resultsGrowth) {
+            labelValue = growth;
+        } else {
+            return;
+        }
+        
+        if (eventName.equals("fetchComplete")) 
+        {
+            /* Retrieve the results object from the event source */
+            ArrayList<TimeseriesDataPoint> points = results.getDataPoints();
+            boolean hasData = points.size() > 0; 
+            
+            TimeseriesDataPoint point = hasData ? points.get(0) : null;
+            String value = (point != null && !point.isNullValue()) ? point.getFormattedValue() : "(no data)";
+            
+            if (results == m_resultsCountryArea) {
+                labelValue.setText(value + " sq. km");
+            } else
+            if (results == m_resultsGdp) {
+                labelValue.setText("$" + value + " USD");
+            } else {              
+                labelValue.setText(value);
+            }
+            
+            
+        } else
+        if (eventName.equals("errorTimeout")) 
+        {
+            labelValue.setText("(timeout)");
+        } else
+        if (eventName.equals("errorTimeout")) 
+        {
+            labelValue.setText("(timeout)");
+        } else
+        if (eventName.equals("errorJson")) 
+        {
+            labelValue.setText("(json error)");
+        } else
+        if (eventName.equals("errorNetwork")) 
+        {
+            labelValue.setText("(network error)");
+        }            
+            
+    }    
 
 }

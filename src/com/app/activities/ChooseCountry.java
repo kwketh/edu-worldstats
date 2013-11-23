@@ -123,7 +123,7 @@ public class ChooseCountry extends Activity implements Observer
                 Country country = (Country)listView.getItemAtPosition(position);
 
                 // Show Alert
-                Toast.makeText(getApplicationContext(), "You have selected country " + country.getName(), Toast.LENGTH_LONG).show();
+                // Toast.makeText(getApplicationContext(), "You have selected country " + country.getName(), Toast.LENGTH_LONG).show();
                 
                 Intent intent = new Intent(getApplicationContext(), DisplayActivity.class);
                 

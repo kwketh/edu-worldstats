@@ -24,17 +24,16 @@ import android.widget.TextView;
 public class BasicInfoFragment extends Fragment implements Observer
 {
     SeekBar yearSeek;
-    
     TextView capitalCity;
     TextView population;
     TextView gdp;
-    TextView gniPerCapita;
+    TextView countryArea;
     TextView growth;
     TextView year;
     
     CountryIndicatorResults m_resultsPopulation;
     CountryIndicatorResults m_resultsGdp;
-    CountryIndicatorResults m_resultsGniPerCapita;
+    CountryIndicatorResults m_resultsCountryArea;
     CountryIndicatorResults m_resultsGrowth;
     
     final static int YEAR_MIN = 1960;
@@ -56,7 +55,7 @@ public class BasicInfoFragment extends Fragment implements Observer
         year = (TextView) rootView.findViewById(R.id.year);
         population = (TextView) rootView.findViewById(R.id.population);
         gdp = (TextView) rootView.findViewById(R.id.GDP);
-        gniPerCapita = (TextView) rootView.findViewById(R.id.GNIPerCapita);
+        countryArea = (TextView) rootView.findViewById(R.id.countryArea);
         growth = (TextView) rootView.findViewById(R.id.growth);
         yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar1);
 
@@ -99,13 +98,13 @@ public class BasicInfoFragment extends Fragment implements Observer
                 
         m_resultsPopulation = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.POPULATION, fetchDate);        
         m_resultsGdp = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.GDP, fetchDate);
-        m_resultsGniPerCapita = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.GNI_PER_CAPITA, fetchDate);
+        m_resultsCountryArea = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.AREA_OF_COUNTRY, fetchDate);
         m_resultsGrowth = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.GROWTH, fetchDate);
                 
         /* Observe for any changes to the results */
         m_resultsPopulation.addObserver(this);
         m_resultsGdp.addObserver(this);
-        m_resultsGniPerCapita.addObserver(this);
+        m_resultsCountryArea.addObserver(this);
         m_resultsGrowth.addObserver(this);
     }
 
@@ -113,7 +112,7 @@ public class BasicInfoFragment extends Fragment implements Observer
         year.setText("Change year: " + m_currentYear);
         population.setText("(loading...)");
         gdp.setText("(loading...)");
-        gniPerCapita.setText("(loading...)");
+        countryArea.setText("(loading...)");
         growth.setText("(loading...)");
     }
     
@@ -142,8 +141,8 @@ public class BasicInfoFragment extends Fragment implements Observer
         if (results == m_resultsGdp) {
             labelValue = gdp;
         } else
-        if (results == m_resultsGniPerCapita) {
-            labelValue = gniPerCapita;
+        if (results == m_resultsCountryArea) {
+            labelValue = countryArea;
         } else
         if (results == m_resultsGrowth) {
             labelValue = growth;
@@ -160,7 +159,16 @@ public class BasicInfoFragment extends Fragment implements Observer
             TimeseriesDataPoint point = hasData ? points.get(0) : null;
             String value = (point != null && !point.isNullValue()) ? point.getFormattedValue() : "(no data)";
             
-            labelValue.setText(value);
+            if (results == m_resultsCountryArea) {
+                labelValue.setText(value + " sq. km");
+            } else
+            if (results == m_resultsGdp) {
+                labelValue.setText("$" + value + " USD");
+            } else {              
+                labelValue.setText(value);
+            }
+            
+            
         } else
         if (eventName.equals("errorTimeout")) 
         {

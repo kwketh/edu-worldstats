@@ -24,7 +24,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/tv0"
         android:textAlignment="center"
-        android:textSize="14sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/tv1"
@@ -44,7 +44,7 @@
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/tv1"
         android:textAlignment="center"
-        android:textSize="14sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/tv3"
@@ -64,7 +64,7 @@
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/tv3"
         android:textAlignment="center"
-        android:textSize="14sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/tv4"
@@ -73,25 +73,25 @@
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/GDP"
         android:paddingTop="12dp"
-        android:text="@string/gni_per_capita"
+        android:text="@string/area_of_country"
         android:textAlignment="center"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/GNIPerCapita"
+        android:id="@+id/countryArea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/tv4"
         android:textAlignment="center"
-        android:textSize="14sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/tv5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/capitalCity"
-        android:layout_below="@+id/GNIPerCapita"
+        android:layout_below="@+id/countryArea"
         android:paddingTop="12dp"
         android:text="@string/growth"
         android:textAlignment="center"
@@ -104,14 +104,15 @@
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/tv5"
         android:textAlignment="center"
-        android:textSize="14sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/capitalCity"
+        android:layout_alignLeft="@+id/growth"
         android:layout_below="@+id/growth"
+        android:layout_marginTop="21dp"
         android:paddingTop="12dp"
         android:text="@string/change_date"
         android:textAlignment="center"
@@ -121,7 +122,8 @@
         android:id="@+id/seekBar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/capitalCity"
-        android:layout_below="@+id/year" />
+        android:layout_alignLeft="@+id/year"
+        android:layout_below="@+id/year"
+        android:layout_marginTop="18dp" />
 
 </RelativeLayout>
