@@ -30,6 +30,20 @@ public class IndustryFragment extends Fragment implements Observer
     TextView maleSelfEmployed;
     TextView femaleSelfEmployed;
 
+    CountryIndicatorResults m_resultsMaleUnemployed;
+    CountryIndicatorResults m_resultsFemaleUnemployed;
+    CountryIndicatorResults m_resultsMaleLabourParticipation;
+    CountryIndicatorResults m_resultsFemaleLabourParticipation;
+    CountryIndicatorResults m_resultsMaleEmployers;
+    CountryIndicatorResults m_resultsFemaleEmployers;
+    CountryIndicatorResults m_resultsMaleSelfEmployed;
+    CountryIndicatorResults m_resultsFemaleSelfEmployed;
+    
+    final static int YEAR_MIN = 1960;
+    final static int YEAR_MAX = 2013;    
+    
+    private int m_currentYear = 2010;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -45,18 +59,20 @@ public class IndustryFragment extends Fragment implements Observer
         femaleLabourParticipation = (TextView) rootView
                 .findViewById(R.id.femaleParticipation);
         maleEmployers = (TextView) rootView.findViewById(R.id.maleEmployers);
-        femaleEmployers = (TextView) rootView.findViewById(R.id.femaleEmployers);
-        maleSelfEmployed = (TextView) rootView.findViewById(R.id.maleSelfEmployed);
-        femaleSelfEmployed = (TextView) rootView.findViewById(R.id.femaleSelfEmployed);
-        
+        femaleEmployers = (TextView) rootView
+                .findViewById(R.id.femaleEmployers);
+        maleSelfEmployed = (TextView) rootView
+                .findViewById(R.id.maleSelfEmployed);
+        femaleSelfEmployed = (TextView) rootView
+                .findViewById(R.id.femaleSelfEmployed);
+
         year = (TextView) rootView.findViewById(R.id.year);
         yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar);
-        updateValues(yearSeek.getProgress());
-        
+
         yearSeek.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
-                updateValues(arg1);
+                updateValues();
             }
 
             @Override
@@ -68,87 +84,83 @@ public class IndustryFragment extends Fragment implements Observer
 
             }
         });
-        
-        
+
         return rootView;
     }
 
-    private void updateValues(int value) {
-        year.setText((value + 1960) + "");
-        // Update all fields here
+    public void updateValues() {      
+        year.setText("Change year: " + m_currentYear);
+        maleUnemployed.setText("(loading...)");
+        femaleUnemployed.setText("(loading...)");
+        maleLabourParticipation.setText("(loading...)");
+        femaleLabourParticipation.setText("(loading...)");
+        maleEmployers.setText("(loading...)");
+        femaleEmployers.setText("(loading...)");
+        maleSelfEmployed.setText("(loading...)");
+        femaleSelfEmployed.setText("(loading...)");
     }
 
     /**
-     * This method is called whenever the observed object has changed.
-     * (in this case the CountryIndicatorResults object)
+     * This method is called whenever the observed object has changed. (in this
+     * case the CountryIndicatorResults object)
      * 
-     * @param eventSource 
-     *      the observable object triggering the event.
+     * @param eventSource
+     *            the observable object triggering the event.
      * 
      * @param eventName
-     *      an argument passed from the observable object.
-     *      the value will always be an instance of String.
+     *            an argument passed from the observable object. the value will
+     *            always be an instance of String.
      * 
      * @see Observer#update
-     */    
+     */
     @Override
-    public void update(Observable eventSource, Object eventName) 
-    {
-        CountryIndicatorResults results = (CountryIndicatorResults)eventSource;
+    public void update(Observable eventSource, Object eventName) {
+        CountryIndicatorResults results = (CountryIndicatorResults) eventSource;
         TextView labelValue;
-    
-        if (results == m_resultsPopulation) {
-            labelValue = population;
-        } else
-        if (results == m_resultsGdp) {
-            labelValue = gdp;
-        } else
-        if (results == m_resultsCountryArea) {
-            labelValue = countryArea;
-        } else
-        if (results == m_resultsGrowth) {
-            labelValue = growth;
+
+        if (results == m_resultsMaleUnemployed) {
+            labelValue = maleUnemployed;
+        } else if (results == m_resultsFemaleUnemployed) {
+            labelValue = femaleUnemployed;
+        } else if (results == m_resultsMaleLabourParticipation) {
+            labelValue = maleLabourParticipation;
+        } else if (results == m_resultsFemaleLabourParticipation) {
+            labelValue = femaleLabourParticipation;
+        } else if (results == m_resultsMaleEmployers) {
+            labelValue = maleEmployers;
+        } else if (results == m_resultsFemaleEmployers) {
+            labelValue = femaleEmployers;
+        } else if (results == m_resultsMaleSelfEmployed) {
+            labelValue = maleSelfEmployed;
+        } else if (results == m_resultsFemaleSelfEmployed) {
+            labelValue = femaleSelfEmployed;
         } else {
             return;
         }
-        
-        if (eventName.equals("fetchComplete")) 
-        {
+
+        if (eventName.equals("fetchComplete")) {
             /* Retrieve the results object from the event source */
             ArrayList<TimeseriesDataPoint> points = results.getDataPoints();
-            boolean hasData = points.size() > 0; 
-            
+            boolean hasData = points.size() > 0;
+
             TimeseriesDataPoint point = hasData ? points.get(0) : null;
-            String value = (point != null && !point.isNullValue()) ? point.getFormattedValue() : "(no data)";
+            String value = (point != null && !point.isNullValue()) ? point
+                    .getFormattedValue() : "(no data)";
+
             
-            if (results == m_resultsCountryArea) {
-                labelValue.setText(value + " sq. km");
-            } else
-            if (results == m_resultsGdp) {
-                labelValue.setText("$" + value + " USD");
-            } else {              
                 labelValue.setText(value);
-            }
             
-            
-        } else
-        if (eventName.equals("errorTimeout")) 
-        {
+
+        } else if (eventName.equals("errorTimeout")) {
             labelValue.setText("(timeout)");
-        } else
-        if (eventName.equals("errorTimeout")) 
-        {
+        } else if (eventName.equals("errorTimeout")) {
             labelValue.setText("(timeout)");
-        } else
-        if (eventName.equals("errorJson")) 
-        {
+        } else if (eventName.equals("errorJson")) {
             labelValue.setText("(json error)");
-        } else
-        if (eventName.equals("errorNetwork")) 
-        {
+        } else if (eventName.equals("errorNetwork")) {
             labelValue.setText("(network error)");
-        }            
-            
-    }    
+        }
+
+    }
 
 }
