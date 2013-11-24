@@ -39,7 +39,7 @@ public class SocialDevelopmentFragment extends Fragment implements Observer
     CountryIndicatorResults m_resultsCpiaRating;
 
     final static int YEAR_MIN = 1960;
-    final static int YEAR_MAX = 2013;
+    final static int YEAR_MAX = 2010;
 
     private int m_currentYear = 2010;
 
