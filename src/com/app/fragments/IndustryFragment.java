@@ -130,14 +130,14 @@ public class IndustryFragment extends Fragment implements Observer
 
     public void updateValues() {      
         year.setText("Change year: " + m_currentYear);
-        maleUnemployed.setText("(loading...)");
-        femaleUnemployed.setText("(loading...)");
-        maleLabourParticipation.setText("(loading...)");
-        femaleLabourParticipation.setText("(loading...)");
-        maleEmployers.setText("(loading...)");
-        femaleEmployers.setText("(loading...)");
-        maleSelfEmployed.setText("(loading...)");
-        femaleSelfEmployed.setText("(loading...)");
+        maleUnemployed.setText("Loading...");
+        femaleUnemployed.setText("Loading...");
+        maleLabourParticipation.setText("Loading...");
+        femaleLabourParticipation.setText("Loading...");
+        maleEmployers.setText("Loading...");
+        femaleEmployers.setText("Loading...");
+        maleSelfEmployed.setText("Loading...");
+        femaleSelfEmployed.setText("Loading...");
     }
 
     /**
@@ -185,20 +185,20 @@ public class IndustryFragment extends Fragment implements Observer
 
             TimeseriesDataPoint point = hasData ? points.get(0) : null;
             String value = (point != null && !point.isNullValue()) ? point
-                    .getFormattedValue() : "(no data)";
+                    .getFormattedValue() : "No Data";
 
             
                 labelValue.setText(value);
             
 
         } else if (eventName.equals("errorTimeout")) {
-            labelValue.setText("(timeout)");
+            labelValue.setText("Timeout");
         } else if (eventName.equals("errorTimeout")) {
-            labelValue.setText("(timeout)");
+            labelValue.setText("Timeout");
         } else if (eventName.equals("errorJson")) {
-            labelValue.setText("(json error)");
+            labelValue.setText("JSON Error");
         } else if (eventName.equals("errorNetwork")) {
-            labelValue.setText("(network error)");
+            labelValue.setText("Network Error");
         }
 
     }

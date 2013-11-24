@@ -115,11 +115,11 @@ public class EducationFragment extends Fragment implements Observer
     
     public void updateValues() {    
         
-        primaryEnrollment.setText("(loading...)");
-        secondaryEnrollment.setText("(loading...)");
-        tertiaryEnrollment.setText("(loading...)");
-        maleLiteracyRate.setText("(loading...)");
-        femaleLiteracyRate.setText("(loading...)");
+        primaryEnrollment.setText("Loading...");
+        secondaryEnrollment.setText("Loading...");
+        tertiaryEnrollment.setText("Loading...");
+        maleLiteracyRate.setText("Loading...");
+        femaleLiteracyRate.setText("Loading...");
         year.setText("Change year: " + m_currentYear);
     }
 
@@ -156,7 +156,7 @@ public class EducationFragment extends Fragment implements Observer
             boolean hasData = points.size() > 0; 
             
             TimeseriesDataPoint point = hasData ? points.get(0) : null;
-            String value = (point != null && !point.isNullValue()) ? point.getFormattedValue() : "(no data)";
+            String value = (point != null && !point.isNullValue()) ? point.getFormattedValue() : "No Data";
             
                        
                 labelValue.setText(value);
@@ -166,19 +166,19 @@ public class EducationFragment extends Fragment implements Observer
         } else
         if (eventName.equals("errorTimeout")) 
         {
-            labelValue.setText("(timeout)");
+            labelValue.setText("Timeout");
         } else
         if (eventName.equals("errorTimeout")) 
         {
-            labelValue.setText("(timeout)");
+            labelValue.setText("Timeout");
         } else
         if (eventName.equals("errorJson")) 
         {
-            labelValue.setText("(json error)");
+            labelValue.setText("JSON Error");
         } else
         if (eventName.equals("errorNetwork")) 
         {
-            labelValue.setText("(network error)");
+            labelValue.setText("Network Error");
         }            
             
     }    

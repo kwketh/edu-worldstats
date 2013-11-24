@@ -117,11 +117,11 @@ public class SocialDevelopmentFragment extends Fragment implements Observer
 
     public void updateValues() {      
         year.setText("Change year: " + m_currentYear);
-        maleLifeExpectancy.setText("(loading...)");
-        femaleLifeExpectancy.setText("(loading...)");
-        femaleParliamentSeats.setText("(loading...)");
-        fertilityRate.setText("(loading...)");
-        cpiaRating.setText("loading...)");
+        maleLifeExpectancy.setText("Loading...");
+        femaleLifeExpectancy.setText("Loading...");
+        femaleParliamentSeats.setText("Loading...");
+        fertilityRate.setText("Loading...");
+        cpiaRating.setText("Loading...");
     }
 
     /**
@@ -169,26 +169,26 @@ public class SocialDevelopmentFragment extends Fragment implements Observer
             boolean hasData = points.size() > 0; 
             
             TimeseriesDataPoint point = hasData ? points.get(0) : null;
-            String value = (point != null && !point.isNullValue()) ? point.getFormattedValue() : "(no data)";
+            String value = (point != null && !point.isNullValue()) ? point.getFormattedValue() : "No Data";
                          
                 labelValue.setText(value);
            
         } else
         if (eventName.equals("errorTimeout")) 
         {
-            labelValue.setText("(timeout)");
+            labelValue.setText("Timeout");
         } else
         if (eventName.equals("errorTimeout")) 
         {
-            labelValue.setText("(timeout)");
+            labelValue.setText("Timeout");
         } else
         if (eventName.equals("errorJson")) 
         {
-            labelValue.setText("(json error)");
+            labelValue.setText("JSON Error");
         } else
         if (eventName.equals("errorNetwork")) 
         {
-            labelValue.setText("(network error)");
+            labelValue.setText("Network Error");
         }            
             
     }  
