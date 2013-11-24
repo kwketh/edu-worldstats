@@ -75,6 +75,8 @@ public class IndustryFragment extends Fragment implements Observer
 
         year = (TextView) rootView.findViewById(R.id.year);
         yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar);
+        
+        updateValues();
 
         yearSeek.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
             @Override
