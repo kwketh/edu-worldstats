@@ -8,8 +8,8 @@ public enum Indicator {
     POPULATION("SP.POP.TOTL"),
     // GDP
     GDP("NY.GDP.MKTP.CD"),
-    // GNI Per Capita
-    GNI_PER_CAPITA("NY.GNP.PCAP.PP.CD"),
+    // Area Of Country
+    AREA_OF_COUNTRY("AG.LND.TOTL.K2"),
     // Annual Growth
     GROWTH("NY.GDP.MKTP.KD.ZG"),
 

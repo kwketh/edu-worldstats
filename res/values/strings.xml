@@ -25,7 +25,7 @@
     <string name="enter_a_country_name">Enter A Country Name</string>
     <string name="title_activity_compare_country_with">CompareCountryWith</string>
     <string name="compare_country_with">Enter The Name Of The Country To Compare With</string>
-    <string name="ratio_of_school_enrollment">Ratio of boys to girls in:</string>
+    <string name="ratio_of_school_enrollment">Ratio of female to male in:</string>
     <string name="primary_enrollment">Primary Enrollment</string>
     <string name="secondary_enrollment">Secondary Enrollment</string>
     <string name="tertiary_enrollment">Tertiary Enrollment</string>
@@ -41,5 +41,6 @@
     <string name="fertility_rate">Fertility Rate</string>
     <string name="cpia_rating">CPIA Gender Equality Rating</string>
     <string name="capital_city">Capital city</string>
+    <string name="area_of_country">Area of Country</string>
 
 </resources>

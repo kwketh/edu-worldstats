@@ -26,21 +26,20 @@ import android.widget.TextView;
 public class BasicInfoFragment extends Fragment implements Observer
 {
     SeekBar yearSeek;
-
     TextView capitalCity;
     TextView population;
     TextView gdp;
-    TextView gniPerCapita;
+    TextView countryArea;
     TextView growth;
     TextView year;
 
     CountryIndicatorResults m_resultsPopulation;
     CountryIndicatorResults m_resultsGdp;
-    CountryIndicatorResults m_resultsGniPerCapita;
+    CountryIndicatorResults m_resultsCountryArea;
     CountryIndicatorResults m_resultsGrowth;
 
     final static int YEAR_MIN = 1960;
-    final static int YEAR_MAX = 2013;
+    final static int YEAR_MAX = 2010;
 
     private int m_currentYear = 2010;
 
@@ -58,7 +57,7 @@ public class BasicInfoFragment extends Fragment implements Observer
         year = (TextView) rootView.findViewById(R.id.year);
         population = (TextView) rootView.findViewById(R.id.population);
         gdp = (TextView) rootView.findViewById(R.id.GDP);
-        gniPerCapita = (TextView) rootView.findViewById(R.id.GNIPerCapita);
+        countryArea = (TextView) rootView.findViewById(R.id.countryArea);
         growth = (TextView) rootView.findViewById(R.id.growth);
         yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar1);
 
@@ -102,24 +101,24 @@ public class BasicInfoFragment extends Fragment implements Observer
                 country, Indicator.POPULATION, fetchDate);
         m_resultsGdp = WorldBankAPI.fetchCountriesIndicatorResults(country,
                 Indicator.GDP, fetchDate);
-        m_resultsGniPerCapita = WorldBankAPI.fetchCountriesIndicatorResults(
-                country, Indicator.GNI_PER_CAPITA, fetchDate);
+        m_resultsCountryArea = WorldBankAPI.fetchCountriesIndicatorResults(
+                country, Indicator.AREA_OF_COUNTRY, fetchDate);
         m_resultsGrowth = WorldBankAPI.fetchCountriesIndicatorResults(country,
                 Indicator.GROWTH, fetchDate);
 
         /* Observe for any changes to the results */
         m_resultsPopulation.addObserver(this);
         m_resultsGdp.addObserver(this);
-        m_resultsGniPerCapita.addObserver(this);
+        m_resultsCountryArea.addObserver(this);
         m_resultsGrowth.addObserver(this);
     }
 
     public void updateValues() {
         year.setText("Change year: " + m_currentYear);
-        population.setText("(loading...)");
-        gdp.setText("(loading...)");
-        gniPerCapita.setText("(loading...)");
-        growth.setText("(loading...)");
+        population.setText("Loading...");
+        gdp.setText("Loading...");
+        countryArea.setText("Loading...");
+        growth.setText("Loading...");
     }
 
     /**
@@ -144,8 +143,8 @@ public class BasicInfoFragment extends Fragment implements Observer
             labelValue = population;
         } else if (results == m_resultsGdp) {
             labelValue = gdp;
-        } else if (results == m_resultsGniPerCapita) {
-            labelValue = gniPerCapita;
+        } else if (results == m_resultsCountryArea) {
+            labelValue = countryArea;
         } else if (results == m_resultsGrowth) {
             labelValue = growth;
         } else {
@@ -159,36 +158,25 @@ public class BasicInfoFragment extends Fragment implements Observer
 
             TimeseriesDataPoint point = hasData ? points.get(0) : null;
             String value = (point != null && !point.isNullValue()) ? point
-                    .getFormattedValue() : "(no data)";
+                    .getFormattedValue() : "No Data";
 
-            if (results == m_resultsPopulation) {
-                population.setText(value);
+            if (results == m_resultsCountryArea) {
+                labelValue.setText(value + " sq. km");
             } else if (results == m_resultsGdp) {
-                gdp.setText(value);
-            } else if (results == m_resultsGniPerCapita) {
-                gniPerCapita.setText(value);
-            } else if (results == m_resultsGrowth) {
-                growth.setText(value);
+                labelValue.setText("$" + value + " USD");
+            } else {
+                labelValue.setText(value);
             }
 
-            labelValue.setText(value);
-        } else {
-            if (eventName.equals("errorTimeout")) {
-                labelValue.setText("(timeout)");
-            } else if (eventName.equals("errorTimeout")) {
-                labelValue.setText("(timeout)");
-            } else if (eventName.equals("errorJson")) {
-                labelValue.setText("(json error)");
-            } else if (eventName.equals("errorNetwork")) {
-                labelValue.setText("(network error)");
-            }
+        } else if (eventName.equals("errorTimeout")) {
+            labelValue.setText("(Timeout)");
+        } else if (eventName.equals("errorTimeout")) {
+            labelValue.setText("(Timeout)");
+        } else if (eventName.equals("errorJson")) {
+            labelValue.setText("(JSON Error)");
+        } else if (eventName.equals("errorNetwork")) {
+            labelValue.setText("(Network Error)");
         }
-    }
 
-    public void getDefinition(View view) {
-        IndicatorDefinitionResults results = WorldBankAPI
-                .fetchIndicatorDefinition(Indicator.POPULATION);
-        Toast.makeText(getActivity(), results.getName(), Toast.LENGTH_LONG)
-                .show();
     }
 }
