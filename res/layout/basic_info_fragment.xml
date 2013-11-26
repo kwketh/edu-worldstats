@@ -18,7 +18,7 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/capitalCity"
+        android:id="@+id/capitalCity1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -30,18 +30,18 @@
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/capitalCity"
-        android:layout_below="@+id/capitalCity"
+        android:layout_alignLeft="@+id/capitalCity1"
+        android:layout_below="@+id/capitalCity1"
         android:paddingTop="12dp"
         android:text="@string/population"
         android:textAlignment="center"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/population"
+        android:id="@+id/population1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/capitalCity"
+        android:layout_alignLeft="@+id/capitalCity1"
         android:layout_below="@+id/tv1"
         android:textAlignment="center"
         android:textSize="24sp" />
@@ -50,18 +50,18 @@
         android:id="@+id/tv3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/capitalCity"
-        android:layout_below="@+id/population"
+        android:layout_alignLeft="@+id/capitalCity1"
+        android:layout_below="@+id/population1"
         android:paddingTop="12dp"
         android:text="@string/gdp"
         android:textAlignment="center"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/GDP"
+        android:id="@+id/GDP1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/capitalCity"
+        android:layout_alignLeft="@+id/capitalCity1"
         android:layout_below="@+id/tv3"
         android:textAlignment="center"
         android:textSize="24sp" />
@@ -70,18 +70,18 @@
         android:id="@+id/tv4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/capitalCity"
-        android:layout_below="@+id/GDP"
+        android:layout_alignLeft="@+id/capitalCity1"
+        android:layout_below="@+id/GDP1"
         android:paddingTop="12dp"
         android:text="@string/area_of_country"
         android:textAlignment="center"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/countryArea"
+        android:id="@+id/countryArea1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/capitalCity"
+        android:layout_alignLeft="@+id/capitalCity1"
         android:layout_below="@+id/tv4"
         android:textAlignment="center"
         android:textSize="24sp" />
@@ -90,18 +90,18 @@
         android:id="@+id/tv5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/capitalCity"
-        android:layout_below="@+id/countryArea"
+        android:layout_alignLeft="@+id/capitalCity1"
+        android:layout_below="@+id/countryArea1"
         android:paddingTop="12dp"
         android:text="@string/growth"
         android:textAlignment="center"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/growth"
+        android:id="@+id/growth1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/capitalCity"
+        android:layout_alignLeft="@+id/capitalCity1"
         android:layout_below="@+id/tv5"
         android:textAlignment="center"
         android:textSize="24sp" />
@@ -110,8 +110,8 @@
         android:id="@+id/year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/growth"
-        android:layout_below="@+id/growth"
+        android:layout_alignLeft="@+id/growth1"
+        android:layout_below="@+id/growth1"
         android:layout_marginTop="21dp"
         android:paddingTop="12dp"
         android:text="@string/change_date"

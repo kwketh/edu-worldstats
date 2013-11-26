@@ -13,8 +13,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="3dp"
         android:textSize="28sp" />
-     
-     <TextView
+
+    <TextView
         android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,21 +24,13 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/tv3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv1"
-        android:layout_below="@+id/tv1"
-        android:layout_marginLeft="90dp"
-        android:text="@string/female"
-        android:textSize="14sp" />
-
-    <TextView
         android:id="@+id/maleUnemployed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tv2"
+        android:text="3"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
 
     <TextView
@@ -47,19 +39,21 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv3"
         android:layout_below="@+id/tv3"
+        android:text="2"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
-    
+
     <TextView
         android:id="@+id/tv4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
-        android:layout_below="@+id/maleUnemployed1"        
+        android:layout_below="@+id/maleUnemployed1"
         android:layout_marginTop="10dp"
         android:text="@string/labour_participation"
         android:textSize="16sp" />
-     
-     <TextView
+
+    <TextView
         android:id="@+id/tv5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,21 +63,13 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/tv6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv1"
-        android:layout_below="@+id/tv4"
-        android:layout_marginLeft="90dp"
-        android:text="@string/female"
-        android:textSize="14sp" />
-
-    <TextView
         android:id="@+id/maleParticipation1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tv5"
+        android:text="37"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
 
     <TextView
@@ -92,9 +78,11 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv3"
         android:layout_below="@+id/tv6"
+        android:text="39"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
-    
-     <TextView
+
+    <TextView
         android:id="@+id/tv7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -103,8 +91,8 @@
         android:layout_marginTop="10dp"
         android:text="@string/employers"
         android:textSize="16sp" />
-     
-     <TextView
+
+    <TextView
         android:id="@+id/tv8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -114,21 +102,13 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/tv9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv1"
-        android:layout_below="@+id/tv7"
-        android:layout_marginLeft="90dp"
-        android:text="@string/female"
-        android:textSize="14sp" />
-
-    <TextView
         android:id="@+id/maleEmployers1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tv8"
+        android:text="14"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
 
     <TextView
@@ -137,9 +117,11 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv3"
         android:layout_below="@+id/tv9"
+        android:text="4"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
-     
-     <TextView
+
+    <TextView
         android:id="@+id/tv10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -148,8 +130,8 @@
         android:layout_marginTop="10dp"
         android:text="@string/self_employed"
         android:textSize="16sp" />
-     
-     <TextView
+
+    <TextView
         android:id="@+id/tv11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -159,21 +141,13 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/tv12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv1"
-        android:layout_below="@+id/tv10"
-        android:layout_marginLeft="90dp"
-        android:text="@string/female"
-        android:textSize="14sp" />
-
-    <TextView
         android:id="@+id/maleSelfEmployed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tv11"
+        android:text="18"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
 
     <TextView
@@ -182,16 +156,18 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv3"
         android:layout_below="@+id/tv12"
+        android:text="16"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
-    
+
     <TextView
         android:id="@+id/year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/maleSelfEmployed1"
-        android:text="@string/change_date"
         android:layout_marginTop="10dp"
+        android:text="@string/change_date"
         android:textAlignment="center"
         android:textSize="12sp" />
 
@@ -213,5 +189,122 @@
         android:paddingTop="12dp"
         android:text="@string/unemployed"
         android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/maleUnemployed2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv4"
+        android:layout_toRightOf="@+id/tv2"
+        android:text="4"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/femaleUnemployed2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tv3"
+        android:layout_below="@+id/tv3"
+        android:text="3"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv2"
+        android:layout_alignBottom="@+id/tv2"
+        android:layout_centerHorizontal="true"
+        android:text="@string/female"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/maleParticipation1"
+        android:layout_alignLeft="@+id/femaleParticipation1"
+        android:text="@string/female"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/maleParticipation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv7"
+        android:layout_toRightOf="@+id/maleUnemployed2"
+        android:text="31"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/femaleParticipation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv6"
+        android:layout_toRightOf="@+id/tv6"
+        android:text="36"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/femaleParticipation2"
+        android:text="@string/female"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/maleSelfEmployed1"
+        android:layout_toLeftOf="@+id/femaleParticipation2"
+        android:text="@string/female"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/maleEmployers2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv10"
+        android:layout_alignLeft="@+id/maleParticipation2"
+        android:text="18"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/femaleEmployers2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/femaleParticipation2"
+        android:layout_below="@+id/tv9"
+        android:text="21"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/maleSelfEmployed2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/maleEmployers2"
+        android:layout_below="@+id/tv11"
+        android:text="17"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/femaleSelfEmployed2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/femaleEmployers2"
+        android:layout_below="@+id/tv12"
+        android:text="19"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
 
 </RelativeLayout>

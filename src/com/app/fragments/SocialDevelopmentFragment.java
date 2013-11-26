@@ -54,13 +54,13 @@ public class SocialDevelopmentFragment extends Fragment implements Observer
         final String countryCode = intent.getStringExtra("countryCode");
 
         maleLifeExpectancy = (TextView) rootView
-                .findViewById(R.id.maleLifeExpectancy);
+                .findViewById(R.id.maleLifeExpectancy1);
         femaleLifeExpectancy = (TextView) rootView
-                .findViewById(R.id.femaleLifeExpectancy);
+                .findViewById(R.id.femaleLifeExpectancy1);
         femaleParliamentSeats = (TextView) rootView
-                .findViewById(R.id.proportionOfSeats);
-        fertilityRate = (TextView) rootView.findViewById(R.id.fertilityRate);
-        cpiaRating = (TextView) rootView.findViewById(R.id.cpiaRating);
+                .findViewById(R.id.proportionOfSeats1);
+        fertilityRate = (TextView) rootView.findViewById(R.id.fertilityRate1);
+        cpiaRating = (TextView) rootView.findViewById(R.id.cpiaRating1);
 
         year = (TextView) rootView.findViewById(R.id.year);
         yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar);

@@ -45,18 +45,18 @@ public class BasicInfoFragment extends Fragment implements Observer
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.basic_info_fragment,
+        View rootView = inflater.inflate(R.layout.basic_info_compare_fragment,
                 container, false);
 
         Intent intent = getActivity().getIntent();
         final String countryCode = intent.getStringExtra("countryCode");
 
-        capitalCity = (TextView) rootView.findViewById(R.id.capitalCity);
+        capitalCity = (TextView) rootView.findViewById(R.id.capitalCity1);
         year = (TextView) rootView.findViewById(R.id.year);
-        population = (TextView) rootView.findViewById(R.id.population);
-        gdp = (TextView) rootView.findViewById(R.id.GDP);
-        countryArea = (TextView) rootView.findViewById(R.id.countryArea);
-        growth = (TextView) rootView.findViewById(R.id.growth);
+        population = (TextView) rootView.findViewById(R.id.population1);
+        gdp = (TextView) rootView.findViewById(R.id.GDP1);
+        countryArea = (TextView) rootView.findViewById(R.id.countryArea1);
+        growth = (TextView) rootView.findViewById(R.id.growth1);
         yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar1);
 
         yearSeek.setMax(YEAR_MAX - YEAR_MIN);

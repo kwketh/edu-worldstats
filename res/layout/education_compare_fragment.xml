@@ -22,6 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tv2"
+        android:text="88"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
 
     <TextView
@@ -40,6 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tv3"
+        android:text="98"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
 
     <TextView
@@ -58,6 +62,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tv4"
+        android:text="19"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
 
     <TextView
@@ -80,21 +86,13 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/tv7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv6"
-        android:layout_below="@+id/tv5"
-        android:layout_marginLeft="90dp"
-        android:text="@string/female"
-        android:textSize="14sp" />
-
-    <TextView
         android:id="@+id/maleLiteracyRate1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tv6"
+        android:text="99"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
 
     <TextView
@@ -103,6 +101,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv7"
         android:layout_below="@+id/tv7"
+        android:text="98"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
 
     <TextView
@@ -125,13 +125,84 @@
         android:progress="53" />
 
     <TextView
+        android:id="@+id/primaryEnrollment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv3"
+        android:layout_toRightOf="@+id/tv3"
+        android:text="89"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
+
+    <TextView
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignLeft="@+id/seekBar"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
         android:paddingTop="12dp"
         android:text="@string/ratio_of_school_enrollment"
         android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/countryBeingCompared1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="17dp"
+        android:text="United Kingdom - France"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/secondaryEnrollment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv4"
+        android:layout_alignLeft="@+id/primaryEnrollment2"
+        android:text="19"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tertiaryEnrollment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/secondaryEnrollment2"
+        android:layout_below="@+id/tv4"
+        android:text="11"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/maleLiteracyRate1"
+        android:layout_toRightOf="@+id/tv3"
+        android:text="@string/female"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/maleLiteracyRate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv6"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/tv6"
+        android:text="97"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/femaleLiteracyRate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/year"
+        android:layout_toRightOf="@+id/tv1"
+        android:text="98"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
 
 </RelativeLayout>

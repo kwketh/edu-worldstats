@@ -58,20 +58,20 @@ public class IndustryFragment extends Fragment implements Observer
         Intent intent = getActivity().getIntent();
         final String countryCode = intent.getStringExtra("countryCode");
 
-        maleUnemployed = (TextView) rootView.findViewById(R.id.maleUnemployed);
+        maleUnemployed = (TextView) rootView.findViewById(R.id.maleUnemployed1);
         femaleUnemployed = (TextView) rootView
-                .findViewById(R.id.femaleUnemployed);
+                .findViewById(R.id.femaleUnemployed1);
         maleLabourParticipation = (TextView) rootView
-                .findViewById(R.id.maleParticipation);
+                .findViewById(R.id.maleParticipation1);
         femaleLabourParticipation = (TextView) rootView
-                .findViewById(R.id.femaleParticipation);
-        maleEmployers = (TextView) rootView.findViewById(R.id.maleEmployers);
+                .findViewById(R.id.femaleParticipation1);
+        maleEmployers = (TextView) rootView.findViewById(R.id.maleEmployers1);
         femaleEmployers = (TextView) rootView
-                .findViewById(R.id.femaleEmployers);
+                .findViewById(R.id.femaleEmployers1);
         maleSelfEmployed = (TextView) rootView
-                .findViewById(R.id.maleSelfEmployed);
+                .findViewById(R.id.maleSelfEmployed1);
         femaleSelfEmployed = (TextView) rootView
-                .findViewById(R.id.femaleSelfEmployed);
+                .findViewById(R.id.femaleSelfEmployed1);
 
         year = (TextView) rootView.findViewById(R.id.year);
         yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar);

@@ -56,15 +56,15 @@ public class EducationFragment extends Fragment implements Observer
 
         year = (TextView) rootView.findViewById(R.id.year);
         primaryEnrollment = (TextView) rootView
-                .findViewById(R.id.primaryEnrollment);
+                .findViewById(R.id.primaryEnrollment1);
         secondaryEnrollment = (TextView) rootView
-                .findViewById(R.id.secondaryEnrollment);
+                .findViewById(R.id.secondaryEnrollment1);
         tertiaryEnrollment = (TextView) rootView
-                .findViewById(R.id.tertiaryEnrollment);
+                .findViewById(R.id.tertiaryEnrollment1);
         maleLiteracyRate = (TextView) rootView
-                .findViewById(R.id.maleLiteracyRate);
+                .findViewById(R.id.maleLiteracyRate1);
         femaleLiteracyRate = (TextView) rootView
-                .findViewById(R.id.femaleLiteracyRate);
+                .findViewById(R.id.femaleLiteracyRate1);
         yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar);
         
         updateValues();
