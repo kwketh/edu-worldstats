@@ -15,7 +15,17 @@
   <component name="ChangeListManager">
     <list default="true" id="09a095a6-63dc-43e1-aee3-cc39345d2194" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestApp.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestApp.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java" afterPath="$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" afterPath="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" />
@@ -145,7 +155,7 @@
       <file leaf-file-name="SearchCountry.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/app/activities/SearchCountry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="35" selection-start="321" selection-end="321" vertical-scroll-proportion="0.23728813">
+            <state line="14" column="36" selection-start="321" selection-end="321" vertical-scroll-proportion="0.23728813">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -213,6 +223,7 @@
         <option value="$PROJECT_DIR$/src/com/app/activities/CompareCountryWith.java" />
         <option value="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" />
         <option value="$PROJECT_DIR$/src/com/app/fragments/EducationFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/app/activities/SearchCountry.java" />
       </list>
     </option>
   </component>
@@ -902,7 +913,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/app/activities/SearchCountry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="321" selection-end="321" vertical-scroll-proportion="0.23728813">
+        <state line="14" column="36" selection-start="321" selection-end="321" vertical-scroll-proportion="0.23728813">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
