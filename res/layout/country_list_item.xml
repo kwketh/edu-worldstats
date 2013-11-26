@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="fill_parent"
+          android:layout_height="160dp"
+          android:descendantFocusability="blocksDescendants"
+          android:id="@+id/countryListItem">
+
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/itemCountryFlag"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+        <TextView
+				android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/itemCountryName"
+                android:paddingLeft="60dp"
+                android:gravity="center_vertical"/>
+
+</RelativeLayout>
