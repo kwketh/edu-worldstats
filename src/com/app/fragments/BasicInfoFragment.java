@@ -5,10 +5,10 @@ import java.util.Observable;
 import java.util.Observer;
 
 import com.app.R;
+import com.app.activities.DetailedView;
 import com.app.worldbankapi.CountryIndicatorResults;
 import com.app.worldbankapi.CountryList;
 import com.app.worldbankapi.Indicator;
-import com.app.worldbankapi.IndicatorDefinitionResults;
 import com.app.worldbankapi.TimeseriesDataPoint;
 import com.app.worldbankapi.WorldBankAPI;
 
@@ -19,7 +19,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
-import android.widget.Toast;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
@@ -115,10 +114,10 @@ public class BasicInfoFragment extends Fragment implements Observer
 
     public void updateValues() {
         year.setText("Change year: " + m_currentYear);
-        population.setText("Loading...");
-        gdp.setText("Loading...");
-        countryArea.setText("Loading...");
-        growth.setText("Loading...");
+        population.setText("loading...");
+        gdp.setText("loading...");
+        countryArea.setText("loading...");
+        growth.setText("loading...");
     }
 
     /**
@@ -158,7 +157,7 @@ public class BasicInfoFragment extends Fragment implements Observer
 
             TimeseriesDataPoint point = hasData ? points.get(0) : null;
             String value = (point != null && !point.isNullValue()) ? point
-                    .getFormattedValue() : "No Data";
+                    .getFormattedValue() : "(no data)";
 
             if (results == m_resultsCountryArea) {
                 labelValue.setText(value + " sq. km");

@@ -6,11 +6,13 @@ import com.app.R;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
+import android.view.View;
 
 public class DisplayActivity extends FragmentActivity implements ActionBar.TabListener {
 
@@ -100,5 +102,13 @@ public class DisplayActivity extends FragmentActivity implements ActionBar.TabLi
     @Override
     public void onTabSelected(Tab arg0, FragmentTransaction arg1) {
         viewPager.setCurrentItem(arg0.getPosition());
+    }
+    
+    public void showDetails(View v) {
+        String indicator = (String) v.getTag();
+        Intent intent = new Intent(this, DetailedView.class);
+        intent.putExtra("indicator", indicator);  
+        startActivity(intent);
+        
     }
 }

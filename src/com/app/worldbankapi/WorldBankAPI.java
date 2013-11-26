@@ -48,9 +48,9 @@ public class WorldBankAPI
         return results;
     }   
    
-   public static IndicatorDefinitionResults fetchIndicatorDefinition(Indicator indicator) 
+   public static IndicatorDefinitionResults fetchIndicatorDefinition(String indicator) 
    {
-      String url = "/indicator/" + indicator.getId();
+      String url = "/indicator/" + indicator;
       
       RequestParams params = new RequestParams();        
       params.put("format", "json");

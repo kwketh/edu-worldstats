@@ -36,7 +36,11 @@
         android:text="@string/population"
         android:textAlignment="center"
         android:textSize="16sp"
-        android:onClick="getDefinition" />
+        android:onClick="showDetails"
+        android:tag="SP.POP.TOTL"
+        android:clickable="true" />
+    
+    
 
     <TextView
         android:id="@+id/population"
@@ -126,5 +130,20 @@
         android:layout_alignLeft="@+id/year"
         android:layout_below="@+id/year"
         android:layout_marginTop="18dp" />
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv1"
+        android:layout_alignBottom="@+id/tv1"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_marginLeft="84dp"
+        android:text="i"
+        android:onClick="showDetails"
+        android:tag="SP.POP.TOTL"
+        android:clickable="true"
+         />
 
 </RelativeLayout>
