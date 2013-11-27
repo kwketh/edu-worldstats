@@ -25,7 +25,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/indicatorName"
             android:layout_gravity="center_horizontal|top" android:layout_marginTop="5dp"
-            android:textColor="#fecccccc" android:textAlignment="center"/>
+            android:textColor="#ffcccccc" android:textAlignment="center"/>
     </LinearLayout>
 
 
