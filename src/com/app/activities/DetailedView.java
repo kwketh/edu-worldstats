@@ -32,12 +32,7 @@ public class DetailedView extends Activity implements Observer
                 
         IndicatorDefinitionResults results = WorldBankAPI.fetchIndicatorDefinition(indicator);
         results.addObserver(this);
-        
-        
-        
-        
-        
-        
+           
     }
     
     @Override
