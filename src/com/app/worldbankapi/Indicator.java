@@ -66,19 +66,40 @@ public enum Indicator {
     Indicator(String indicatorId) {
         m_id = indicatorId;
     }
-    
+
     public String formatValue(DataPoint dataPoint) {
-        if (dataPoint == null || dataPoint.isNullValue()) {
-            return "(no data)";
-        } else
-        if (this == Indicator.AREA_OF_COUNTRY) {
-            return dataPoint.getFormattedValue() + "sq. km";
-        } else
-        if (this == Indicator.GDP) {
+
+        if (dataPoint == null || dataPoint.isNullValue())
+            return "";
+
+        /* Areas in square meters */
+        if (this == Indicator.AREA_OF_COUNTRY)
+            return dataPoint.getFormattedValue() + " sq. km";
+
+        /* Currencies in USD */
+        if (this == Indicator.GDP)
             return "$ " + dataPoint.getFormattedValue();
-        } else {
-            return dataPoint.getFormattedValue();
-        }
+
+        /* Percentages */
+        if (this == Indicator.LABOUR_PARTICIPATION_MALE ||
+            this == Indicator.LABOUR_PARTICIPATION_FEMALE ||
+            this == Indicator.MALE_UNEMPLOYMENT ||
+            this == Indicator.FEMALE_UNEMPLOYMENT ||
+            this == Indicator.EMPLOYERS_MALE ||
+            this == Indicator.EMPLOYERS_FEMALE ||
+            this == Indicator.SELF_EMPLOYED_MALE ||
+            this == Indicator.SELF_EMPLOYED_FEMALE ||
+            this == Indicator.RATIO_F_M_PRIMARY ||
+            this == Indicator.RATIO_F_M_SECONDARY ||
+            this == Indicator.RATIO_F_M_TERTIARY ||
+            this == Indicator.LITERACY_RATE_M ||
+            this == Indicator.LITERACY_RATE_F ||
+            this == Indicator.PARLIAMENT_SEATS_FEMALE ||
+            this == Indicator.GROWTH)
+                return dataPoint.getFormattedValue() + "%";
+
+        /* The value by itself only */
+        return dataPoint.getFormattedValue();
     }
 
     public String getId() {
