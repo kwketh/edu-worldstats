@@ -29,20 +29,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09a095a6-63dc-43e1-aee3-cc39345d2194" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/slide_in_text.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" afterPath="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java" afterPath="$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java" afterPath="$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/Results.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/Results.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/anim/slide_in_left.xml" afterPath="$PROJECT_DIR$/res/anim/slide_in_left.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankClient.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_detailed_view.xml" afterPath="$PROJECT_DIR$/res/layout/activity_detailed_view.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="edu-worldstats.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385512287165" ignored="false" />
+    <file path="/Dummy.txt" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385567493592" ignored="false" />
     <file path="/CompareCountryWith.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385476390568" ignored="false" />
     <file path="/fragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385544798037" ignored="false" />
-    <file path="/ChooseCountry.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385486217676" ignored="false" />
+    <file path="/ChooseCountry.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385563414088" ignored="false" />
     <file path="/EducationFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385547305564" ignored="false" />
     <file path="/BasicInfoFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385540608271" ignored="false" />
     <file path="/CountryIndicatorResults.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385552529399" ignored="false" />
@@ -52,7 +48,7 @@
     <file path="/IndicatorsFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385511894918" ignored="false" />
     <file path="/GenericIndicatorsFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385560116744" ignored="false" />
     <file path="/activity_display.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385537553535" ignored="false" />
-    <file path="/DisplayActivity.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385559050196" ignored="false" />
+    <file path="/DisplayActivity.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385568586239" ignored="false" />
     <file path="/TabsPagerAdapter.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385545647727" ignored="false" />
     <file path="/SocialDevelopmentFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385547361767" ignored="false" />
     <file path="/IndustryFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385547313155" ignored="false" />
@@ -61,6 +57,12 @@
     <file path="/basic_info_fragment.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385555574215" ignored="false" />
     <file path="/slide_in_text.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385558573756" ignored="false" />
     <file path="/Results.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385560144529" ignored="false" />
+    <file path="/DetailedView.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385569122438" ignored="false" />
+    <file path="/SearchCountry.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385561563736" ignored="false" />
+    <file path="/styles.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385568519345" ignored="false" />
+    <file path="/WorldBankClient.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385564138472" ignored="false" />
+    <file path="/activity_detailed_view.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385565332890" ignored="false" />
+    <file path="$PROJECT_DIR$/res/color/colors.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385567527764" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,23 +114,6 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java" line="199" class="com.app.activities.DisplayActivity" package="com.app.activities">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -138,33 +123,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GenericIndicatorsFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java">
+      <file leaf-file-name="DetailedView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/app/activities/DetailedView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="25" selection-start="6502" selection-end="6502" vertical-scroll-proportion="0.0">
+            <state line="45" column="60" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1520#1710#0" expanded="true" />
+                <element signature="e#1699#1700#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_compare_countries.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_compare_countries.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Results.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/Results.java">
+      <file leaf-file-name="CompareCountries.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/app/activities/CompareCountries.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="23" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
+            <state line="11" column="13" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,7 +148,30 @@
       <file leaf-file-name="BasicInfoFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="13" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0">
+            <state line="51" column="45" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_detailed_view.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/activity_detailed_view.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="25" selection-start="620" selection-end="669" vertical-scroll-proportion="0.36395147">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenericIndicatorsFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="22" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,25 +182,7 @@
       <file leaf-file-name="CountryIndicatorResults.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slide_in_left.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/anim/slide_in_left.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="196" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slide_in_text.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/anim/slide_in_text.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="26" selection-start="198" selection-end="198" vertical-scroll-proportion="-1.8">
+            <state line="8" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -211,31 +191,35 @@
       <file leaf-file-name="ChooseCountry.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="9" selection-start="3829" selection-end="3829" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#3495#4475#0" expanded="true" />
-                <element signature="e#4464#4465#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fragment.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/app/Fragment.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="165" selection-end="165" vertical-scroll-proportion="-3.0">
+            <state line="82" column="63" selection-start="2333" selection-end="2333" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DisplayActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java">
+      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="199" column="64" selection-start="6207" selection-end="6207" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="10" column="58" selection-start="447" selection-end="447" vertical-scroll-proportion="-4.8">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Country.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/Country.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="13" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountryList.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="20" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -258,22 +242,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/IndicatorDefinitionResults.java" />
-        <option value="$PROJECT_DIR$/res/layout/industry_fragment.xml" />
-        <option value="$PROJECT_DIR$/res/layout/education_fragment.xml" />
-        <option value="$PROJECT_DIR$/res/layout/social_development_fragment.xml" />
-        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankResponseHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java" />
-        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankAPI.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/Indicator.java" />
-        <option value="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" />
-        <option value="$PROJECT_DIR$/res/layout/basic_info_fragment.xml" />
-        <option value="$PROJECT_DIR$/res/anim/slide_in_left.xml" />
-        <option value="$PROJECT_DIR$/res/anim/slide_in_text.xml" />
-        <option value="$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java" />
         <option value="$PROJECT_DIR$/src/com/app/worldbankapi/Results.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/app/activities/SearchCountry.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/anim/fade_in_half.xml" />
+        <option value="$PROJECT_DIR$/res/anim/fade_out_half.xml" />
+        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankAPI.java" />
+        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankClient.java" />
+        <option value="$PROJECT_DIR$/res/color/colors.xml" />
+        <option value="$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java" />
+        <option value="$PROJECT_DIR$/res/anim/fade_out_instant.xml" />
+        <option value="$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/app/activities/DetailedView.java" />
+        <option value="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" />
+        <option value="$PROJECT_DIR$/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_detailed_view.xml" />
       </list>
     </option>
   </component>
@@ -487,6 +471,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="values-fr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu-worldstats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu-worldstats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -585,7 +587,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.lastSelected" value="project.propCompiler" />
-    <property name="AndroidLayoutSelectedEditor" value="android-designer" />
+    <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
@@ -797,8 +799,8 @@
     <frame x="5" y="22" width="1440" height="813" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17934003" sideWeight="0.981241" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998565" sideWeight="0.981241" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17934003" sideWeight="0.981241" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.981241" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32611832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.981241" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.77633476" order="-1" side_tool="false" content_ui="tabs" />
@@ -819,7 +821,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2898135" sideWeight="0.981241" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2898135" sideWeight="0.981241" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.01875902" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -895,129 +897,121 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/app/activities/SearchCountry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/basic_info_fragment.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1711" selection-end="1711" vertical-scroll-proportion="17.12">
+        <state line="19" column="2" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/app/activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="16" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+        <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/app/BackStackRecord.class">
+    <entry file="file://$PROJECT_DIR$/src/com/app/activities/CompareCountryWith.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="0" selection-start="5985" selection-end="5985" vertical-scroll-proportion="-12.48">
+        <state line="11" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/app/FragmentManagerImpl.class">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_compare_country_with.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="0" selection-start="9856" selection-end="9856" vertical-scroll-proportion="-11.48">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankResponseHandler.java">
+    <entry file="file://$PROJECT_DIR$/res/anim/fade_out.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/anim/slide_in_text.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/Country.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="198" selection-end="198" vertical-scroll-proportion="-1.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/anim/slide_in_left.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="196" vertical-scroll-proportion="-0.0">
+        <state line="2" column="13" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0">
+        <state line="8" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="9" selection-start="3829" selection-end="3829" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#3495#4475#0" expanded="true" />
-            <element signature="e#4464#4465#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="64" selection-start="6207" selection-end="6207" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/app/Fragment.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="165" selection-end="165" vertical-scroll-proportion="-3.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/Results.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="23" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
+        <state line="54" column="20" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="25" selection-start="6502" selection-end="6502" vertical-scroll-proportion="0.0">
+        <state line="32" column="22" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_compare_countries.xml">
-      <provider selected="true" editor-type-id="android-designer">
+    <entry file="file://$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="45" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/activities/DetailedView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="60" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1520#1710#0" expanded="true" />
+            <element signature="e#1699#1700#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/activities/CompareCountries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="63" selection-start="2333" selection-end="2333" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="58" selection-start="447" selection-end="447" vertical-scroll-proportion="-4.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_detailed_view.xml">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="25" selection-start="620" selection-end="669" vertical-scroll-proportion="0.36395147">
           <folding />
         </state>
       </provider>
