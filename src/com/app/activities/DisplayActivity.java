@@ -1,7 +1,9 @@
 package com.app.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
+import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import com.app.adapters.TabsPagerAdapter;
@@ -198,5 +200,13 @@ public class DisplayActivity extends FragmentActivity implements ActionBar.TabLi
 
         if (activeFragment instanceof GenericIndicatorsFragment)
             ((GenericIndicatorsFragment)activeFragment).animateIn();
+    }
+    
+    public void showDetails(View v) {
+        String indicator = (String) v.getTag();
+        Intent intent = new Intent(this, DetailedView.class);
+        intent.putExtra("indicator", indicator);  
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        startActivity(intent);
     }
 }

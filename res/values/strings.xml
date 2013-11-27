@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!-- English -->
+
+    <!-- English -->
     <string name="app_name">I/national Gender Gap</string>
     <string name="action_settings">Settings</string>
     <string name="basic_info">Basic Info</string>
@@ -42,5 +43,7 @@
     <string name="cpia_rating">CPIA gender quality rating (1 is low, 6 is high)</string>
     <string name="capital_city">Capital city</string>
     <string name="area_of_country">Area of country</string>
+    <string name="title_activity_detailed_view">DetailedView</string>
+    <string name="more_info">More info</string>
 
 </resources>

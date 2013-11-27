@@ -95,4 +95,79 @@
         android:layout_below="@+id/tv6"
         android:textSize="24sp" android:height="30dp" android:gravity="center_vertical"/>
 
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@id/tv2"
+        android:layout_marginBottom="-5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tv2"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/more_info"
+        android:onClick="showDetails"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/ic_menu_info_details"
+        android:tag="SP.DYN.LE00.MA.IN" />
+
+    <ImageView
+        android:id="@+id/iv2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@id/tv3"
+        android:layout_marginBottom="-5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tv3"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/more_info"
+        android:onClick="showDetails"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/ic_menu_info_details"
+        android:tag="SP.DYN.LE00.FE.IN" />
+
+    <ImageView
+        android:id="@+id/iv3"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@id/tv4"
+        android:layout_marginBottom="-5dp"
+        android:layout_marginLeft="-50dp"
+        android:layout_toRightOf="@+id/tv4"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/more_info"
+        android:onClick="showDetails"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/ic_menu_info_details"
+        android:tag="SG.GEN.PARL.ZS" />
+
+    <ImageView
+        android:id="@+id/iv4"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@id/tv5"
+        android:layout_marginBottom="-5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tv5"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/more_info"
+        android:onClick="showDetails"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/ic_menu_info_details"
+        android:tag="SP.DYN.TFRT.IN" />
+
+    <ImageView
+        android:id="@+id/iv5"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@id/tv6"
+        android:layout_marginBottom="-5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tv6"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/more_info"
+        android:onClick="showDetails"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/ic_menu_info_details"
+        android:tag="IQ.CPA.GNDR.XQ" />
+
 </RelativeLayout>
