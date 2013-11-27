@@ -11,7 +11,7 @@
     <string name="population_composition">Population Composition</string>
     <string name="gdp">GDP</string>
     <string name="gni_per_capita">GNI Per Capita</string>
-    <string name="growth">Growth</string>
+    <string name="growth">GDP growth (annual %)</string>
     <string name="change_date">Change Date</string>
     <string name="choose_a_country">Select country</string>
     <string name="compare_countries">Compare countries</string>
@@ -26,21 +26,21 @@
     <string name="title_activity_compare_country_with">CompareCountryWith</string>
     <string name="compare_country_with">Enter The Name Of The Country To Compare With</string>
     <string name="ratio_of_school_enrollment">Ratio of female to male in:</string>
-    <string name="primary_enrollment">Primary Enrollment</string>
-    <string name="secondary_enrollment">Secondary Enrollment</string>
-    <string name="tertiary_enrollment">Tertiary Enrollment</string>
-    <string name="literacy_rate">Literacy Rate</string>
+    <string name="primary_enrollment">Primary enrollment</string>
+    <string name="secondary_enrollment">Secondary enrollment</string>
+    <string name="tertiary_enrollment">Tertiary enrollment</string>
+    <string name="literacy_rate">Literacy rate</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
-    <string name="unemployed">% of Labour Force Unemployed</string>
-    <string name="labour_participation">Labour Participation Rate (% of gender population)</string>
+    <string name="unemployed">Labour force unemployed</string>
+    <string name="labour_participation">Labour participation rate (% of gender population)</string>
     <string name="employers">Employers (% of employed gender population)</string>
-    <string name="self_employed">Self-Employed (% of employed gender population)</string>
-    <string name="life_expectancy">Life Expectancy at Birth (years)</string>
-    <string name="parliament_seats">Proportion of National Parliament Seats held by Women (%)</string>
-    <string name="fertility_rate">Fertility Rate</string>
-    <string name="cpia_rating">CPIA Gender Equality Rating</string>
+    <string name="self_employed">Self-employed (% of employed gender population)</string>
+    <string name="life_expectancy">Life expectancy at birth (years)</string>
+    <string name="parliament_seats">Proportion of seats held by women in national parliaments</string>
+    <string name="fertility_rate">Fertility rate, total (births per woman)</string>
+    <string name="cpia_rating">CPIA gender quality rating (1 is low, 6 is high)</string>
     <string name="capital_city">Capital city</string>
-    <string name="area_of_country">Area of Country</string>
+    <string name="area_of_country">Area of country</string>
 
 </resources>
