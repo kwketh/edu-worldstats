@@ -8,6 +8,7 @@ public class WorldBankClient
     private static AsyncHttpClient clientProtocol = new AsyncHttpClient();
     
     public static void get(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
+        clientProtocol.setTimeout(3);
         clientProtocol.get(baseUrl + url, params, responseHandler);
     }
 }
