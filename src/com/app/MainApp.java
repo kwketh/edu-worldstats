@@ -1,9 +1,11 @@
 package com.app;
 
+import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
 import android.app.Application;
+import android.content.Context;
 
 public class MainApp extends Application 
 {
@@ -31,4 +33,15 @@ public class MainApp extends Application
     {
         return this.bundleData.get(key);
     }
+    
+    public static int getResourceById(String variableName, Context context, Class<?> c) 
+    {
+        try {
+            Field idField = c.getDeclaredField(variableName);
+            return idField.getInt(idField);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return -1;
+        } 
+    }    
 }

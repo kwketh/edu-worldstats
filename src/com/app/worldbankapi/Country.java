@@ -9,6 +9,7 @@ public class Country implements Comparable<Country>
     private double m_longitude;
     private double m_latitude;
     
+    
     /**
      * Constructor to represent a country.
      *  
@@ -17,8 +18,8 @@ public class Country implements Comparable<Country>
      */
     public Country(String countryCode) {
         m_countryCode = countryCode;
-    }    
-    
+    }
+
     /**
      * Returns a representation of the object country code.
      */ 
@@ -64,6 +65,33 @@ public class Country implements Comparable<Country>
 
     public double getLongitude() {
         return m_longitude;
+    }
+
+    public String getFlagResourceName() {
+
+        if (getCode().equals("MF"))
+            return "france";
+
+        if (getCode().equals("CG"))
+            return "republic_of_the_congo";
+
+        if (getCode().equals("CD"))
+            return "congo";
+
+        if (getCode().equals("KP"))
+            return "north_korea";
+
+        if (getCode().equals("KR"))
+            return "south_korea";
+
+        String name = getName();
+        name = name.toLowerCase();
+        name = name.replaceAll("\\s\\(.*", ""); // cut before brackets
+        name = name.replaceAll(",.*", ""); // cut after ,
+        name = name.replaceAll(" ", "_"); // change all spaces to underscores
+        name = name.replaceAll("[^a-z,_]+", ""); // get rid of anything else, only leave underscores and alphabet
+
+        return name;
     }
 
     @Override

@@ -1,14 +1,19 @@
 package com.app.adapters;
 
+import java.lang.reflect.Field;
 import java.util.Arrays;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.app.MainApp;
+import com.app.R;
 import com.app.worldbankapi.Country;
 import com.app.worldbankapi.CountryList;
 
@@ -26,17 +31,23 @@ public class CountryListAdapter extends FilterableAdapter<Country, String>
 
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;        
-        TextView textHeading = null;
+        TextView itemHeading = null;
+        ImageView itemImage = null;
         
         if (view == null) {
-            LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-            view = mInflater.inflate(android.R.layout.simple_list_item_1, null);                       
+            LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);            
+            view = mInflater.inflate(R.layout.country_list_item, null);                       
         }
         
         Country country = getItem(position);
+
+        int flagImageResourceId = MainApp.getResourceById(country.getFlagResourceName(), context, R.drawable.class);
+
+        itemHeading = (TextView)view.findViewById(R.id.itemCountryName);
+        itemHeading.setText(country.getName());
         
-        textHeading = (TextView) view.findViewById(android.R.id.text1);
-        textHeading.setText(country.getName());
+        itemImage = (ImageView)view.findViewById(R.id.itemCountryFlag);
+        itemImage.setImageResource(flagImageResourceId);
 
         return view;
     }
