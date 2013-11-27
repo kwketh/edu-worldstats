@@ -6,6 +6,7 @@ import java.util.Observer;
 import com.app.MainApp;
 import com.app.R;
 import com.app.adapters.CountryListAdapter;
+import com.app.loaders.CountryListLoader;
 import com.app.worldbankapi.Country;
 import com.app.worldbankapi.CountryListResults;
 import com.app.worldbankapi.WorldBankAPI;
@@ -32,18 +33,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
-public class ChooseCountry extends Activity implements Observer
-{   
+public class ChooseCountry extends Activity
+{
     /**
-     * An adapter for the list referenced to countries array.
-     */    
-    private CountryListAdapter countriesAdapter;
-    
-    /**
-     * Country results.
+     * The loader used to load the country list and create an adapter.
      */
-    private CountryListResults results;
-    
+    private CountryListLoader countryListLoader;
+
     /**
      * The view listing all the countries. 
      */
@@ -53,44 +49,13 @@ public class ChooseCountry extends Activity implements Observer
      * Text field used for searching country by name. 
      */
     private EditText textSearchCountry;
-    
-    /*
-     * Loading progress dialog.
-     */
-    private ProgressDialog progressDialog = null;
-
-    void loadCountries() 
-    {   
-        MainApp app = (MainApp)this.getApplication();
-       
-        if (!app.hasData("countries")) 
-        {
-            results = WorldBankAPI.fetchCountryList();            
-            app.storeData("countries", results);                 
-        } 
-        else
-        {
-            results = (CountryListResults)app.getData("countries"); 
-        }
-        
-        results.addObserver(this);        
-
-        if (!results.areLoaded())
-        {
-            progressDialog = new ProgressDialog(this);
-            progressDialog.setCancelable(false);
-            progressDialog.setTitle("Loading");
-            progressDialog.setMessage("Waiting for country list");
-            progressDialog.show();
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_country);
-        
+
         /* Get ListView object from the XML layouts */
         listView = (ListView)findViewById(R.id.country_list);                
         textSearchCountry = (EditText)findViewById(R.id.textSearchCountry);
@@ -98,20 +63,12 @@ public class ChooseCountry extends Activity implements Observer
         /* Show the Up button in the action bar. */
         setupActionBar();
         
-        /* Retrieve list of all countries */
-        loadCountries();     
-        
-        /**
-         * ArrayAdapter constructor parameters:
-         *   @param context - the context
-         *   @param layout - the layout for the row
-         *   @param id - an id of the TextView to which the data is written
-         *   @param data - the array of data
-         */    
-        countriesAdapter = new CountryListAdapter(this, android.R.layout.simple_list_item_1, android.R.id.text1, results.getCountries());
+        /* Construct the loader and retrieve list of all countries */
+        countryListLoader = new CountryListLoader(this);
+        countryListLoader.load();
 
-        /* Assign adapter to ListView */
-        listView.setAdapter(countriesAdapter);
+        /* Assign the loader adapter to ListView */
+        listView.setAdapter(countryListLoader.getAdapter());
                 
         /* ListView item click event */
         listView.setOnItemClickListener(new OnItemClickListener()
@@ -154,9 +111,9 @@ public class ChooseCountry extends Activity implements Observer
                 
                 /* Remove any duplicate white spaces */
                 constraint = constraint.replaceAll("\\s+", " ");
-                
+
                 /* Apply the filter */
-                countriesAdapter.getFilter().filter(constraint);
+                countryListLoader.getAdapter().getFilter().filter(constraint);
             }
         });
 
@@ -209,32 +166,5 @@ public class ChooseCountry extends Activity implements Observer
         }
         return super.onOptionsItemSelected(item);
     }
-    
-    /**
-     * This method is called whenever the observed object has changed.
-     * (in this case the CountryIndicatorResults object)
-     * 
-     * @param eventSource 
-     *      the observable object triggering the event.
-     * 
-     * @param eventName
-     *      an argument passed from the observable object.
-     *      the value will always be an instance of String.
-     * 
-     * @see Observer#update
-     */    
-    @Override
-    public void update(Observable eventSource, Object eventName) 
-    {
-        if (eventName.equals("fetchComplete")) 
-        {
-            countriesAdapter.notifyDataSetChanged();
-            
-            /* Hide the progress dialog */
-            if (progressDialog != null) {
-                progressDialog.dismiss();
-                progressDialog = null;
-            }
-        }
-    }
+
 }

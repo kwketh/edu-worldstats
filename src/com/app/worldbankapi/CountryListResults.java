@@ -8,7 +8,7 @@ public class CountryListResults extends Results
 {
     public CountryList countries;
     
-    CountryListResults()
+    public CountryListResults()
     {
         countries = new CountryList();
     }

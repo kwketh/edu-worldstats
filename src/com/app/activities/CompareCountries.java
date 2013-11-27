@@ -1,6 +1,7 @@
 package com.app.activities;
 
 
+import android.widget.AutoCompleteTextView;
 import com.app.R;
 import android.os.Bundle;
 import android.app.Activity;
@@ -8,15 +9,28 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.annotation.TargetApi;
 import android.os.Build;
+import com.app.loaders.CountryListLoader;
 
 public class CompareCountries extends Activity
 {
+    private CountryListLoader countryListLoader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compare_countries);
         setupActionBar();
+
+        AutoCompleteTextView firstCountry = (AutoCompleteTextView)findViewById(R.id.autoCompleteCountryOne);
+        AutoCompleteTextView secondCountry = (AutoCompleteTextView)findViewById(R.id.autoCompleteCountryTwo);
+
+        /* Construct the loader and retrieve list of all countries */
+        countryListLoader = new CountryListLoader(this);
+        countryListLoader.load();
+
+        /* Assign the loader adapter to ListView */
+        firstCountry.setAdapter(countryListLoader.getAdapter());
+        secondCountry.setAdapter(countryListLoader.getAdapter());
     }
 
     /**

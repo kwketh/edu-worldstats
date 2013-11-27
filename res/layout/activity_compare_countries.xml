@@ -21,7 +21,7 @@
         android:textStyle="bold" />
 
     <AutoCompleteTextView
-        android:id="@+id/autoCompleteCountryOneText"
+        android:id="@+id/autoCompleteCountryOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/txtSelectFirstCountry"
@@ -34,18 +34,18 @@
         android:id="@+id/txtSelectSecondCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/autoCompleteCompareCountryTwo"
-        android:layout_below="@+id/autoCompleteCountryOneText"
+        android:layout_alignLeft="@+id/autoCompleteCountryTwo"
+        android:layout_below="@+id/autoCompleteCountryOne"
         android:layout_marginTop="44dp"
         android:text="@string/select_another_country"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <AutoCompleteTextView
-        android:id="@+id/autoCompleteCompareCountryTwo"
+        android:id="@+id/autoCompleteCountryTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/autoCompleteCountryOneText"
+        android:layout_alignLeft="@+id/autoCompleteCountryOne"
         android:layout_below="@+id/txtSelectSecondCountry"
         android:layout_marginTop="35dp"
         android:ems="10"
@@ -56,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/autoCompleteCompareCountryTwo"
+        android:layout_below="@+id/autoCompleteCountryTwo"
         android:layout_marginTop="46dp"
         android:text="@string/compare" />
 

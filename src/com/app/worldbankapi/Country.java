@@ -31,7 +31,7 @@ public class Country implements Comparable<Country>
      * Returns a representation of the object country code.
      */ 
     public String toString() {
-        return "[code: " + getCode() + ", name: " + getName() + ", capital: " + getCapitalCity() + "]";
+        return getName();
     }
 
     /* Setters */
