@@ -75,7 +75,7 @@ public class ChooseCountry extends Activity implements Observer
         
         results.addObserver(this);        
 
-        if (!results.isLoaded())
+        if (!results.areLoaded())
         {
             progressDialog = new ProgressDialog(this);
             progressDialog.setTitle("Loading");

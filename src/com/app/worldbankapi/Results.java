@@ -30,7 +30,7 @@ public class Results extends Observable
         setChanged();
     }
     
-    public boolean isLoaded()
+    public boolean areLoaded()
     {
         return m_loaded;
     }

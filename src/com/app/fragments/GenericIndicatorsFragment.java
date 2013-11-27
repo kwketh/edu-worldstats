@@ -1,11 +1,15 @@
 package com.app.fragments;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.view.View;
 import com.app.R;
@@ -28,9 +32,9 @@ import java.util.*;
  */
 public abstract class GenericIndicatorsFragment extends Fragment implements Observer
 {
+    private Context m_context;
     private View m_rootView;
     private String m_fetchDate;
-    private boolean m_created;
 
     private static final Map<Indicator, Integer> m_textViewMap;
     static
@@ -74,7 +78,7 @@ public abstract class GenericIndicatorsFragment extends Fragment implements Obse
     GenericIndicatorsFragment()
     {
         super();
-        m_created = false;
+        m_context = null;
         m_indicatorResultsMap = new HashMap<Indicator, CountryIndicatorResults>();
         m_fetchCountries = new CountryList();
         setFetchYear(DisplayActivity.YEAR_DEFAULT);
@@ -95,6 +99,7 @@ public abstract class GenericIndicatorsFragment extends Fragment implements Obse
     {
         /* Create the view */
         m_rootView = inflater.inflate(getFragmentId(), container, false);
+        m_context = (Context)getActivity().getApplicationContext();
 
         /* Get information about the intent */
         final Intent intent = getActivity().getIntent();
@@ -107,6 +112,25 @@ public abstract class GenericIndicatorsFragment extends Fragment implements Obse
         fetchData();
 
         return m_rootView;
+    }
+
+    public void animateIn()
+    {
+        if (m_context == null)
+            return;
+
+        Animation fadeAnimation = AnimationUtils.loadAnimation(m_context, android.R.anim.fade_in);
+        Animation slideAnimation = AnimationUtils.loadAnimation(m_context, R.anim.slide_in_text);
+
+        AnimationSet animationSet = new AnimationSet(true);
+        animationSet.addAnimation(fadeAnimation);
+        animationSet.addAnimation(slideAnimation);
+
+        for (Indicator indicator : getActiveIndicators())
+        {
+            TextView indicatorTextView = getTextViewForIndicator(indicator);
+            indicatorTextView.startAnimation(animationSet);
+        }
     }
 
     public void fetchData()
@@ -134,7 +158,8 @@ public abstract class GenericIndicatorsFragment extends Fragment implements Obse
             if (m_indicatorResultsMap.containsKey(indicator))
             {
                 CountryIndicatorResults results = m_indicatorResultsMap.get(indicator);
-                this.handleCompleteIndicatorResults(indicator, results);
+                if (results.areLoaded())
+                    this.handleCompleteIndicatorResults(indicator, results);
             } else
             {
                 /* Create new results for the indicator */

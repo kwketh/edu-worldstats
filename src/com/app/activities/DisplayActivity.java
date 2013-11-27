@@ -193,6 +193,10 @@ public class DisplayActivity extends FragmentActivity implements ActionBar.TabLi
         int position = tab.getPosition();
         m_pager.setCurrentItem(position);
 
-        updateFragment(getActiveFragment());
+        Fragment activeFragment = getActiveFragment();
+        updateFragment(activeFragment);
+
+        if (activeFragment instanceof GenericIndicatorsFragment)
+            ((GenericIndicatorsFragment)activeFragment).animateIn();
     }
 }
