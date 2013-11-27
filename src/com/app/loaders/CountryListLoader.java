@@ -40,13 +40,14 @@ public class CountryListLoader implements Observer
         if (!app.hasData("countries"))
         {
             m_results = WorldBankAPI.fetchCountryList();
-            m_adapter = new CountryListAdapter(m_context, android.R.layout.simple_list_item_1, android.R.id.text1, m_results.getCountries());
             app.storeData("countries", m_results);
         }
         else
         {
             m_results = (CountryListResults)app.getData("countries");
         }
+
+        m_adapter = new CountryListAdapter(m_context, android.R.layout.simple_list_item_1, android.R.id.text1, m_results.getCountries());
 
         m_results.addObserver(this);
 
