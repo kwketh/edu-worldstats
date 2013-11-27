@@ -28,7 +28,7 @@ public class WorldBankAPI
         params.put("format", "json");
         params.put("date", date);        
                        
-        CountryIndicatorResults results = new CountryIndicatorResults();         
+        CountryIndicatorResults results = new CountryIndicatorResults(indicator);
         WorldBankClient.get(url, params, new WorldBankResponseHandler(results));
         
         return results;

@@ -10,9 +10,9 @@ public class DataPoint
     static DecimalFormat prettyDateFormat = new DecimalFormat("#.##");
     static DecimalFormat prettyValueFormat;
         
-    Double m_value = 0.0;
-    int m_decimals = 0;
-    boolean m_null = false;
+    protected Double m_value = 0.0;
+    private int m_decimals = 0;
+    private boolean m_isNull = false;
     
     DataPoint()
     {
@@ -40,7 +40,7 @@ public class DataPoint
     
     public boolean isNullValue()
     {
-        return m_null;
+        return m_isNull;
     }
         
     public String toString()
@@ -50,8 +50,8 @@ public class DataPoint
     
     public void fromJSON(JSONObject json) throws JSONException
     {
-        m_null = json.isNull("value");
-        if (!m_null) {
+        m_isNull = json.isNull("value");
+        if (!m_isNull) {
             m_value = json.getDouble("value");
             m_decimals = json.optInt("decimal");
         }

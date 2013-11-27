@@ -8,16 +8,23 @@ import org.json.JSONException;
 public class CountryIndicatorResults extends Results
 {    
     ArrayList<TimeseriesDataPoint> m_dataPoints;
+    Indicator m_indicator;
 
-    public CountryIndicatorResults() 
+    public CountryIndicatorResults(Indicator indicator)
     {
         /* Default values */
         m_dataPoints = new ArrayList<TimeseriesDataPoint>();
+        m_indicator = indicator;
     }
 
     public final ArrayList<TimeseriesDataPoint> getDataPoints()
     {
         return m_dataPoints;
+    }
+
+    public Indicator getIndicator()
+    {
+        return m_indicator;
     }
     
     public void fromJSON(JSONArray response) throws JSONException

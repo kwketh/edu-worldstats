@@ -153,16 +153,8 @@ public class EducationFragment extends Fragment implements Observer
         {
             /* Retrieve the results object from the event source */
             ArrayList<TimeseriesDataPoint> points = results.getDataPoints();
-            boolean hasData = points.size() > 0; 
-            
-            TimeseriesDataPoint point = hasData ? points.get(0) : null;
-            String value = (point != null && !point.isNullValue()) ? point.getFormattedValue() : "No Data";
-            
-                       
-                labelValue.setText(value);
-           
-            
-            
+            boolean hasData = points.size() > 0;
+            labelValue.setText(results.getIndicator().formatValue(hasData ? points.get(0) : null));
         } else
         if (eventName.equals("errorTimeout")) 
         {

@@ -66,6 +66,20 @@ public enum Indicator {
     Indicator(String indicatorId) {
         m_id = indicatorId;
     }
+    
+    public String formatValue(DataPoint dataPoint) {
+        if (dataPoint == null || dataPoint.isNullValue()) {
+            return "(no data)";
+        } else
+        if (this == Indicator.AREA_OF_COUNTRY) {
+            return dataPoint.getFormattedValue() + "sq. km";
+        } else
+        if (this == Indicator.GDP) {
+            return "$ " + dataPoint.getFormattedValue();
+        } else {
+            return dataPoint.getFormattedValue();
+        }
+    }
 
     public String getId() {
         return m_id;
