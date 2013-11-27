@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tv2"
-        android:textSize="24sp" />
+        android:textSize="24sp" android:height="30dp" android:gravity="center_vertical"/>
 
     <TextView
         android:id="@+id/tv3"
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tv3"
-        android:textSize="24sp" />
+        android:textSize="24sp" android:height="30dp" android:gravity="center_vertical"/>
 
     <TextView
         android:id="@+id/tv4"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tv4"
-        android:textSize="24sp" />
+        android:textSize="24sp" android:height="30dp" android:gravity="center_vertical"/>
 
     <TextView
         android:id="@+id/tv5"
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tertiaryEnrollment"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="@string/literacy_rate"
         android:textSize="16sp" />
 
@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv1"
         android:layout_below="@+id/tv6"
-        android:textSize="24sp" />
+        android:textSize="24sp" android:height="30dp" android:gravity="center_vertical"/>
 
     <TextView
         android:id="@+id/femaleLiteracyRate"
@@ -103,26 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv7"
         android:layout_below="@+id/tv7"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/year"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv1"
-        android:layout_below="@+id/maleLiteracyRate"
-        android:text="@string/change_date"
-        android:layout_marginTop="10dp"
-        android:textAlignment="center"
-        android:textSize="12sp" />
-
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/year"
-        android:max="53"
-        android:progress="53" />
+        android:textSize="24sp" android:height="30dp" android:gravity="center_vertical"/>
 
     <TextView
         android:id="@+id/tv1"

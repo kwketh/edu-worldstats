@@ -25,7 +25,6 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView.OnEditorActionListener;
 import android.annotation.TargetApi;
@@ -114,7 +113,7 @@ public class ChooseCountry extends Activity implements Observer
         listView.setAdapter(countriesAdapter);
                 
         /* ListView item click event */
-        listView.setOnItemClickListener(new OnItemClickListener() 
+        listView.setOnItemClickListener(new OnItemClickListener()
         {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
@@ -124,18 +123,17 @@ public class ChooseCountry extends Activity implements Observer
 
                 // Show Alert
                 // Toast.makeText(getApplicationContext(), "You have selected country " + country.getName(), Toast.LENGTH_LONG).show();
-                
+
                 Intent intent = new Intent(getApplicationContext(), DisplayActivity.class);
-                
-                // todo: pass the country instance in the intent  
+
+                // todo: pass the country instance in the intent
                 intent.putExtra("countryCode", country.getCode());
                 intent.putExtra("countryName", country.getName());
                 intent.putExtra("capitalCity", country.getCapitalCity());
-                
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);                
-            }
 
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
         });
 
         textSearchCountry.addTextChangedListener(new TextWatcher() 
@@ -164,16 +162,17 @@ public class ChooseCountry extends Activity implements Observer
         textSearchCountry.setOnEditorActionListener(new OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                if (actionId == EditorInfo.IME_ACTION_DONE)
+                {
                     textSearchCountry.clearFocus();
-                    
+
                     /* Hide the keyboard */
                     InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(textSearchCountry.getWindowToken(), 0);
-                    
+
                     return false;
                 }
-                return true;                
+                return true;
             }
          });
     }

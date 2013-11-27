@@ -20,14 +20,15 @@ public class WorldBankAPI
      *   date range accepted (i.e. 1960:2013)
      * @return
      */
-    public static CountryIndicatorResults fetchCountriesIndicatorResults(CountryList countries, Indicator indicator, String date) 
+    public static CountryIndicatorResults fetchCountriesIndicatorResults(CountryList countries, Indicator indicator, String date)
     {
         String url = "/countries/" + countries.getQueryData() + "/indicators/" + indicator.getId();
         
         RequestParams params = new RequestParams();
         params.put("format", "json");
-        params.put("date", date);        
-                       
+        params.put("date", date);
+        params.put("per_page", "1000");
+
         CountryIndicatorResults results = new CountryIndicatorResults(indicator);
         WorldBankClient.get(url, params, new WorldBankResponseHandler(results));
         
@@ -38,7 +39,7 @@ public class WorldBankAPI
      {
         String url = "/countries";
         
-        RequestParams params = new RequestParams();        
+        RequestParams params = new RequestParams();
         params.put("format", "json");
         params.put("per_page", "1000");
                        

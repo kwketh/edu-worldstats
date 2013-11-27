@@ -1,26 +1,194 @@
 package com.app.fragments;
 
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.widget.TextView;
-import com.app.worldbankapi.CountryIndicatorResults;
-import com.app.worldbankapi.Indicator;
-import com.app.worldbankapi.TimeseriesDataPoint;
+import android.view.View;
+import com.app.R;
+import com.app.activities.DisplayActivity;
+import com.app.worldbankapi.*;
 
-import java.util.ArrayList;
-import java.util.Observable;
-import java.util.Observer;
+import java.util.*;
 
-public abstract class GenericIndicatorsFragment extends Fragment implements Observer {
+/**
+ * GenericIndicatorsFragment.
+ *
+ * The class provides additional functionality for a regular fragment.
+ *
+ * The functionality provides fetching country indicator results
+ * (only the active indicators used by the fragment instance) and
+ * updating the fragment labels with new values.
+ *
+ * This is an abstract class to and therefore any fragment requiring
+ * the above functionality needs to extend this class.
+ */
+public abstract class GenericIndicatorsFragment extends Fragment implements Observer
+{
+    private View m_rootView;
+    private String m_fetchDate;
+    private boolean m_created;
+
+    private static final Map<Indicator, Integer> m_textViewMap;
+    static
+    {
+        m_textViewMap = new HashMap<Indicator, Integer>();
+
+        /* Basic info fragment */
+        m_textViewMap.put(Indicator.POPULATION, R.id.population);
+        m_textViewMap.put(Indicator.AREA_OF_COUNTRY, R.id.countryArea);
+        m_textViewMap.put(Indicator.GROWTH, R.id.growth);
+        m_textViewMap.put(Indicator.GDP, R.id.GDP);
+
+        /* Education fragment */
+        m_textViewMap.put(Indicator.RATIO_F_M_PRIMARY, R.id.primaryEnrollment);
+        m_textViewMap.put(Indicator.RATIO_F_M_SECONDARY, R.id.secondaryEnrollment);
+        m_textViewMap.put(Indicator.RATIO_F_M_TERTIARY, R.id.tertiaryEnrollment);
+        m_textViewMap.put(Indicator.LITERACY_RATE_M, R.id.maleLiteracyRate);
+        m_textViewMap.put(Indicator.LITERACY_RATE_F, R.id.femaleLiteracyRate);
+
+        /* Industry fragment */
+        m_textViewMap.put(Indicator.MALE_UNEMPLOYMENT, R.id.maleUnemployed);
+        m_textViewMap.put(Indicator.FEMALE_UNEMPLOYMENT, R.id.femaleUnemployed);
+        m_textViewMap.put(Indicator.LABOUR_PARTICIPATION_MALE, R.id.maleParticipation);
+        m_textViewMap.put(Indicator.LABOUR_PARTICIPATION_FEMALE, R.id.femaleParticipation);
+        m_textViewMap.put(Indicator.EMPLOYERS_MALE, R.id.maleEmployers);
+        m_textViewMap.put(Indicator.EMPLOYERS_FEMALE, R.id.femaleEmployers);
+        m_textViewMap.put(Indicator.SELF_EMPLOYED_MALE, R.id.maleSelfEmployed);
+        m_textViewMap.put(Indicator.SELF_EMPLOYED_FEMALE, R.id.femaleSelfEmployed);
+
+        /* Social development fragment */
+        m_textViewMap.put(Indicator.LIFE_EXPECTANCY_MALE, R.id.maleLifeExpectancy);
+        m_textViewMap.put(Indicator.LIFE_EXPECTANCY_FEMALE, R.id.femaleLifeExpectancy);
+        m_textViewMap.put(Indicator.PARLIAMENT_SEATS_FEMALE, R.id.proportionOfSeats);
+        m_textViewMap.put(Indicator.FERTILITY_RATE, R.id.fertilityRate);
+        m_textViewMap.put(Indicator.CPIA_GENDER_RATING, R.id.cpiaRating);
+    }
+
+    private final CountryList m_fetchCountries;
+    private final Map<Indicator, CountryIndicatorResults> m_indicatorResultsMap;
+
+    GenericIndicatorsFragment()
+    {
+        super();
+        m_created = false;
+        m_indicatorResultsMap = new HashMap<Indicator, CountryIndicatorResults>();
+        m_fetchCountries = new CountryList();
+        setFetchYear(DisplayActivity.YEAR_DEFAULT);
+    }
+
+    public int getFetchYear()
+    {
+        return Integer.parseInt(m_fetchDate);
+    }
+
+    public void setFetchYear(int year)
+    {
+        m_fetchDate = String.valueOf(year);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+        /* Create the view */
+        m_rootView = inflater.inflate(getFragmentId(), container, false);
+
+        /* Get information about the intent */
+        final Intent intent = getActivity().getIntent();
+        final String countryCode = intent.getStringExtra("countryCode");
+
+        /* Set up list of countries to fetch information about */
+        m_fetchCountries.add(new Country(countryCode));
+
+        /* Update phase: fetch all the data required for the fragment  */
+        fetchData();
+
+        return m_rootView;
+    }
+
+    public void fetchData()
+    {
+        /* Check for any simple errors that should not happen in deployment */
+        if (m_fetchCountries.isEmpty()) {
+            System.out.println("Warning: fetchData() was called but no countries are specified");
+            return;
+        }
+
+        if (getActiveIndicators().length == 0)
+            throw new Error("fetchData() was called but no active indicators are specified");
+
+        /* Loop through active indicators of this fragment instance
+         * and fetch the new results */
+        for (Indicator indicator : getActiveIndicators())
+        {
+            /* Update the indicator text view state to loading */
+            TextView indicatorTextView = getTextViewForIndicator(indicator);
+            indicatorTextView.setTextColor(Color.GRAY);
+            indicatorTextView.setTextSize(18);
+            indicatorTextView.setText("(loading)");
+
+            /* If the results for the indicator exist already */
+            if (m_indicatorResultsMap.containsKey(indicator))
+            {
+                CountryIndicatorResults results = m_indicatorResultsMap.get(indicator);
+                this.handleCompleteIndicatorResults(indicator, results);
+            } else
+            {
+                /* Create new results for the indicator */
+                CountryIndicatorResults results = WorldBankAPI.fetchCountriesIndicatorResults(m_fetchCountries, indicator, DisplayActivity.YEAR_RANGE);
+
+                /* Store the results in our HashMap data structure */
+                m_indicatorResultsMap.put(indicator, results);
+
+                /* Listen for any changes within the results */
+                results.addObserver(this);
+            }
+        }
+
+    }
 
     /**
      * Returns a value label for a given indicator.
      *
      * This needs to be implemented by any subclass representing
      * values of indicators.
-     *
-     * @return
      */
-    public abstract TextView getLabelForIndicator(Indicator indicator);
+    final public TextView getTextViewForIndicator(Indicator indicator)
+    {
+        View view = getRootView();
+
+        if (!m_textViewMap.containsKey(indicator))
+             throw new Error("No text view found for indicator " + indicator);
+
+        Integer id = m_textViewMap.get(indicator);
+        TextView textView = (TextView)view.findViewById(id);
+
+        if (textView == null)
+            throw new Error("No text view found for indicator " + indicator);
+
+        return textView;
+    }
+
+    /**
+     * Returns id of the fragment.
+     */
+    abstract public Integer getFragmentId();
+
+    /**
+     * Returns a root view of the fragment.
+     */
+    public View getRootView()
+    {
+        return m_rootView;
+    }
+
+    /**
+     * Returns a list of active indicators for the fragment.
+     */
+    abstract public Indicator[] getActiveIndicators();
 
     /**
      * This method is called whenever the observed object has changed. (in this
@@ -36,24 +204,59 @@ public abstract class GenericIndicatorsFragment extends Fragment implements Obse
      * @see java.util.Observer#update
      */
     @Override
-    public void update(Observable eventSource, Object eventName) {
-        CountryIndicatorResults results = (CountryIndicatorResults) eventSource;
-        TextView indicatorLabel = getLabelForIndicator(results.getIndicator());
+    final public void update(Observable eventSource, Object eventName)
+    {
+        /* Retrieve the results from event source (by casting the event source to the results type) */
+        CountryIndicatorResults results = (CountryIndicatorResults)eventSource;
 
-        if (eventName.equals("fetchComplete")) {
-            /* Retrieve the results object from the event source */
-            ArrayList<TimeseriesDataPoint> points = results.getDataPoints();
-            boolean hasData = points.size() > 0;
-            indicatorLabel.setText(results.getIndicator().formatValue(hasData ? points.get(0) : null));
+        /* Gather information about the results */
+        Indicator indicator = results.getIndicator();
+
+        /* Ensure the event is coming from the most recent results. Sometimes
+         * if fetching two results at the same time, we only want to listen
+         * for updates coming from the most recent results. */
+        if (m_indicatorResultsMap.get(indicator) != results)
+            return;
+
+        /* Get the text view used to represent the indicator value */
+        TextView indicatorTextView = getTextViewForIndicator(indicator);
+
+        /* Finally decide what to do depending on the event */
+        if (eventName.equals("fetchComplete"))
+        {
+            handleCompleteIndicatorResults(indicator, results);
         } else
-        if (eventName.equals("errorTimeout")) {
-            indicatorLabel.setText("(timeout)");
-        } else
-        if (eventName.equals("errorJson")) {
-            indicatorLabel.setText("(json error)");
-        } else
-        if (eventName.equals("errorNetwork")) {
-            indicatorLabel.setText("(network error)");
+        if (eventName.equals("errorTimeout"))
+            indicatorTextView.setText("(timeout)");
+        else if (eventName.equals("errorParse"))
+            indicatorTextView.setText("(json error)");
+        else if (eventName.equals("errorNetwork"))
+            indicatorTextView.setText("(network error)");
+    }
+
+    private void handleCompleteIndicatorResults(Indicator indicator, CountryIndicatorResults results)
+    {
+        /* Get a text view responsible for displaying value of the indicator */
+        TextView indicatorTextView = getTextViewForIndicator(indicator);
+
+        /* Get the data points from results */
+        ArrayList<TimeseriesDataPoint> points = results.getDataPoints();
+        DataPoint point = results.getPointAtYear(getFetchYear());
+
+
+        if (point != null && !point.isNullValue()) {
+            /* Create representation of the indicator value into a 'pretty' formatted string,
+             * this usually depends on the indicator type (to show the unit) and the value
+             * it is representing (to show the right number of digits after the decimal point) */
+            String formattedValue = results.getIndicator().formatValue(point);
+
+            indicatorTextView.setTextColor(Color.BLACK);
+            indicatorTextView.setTextSize(24);
+            indicatorTextView.setText(formattedValue);
+        } else {
+            indicatorTextView.setTextColor(Color.GRAY);
+            indicatorTextView.setTextSize(18);
+            indicatorTextView.setText("(no data)");
         }
 
     }

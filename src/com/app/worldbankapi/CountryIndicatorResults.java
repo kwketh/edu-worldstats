@@ -1,6 +1,7 @@
 package com.app.worldbankapi;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,6 +26,19 @@ public class CountryIndicatorResults extends Results
     public Indicator getIndicator()
     {
         return m_indicator;
+    }
+
+    public TimeseriesDataPoint getPointAtYear(int year)
+    {
+        for (TimeseriesDataPoint point : m_dataPoints)
+        {
+            final Calendar dateInstance = Calendar.getInstance();
+            dateInstance.setTime(point.getDate());
+            if (dateInstance.get(Calendar.YEAR) == year)
+                return point;
+        }
+
+        return null;
     }
     
     public void fromJSON(JSONArray response) throws JSONException

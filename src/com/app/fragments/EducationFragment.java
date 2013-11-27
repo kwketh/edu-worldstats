@@ -21,158 +21,27 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
-public class EducationFragment extends Fragment implements Observer
+public class EducationFragment extends GenericIndicatorsFragment
 {
+    private Indicator[] m_activeIndicators = {
+        Indicator.RATIO_F_M_PRIMARY,
+        Indicator.RATIO_F_M_SECONDARY,
+        Indicator.RATIO_F_M_TERTIARY,
+        Indicator.LITERACY_RATE_M,
+        Indicator.LITERACY_RATE_F,
+    };
 
-    SeekBar yearSeek;
-    TextView year;
-    TextView primaryEnrollment;
-    TextView secondaryEnrollment;
-    TextView tertiaryEnrollment;
-    TextView maleLiteracyRate;
-    TextView femaleLiteracyRate;
-    
-    
-    CountryIndicatorResults m_resultsPrimaryEnrollment;
-    CountryIndicatorResults m_resultsSecondaryEnrollment;
-    CountryIndicatorResults m_resultsTertiaryEnrollment;
-    CountryIndicatorResults m_resultsLiteracyRateMale;
-    CountryIndicatorResults m_resultsLiteracyRateFemale;
-    
-    final static int YEAR_MIN = 1960;
-    final static int YEAR_MAX = 2010;    
-    
-    private int m_currentYear = 2010;
+    TextView capitalCityText;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-
-        View rootView = inflater.inflate(R.layout.education_fragment,
-                container, false);
-        
-        Intent intent = getActivity().getIntent();
-        final String countryCode = intent.getStringExtra("countryCode");
-
-        year = (TextView) rootView.findViewById(R.id.year);
-        primaryEnrollment = (TextView) rootView
-                .findViewById(R.id.primaryEnrollment);
-        secondaryEnrollment = (TextView) rootView
-                .findViewById(R.id.secondaryEnrollment);
-        tertiaryEnrollment = (TextView) rootView
-                .findViewById(R.id.tertiaryEnrollment);
-        maleLiteracyRate = (TextView) rootView
-                .findViewById(R.id.maleLiteracyRate);
-        femaleLiteracyRate = (TextView) rootView
-                .findViewById(R.id.femaleLiteracyRate);
-        yearSeek = (SeekBar) rootView.findViewById(R.id.seekBar);
-        
-        updateValues();
-        
-        yearSeek.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
-                m_currentYear = YEAR_MIN + arg1;
-                updateValues();
-                loadCountryIndicators(countryCode);        
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar arg0) {
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar arg0) {
-
-            }
-        });
-        
-        loadCountryIndicators(countryCode);
-
-        return rootView;
-    }
-    
-    public void loadCountryIndicators(String countryCode)
+    public Integer getFragmentId()
     {
-        String fetchDate = String.valueOf(m_currentYear);
-        
-        /* Construct the results with the country code and indicators */
-        CountryList country = new CountryList(countryCode);
-                
-        m_resultsPrimaryEnrollment = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.RATIO_F_M_PRIMARY, fetchDate);        
-        m_resultsSecondaryEnrollment = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.RATIO_F_M_SECONDARY, fetchDate);
-        m_resultsTertiaryEnrollment = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.RATIO_F_M_TERTIARY, fetchDate);
-        m_resultsLiteracyRateMale = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.LITERACY_RATE_M, fetchDate);
-        m_resultsLiteracyRateFemale = WorldBankAPI.fetchCountriesIndicatorResults(country, Indicator.LITERACY_RATE_F, fetchDate);
-                
-        /* Observe for any changes to the results */
-        m_resultsPrimaryEnrollment.addObserver(this);
-        m_resultsSecondaryEnrollment.addObserver(this);
-        m_resultsTertiaryEnrollment.addObserver(this);
-        m_resultsLiteracyRateMale.addObserver(this);
-        m_resultsLiteracyRateFemale.addObserver(this);
-    }
-    
-    public void updateValues() {    
-        
-        primaryEnrollment.setText("Loading...");
-        secondaryEnrollment.setText("Loading...");
-        tertiaryEnrollment.setText("Loading...");
-        maleLiteracyRate.setText("Loading...");
-        femaleLiteracyRate.setText("Loading...");
-        year.setText("Change year: " + m_currentYear);
+        return R.layout.education_fragment;
     }
 
     @Override
-    public void update(Observable eventSource, Object eventName) 
+    public Indicator[] getActiveIndicators()
     {
-        
-        CountryIndicatorResults results = (CountryIndicatorResults)eventSource;
-        TextView labelValue;
-    
-        if (results == m_resultsPrimaryEnrollment) {
-            labelValue = primaryEnrollment;
-        } else
-        if (results == m_resultsSecondaryEnrollment) {
-            labelValue = secondaryEnrollment;
-        } else
-        if (results == m_resultsTertiaryEnrollment) {
-            labelValue = tertiaryEnrollment;
-        } else
-        if (results == m_resultsLiteracyRateMale) {
-            labelValue = maleLiteracyRate;
-        } else
-        if (results == m_resultsLiteracyRateFemale){
-            labelValue = femaleLiteracyRate;
-        } else
-        {
-            return;
-        }
-        
-        if (eventName.equals("fetchComplete")) 
-        {
-            /* Retrieve the results object from the event source */
-            ArrayList<TimeseriesDataPoint> points = results.getDataPoints();
-            boolean hasData = points.size() > 0;
-            labelValue.setText(results.getIndicator().formatValue(hasData ? points.get(0) : null));
-        } else
-        if (eventName.equals("errorTimeout")) 
-        {
-            labelValue.setText("Timeout");
-        } else
-        if (eventName.equals("errorTimeout")) 
-        {
-            labelValue.setText("Timeout");
-        } else
-        if (eventName.equals("errorJson")) 
-        {
-            labelValue.setText("JSON Error");
-        } else
-        if (eventName.equals("errorNetwork")) 
-        {
-            labelValue.setText("Network Error");
-        }            
-            
-    }    
-
+        return m_activeIndicators;
+    }
 }
