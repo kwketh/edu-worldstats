@@ -37,28 +37,28 @@ public class ChooseCountry extends Activity implements Observer
     /**
      * An adapter for the list referenced to countries array.
      */    
-    CountryListAdapter countriesAdapter;
+    private CountryListAdapter countriesAdapter;
     
     /**
      * Country results.
      */
-    CountryListResults results;     
+    private CountryListResults results;
     
     /**
      * The view listing all the countries. 
      */
-    ListView listView;
+    private ListView listView;
     
     /**
      * Text field used for searching country by name. 
      */
-    EditText textSearchCountry;
+    private EditText textSearchCountry;
     
     /*
      * Loading progress dialog.
      */
-    ProgressDialog progressDialog = null;
-    
+    private ProgressDialog progressDialog = null;
+
     void loadCountries() 
     {   
         MainApp app = (MainApp)this.getApplication();
@@ -78,8 +78,9 @@ public class ChooseCountry extends Activity implements Observer
         if (!results.areLoaded())
         {
             progressDialog = new ProgressDialog(this);
+            progressDialog.setCancelable(false);
             progressDialog.setTitle("Loading");
-            progressDialog.setMessage("Waiting for country list...");
+            progressDialog.setMessage("Waiting for country list");
             progressDialog.show();
         }
     }

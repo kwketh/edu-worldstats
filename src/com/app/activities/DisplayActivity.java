@@ -202,11 +202,12 @@ public class DisplayActivity extends FragmentActivity implements ActionBar.TabLi
             ((GenericIndicatorsFragment)activeFragment).animateIn();
     }
     
-    public void showDetails(View v) {
-        String indicator = (String) v.getTag();
+    public void showDetails(View view)
+    {
+        String indicator = (String)view.getTag();
         Intent intent = new Intent(this, DetailedView.class);
-        intent.putExtra("indicator", indicator);  
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        intent.putExtra("indicator", indicator);
         startActivity(intent);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 }
