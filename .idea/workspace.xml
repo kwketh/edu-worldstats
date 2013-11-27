@@ -29,16 +29,246 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09a095a6-63dc-43e1-aee3-cc39345d2194" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/basic_info_compare_fragment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/education_compare_fragment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/industry_compare_fragment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/social_development_compare_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/afghanistan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/albania.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/algeria.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/american_samoa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/andorra.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/angola.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/anguilla.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/antigua_and_barbuda.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/argentina.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/armenia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/aruba.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/australia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/austria.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/azerbaijan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/bahamas.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/bahrain.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/bangladesh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/barbados.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/belarus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/belgium.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/belize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/benin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/bermuda.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/bhutan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/bolivia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/bosnia_and_herzegovina.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/botswana.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/brazil.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/brunei_darussalam.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/bulgaria.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/burkina_faso.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/burundi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/cambodia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/cameroon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/canada.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/cape_verde.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/cayman_islands.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/central_african_republic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/chad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/chile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/china.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/christmas_island.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/colombia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/comoros.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/congo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/cook_islands.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/costa_rica.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/cote_divoire.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/croatia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/cuba.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/curacao.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/cyprus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/czech_republic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/denmark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/djibouti.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/dominica.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/dominican_republic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ecuador.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/egypt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/el_salvador.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/equatorial_guinea.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/eritrea.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/estonia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ethiopia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/faeroe_islands.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/falkland_islands.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/fiji.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/finland.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/france.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/french_polynesia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/gabon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/gambia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/georgia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/germany.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ghana.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/gibraltar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/greece.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/greenland.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/grenada.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/guam.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/guatemala.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/guinea.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/guineabissau.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/guyana.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/haiti.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/honduras.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/hong_kong.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/hungary.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/iceland.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/india.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/indonesia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/iran.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/iraq.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ireland.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/isle_of_man.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/israel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/italy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/jamaica.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/japan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/jordan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/kazakhstan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/kenya.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/kiribati.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/kuwait.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/kyrgyz_republic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/lao_pdr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/latvia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/lebanon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/lesotho.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/liberia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/libya.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/liechtenstein.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/lithuania.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/luxembourg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/macao.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/macedonia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/madagascar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/malawi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/malaysia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/maldives.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/mali.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/malta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/marshall_islands.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/martinique.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/mauritania.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/mauritius.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/mexico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/micronesia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/moldova.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/monaco.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/mongolia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/montenegro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/montserrat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/morocco.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/mozambique.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/myanmar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/namibia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/nauru.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/nepal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/netherlands.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/netherlands_antilles.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/new_caledonia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/new_zealand.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/nicaragua.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/niger.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/nigeria.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/niue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/norfolk_island.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/north_korea.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/northern_mariana_islands.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/norway.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/oman.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/pakistan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/palau.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/panama.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/papua_new_guinea.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/paraguay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/peru.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/philippines.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/pitcairn_islands.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/poland.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/portugal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/puerto_rico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/qatar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/republic_of_the_congo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/romania.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/russian_federation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/rwanda.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/saint_pierre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/saint_vicent_and_the_grenadines.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/samoa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/san_marino.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/sao_tome_and_principe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/saudi_arabia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/senegal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/serbia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/serbia_and_montenegro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/seychelles.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/sierra_leone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/singapore.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/sint_maarten.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/slovak_republic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/slovenia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/solomon_islands.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/somalia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/south_africa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/south_georgia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/south_korea.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/soviet_union.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/spain.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/sri_lanka.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/st_kitts_and_nevis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/st_lucia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/sudan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/suriname.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/swaziland.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/sweden.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/switzerland.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/syrian_arab_republic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/taiwan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/tajikistan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/tanzania.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/thailand.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/tibet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/timorleste.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/togo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/tonga.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/trinidad_and_tobago.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/tunisia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/turkey.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/turkmenistan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/turks_and_caicos_islands.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/tuvalu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/uae.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/uganda.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ukraine.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/united_kingdom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/united_states.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/uruguay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/us_virgin_islands.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/uzbekistan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/vanuatu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/vatican_city.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/venezuela.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/vietnam.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/virgin_islands.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallis_and_futuna.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/yemen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/zambia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/zimbabwe.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/Country.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/Country.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/adapters/CountryListAdapter.java" afterPath="$PROJECT_DIR$/src/com/app/adapters/CountryListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/MainApp.java" afterPath="$PROJECT_DIR$/src/com/app/MainApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/country_list_item.xml" afterPath="$PROJECT_DIR$/res/layout/country_list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/social_development_fragment.xml" afterPath="$PROJECT_DIR$/res/layout/social_development_fragment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="edu-worldstats.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385570639651" ignored="false" />
+    <file path="/Dummy.txt" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385570898471" ignored="false" />
     <file path="/CompareCountryWith.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385476390568" ignored="false" />
     <file path="/fragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385544798037" ignored="false" />
     <file path="/ChooseCountry.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385563414088" ignored="false" />
@@ -55,17 +285,19 @@
     <file path="/TabsPagerAdapter.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385545647727" ignored="false" />
     <file path="/SocialDevelopmentFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385547361767" ignored="false" />
     <file path="/IndustryFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385547313155" ignored="false" />
-    <file path="/strings.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385554802651" ignored="false" />
+    <file path="/strings.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385577618822" ignored="false" />
     <file path="/WorldBankResponseHandler.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385552734620" ignored="false" />
     <file path="/basic_info_fragment.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385555574215" ignored="false" />
     <file path="/slide_in_text.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385558573756" ignored="false" />
     <file path="/Results.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385560144529" ignored="false" />
     <file path="/DetailedView.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385569122438" ignored="false" />
     <file path="/SearchCountry.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385561563736" ignored="false" />
-    <file path="/styles.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385568519345" ignored="false" />
+    <file path="/styles.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385578075505" ignored="false" />
     <file path="/WorldBankClient.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385564138472" ignored="false" />
     <file path="/activity_detailed_view.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385565332890" ignored="false" />
     <file path="$PROJECT_DIR$/res/color/colors.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385567527764" ignored="false" />
+    <file path="/CountryListAdapter.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385578183415" ignored="false" />
+    <file path="/Country.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385575792966" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,85 +358,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DetailedView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/activities/DetailedView.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="60" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompareCountries.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/activities/CompareCountries.java">
+      <file leaf-file-name="choose_country.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/choose_country.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicInfoFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="45" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_detailed_view.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_detailed_view.xml">
+      <file leaf-file-name="basic_info_fragment.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/basic_info_fragment.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="25" selection-start="620" selection-end="669" vertical-scroll-proportion="-4.0384617">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="View.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platforms/android-18/android.jar!/android/view/View.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1152" column="0" selection-start="52033" selection-end="52033" vertical-scroll-proportion="0.0">
+      <file leaf-file-name="country_list_item.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/country_list_item.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="19" column="42" selection-start="865" selection-end="865" vertical-scroll-proportion="-11.4">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="33" selection-start="238" selection-end="238" vertical-scroll-proportion="0.25301206">
-              <folding />
-            </state>
+      <file leaf-file-name="social_development_fragment.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/social_development_fragment.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericIndicatorsFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="22" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CountryIndicatorResults.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChooseCountry.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="63" selection-start="2333" selection-end="2333" vertical-scroll-proportion="0.0">
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -213,9 +415,43 @@
       <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="58" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+            <state line="17" column="15" selection-start="665" selection-end="665" vertical-scroll-proportion="-10.2">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountryListAdapter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/app/adapters/CountryListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="31" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.7293355">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainApp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/app/MainApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="13" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grenada.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable/grenada.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -237,27 +473,27 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/Results.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/app/activities/SearchCountry.java" />
-        <option value="$PROJECT_DIR$/res/anim/fade_in_half.xml" />
-        <option value="$PROJECT_DIR$/res/anim/fade_out_half.xml" />
-        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankAPI.java" />
-        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankClient.java" />
         <option value="$PROJECT_DIR$/res/color/colors.xml" />
         <option value="$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java" />
         <option value="$PROJECT_DIR$/res/anim/fade_out_instant.xml" />
         <option value="$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java" />
         <option value="$PROJECT_DIR$/src/com/app/activities/DetailedView.java" />
-        <option value="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" />
-        <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_detailed_view.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" />
+        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/diagram.java" />
+        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/Country.java" />
+        <option value="$PROJECT_DIR$/res/layout/social_development_fragment.xml" />
+        <option value="$PROJECT_DIR$/res/layout/country_list_item.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/src/com/app/MainApp.java" />
+        <option value="$PROJECT_DIR$/src/com/app/adapters/CountryListAdapter.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="5" />
+    <option name="x" value="3" />
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="813" />
@@ -290,6 +526,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -483,7 +720,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
+              <option name="myItemId" value="menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -502,24 +739,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edu-worldstats" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edu-worldstats" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anim" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -557,20 +776,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/android-support-v4.jar!/" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/android-support-v4.jar!/" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="edu-worldstats" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -581,8 +799,8 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="options.lastSelected" value="project.propCompiler" />
-    <property name="AndroidLayoutSelectedEditor" value="text-editor" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="AndroidLayoutSelectedEditor" value="android-designer" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
@@ -591,6 +809,12 @@
     <property name="gradle.tool.window.active" value="Tasks" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res/drawable" />
+      <recent name="$PROJECT_DIR$/res/drawable/flags" />
+    </key>
   </component>
   <component name="RunManager" selected="Android Application.TestApp">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -625,6 +849,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -651,19 +888,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -791,9 +1015,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="22" width="1440" height="813" extended-state="6" />
+    <frame x="3" y="22" width="1440" height="813" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17934003" sideWeight="0.98268396" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.98268396" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32611832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.981241" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.77633476" order="4" side_tool="false" content_ui="tabs" />
@@ -808,18 +1034,16 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289855" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32467532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266187" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32611832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.981241" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2898135" sideWeight="0.6724387" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.017316017" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17934003" sideWeight="0.981241" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2898135" sideWeight="0.98268396" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.017316017" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.981241" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289855" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -890,23 +1114,58 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/app/activities/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/Country.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/activities/CompareCountryWith.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+        <state line="83" column="24" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_compare_country_with.xml">
+    <entry file="file://$PROJECT_DIR$/res/drawable/switzerland.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/syrian_arab_republic.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/saudi_arabia.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/united_states.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/virgin_islands.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/grenada.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/choose_country.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/basic_info_fragment.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
@@ -916,96 +1175,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/anim/fade_out.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/social_development_fragment.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/country_list_item.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="19" column="42" selection-start="865" selection-end="865" vertical-scroll-proportion="-11.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="20" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="22" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="45" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/activities/DetailedView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="60" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/activities/CompareCountries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="63" selection-start="2333" selection-end="2333" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="58" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+        <state line="17" column="15" selection-start="665" selection-end="665" vertical-scroll-proportion="-10.2">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_detailed_view.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/app/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="25" selection-start="620" selection-end="669" vertical-scroll-proportion="-4.0384617">
+        <state line="9" column="13" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platforms/android-18/android.jar!/android/view/View.class">
+    <entry file="file://$PROJECT_DIR$/src/com/app/adapters/CountryListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1152" column="0" selection-start="52033" selection-end="52033" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="33" selection-start="238" selection-end="238" vertical-scroll-proportion="0.25301206">
+        <state line="48" column="31" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.7293355">
           <folding />
         </state>
       </provider>
