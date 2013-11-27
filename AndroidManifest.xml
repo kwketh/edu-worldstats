@@ -67,15 +67,13 @@
         </activity>
         <activity
             android:name="com.app.activities.DetailedView"
+            android:theme="@style/Theme.Transparent"
             android:parentActivityName="com.app.activities.DisplayActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.activities.DisplayActivity" />
         </activity>
-        <activity
-            android:name="com.app.DetailedView"
-            android:label="@string/title_activity_detailed_view" >
-        </activity>
+
     </application>
 
 </manifest>
