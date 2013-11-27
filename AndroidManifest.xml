@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="13"
+        android:minSdkVersion="14"
         android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -28,7 +28,7 @@
         <activity
             android:name="com.app.activities.ChooseCountry"
             android:label="@string/select_country"
-            android:parentActivityName="com.app.activities.MainActivity"
+            android:parentActivityName="com.app.activities.MainActivity" 
             android:windowSoftInputMode="adjustPan" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -58,20 +58,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.activities.MainActivity" />
         </activity>
-        <activity
+        <activity 
             android:name="com.app.activities.DisplayActivity"
-            android:parentActivityName="com.app.activities.ChooseCountry" >
+            android:parentActivityName="com.app.activities.ChooseCountry" >            
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.activities.ChooseCountry" />
         </activity>
         <activity
-            android:name="com.app.activities.DetailedView"
-            android:theme="@style/Theme.Transparent"
-            android:parentActivityName="com.app.activities.DisplayActivity" >
+                android:name="com.app.activities.DetailedView"
+                android:theme="@style/Theme.Transparent"
+                android:parentActivityName="com.app.activities.DisplayActivity" >
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.activities.DisplayActivity" />
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.app.activities.DisplayActivity" />
         </activity>
 
     </application>
