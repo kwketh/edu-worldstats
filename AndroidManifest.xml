@@ -73,7 +73,18 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.app.activities.DisplayActivity" />
         </activity>
-
+        <activity
+            android:name="com.app.DetailedView"
+            android:label="@string/title_activity_detailed_view" >
+        </activity>
+        <activity
+            android:name="com.app.activities.RSSActivity"
+            android:label="@string/title_activity_rss"
+            android:parentActivityName="com.app.activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.activities.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
