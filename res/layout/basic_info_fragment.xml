@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/tv0"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/capitalCity"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/tv0"
@@ -28,7 +28,7 @@
 
     <TextView
         android:id="@+id/tv1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/capitalCity"
@@ -44,7 +44,7 @@
 
     <TextView
         android:id="@+id/population"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/tv1"
@@ -53,7 +53,7 @@
 
     <TextView
         android:id="@+id/tv3"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/population"
@@ -64,7 +64,7 @@
 
     <TextView
         android:id="@+id/GDP"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/tv3"
@@ -73,7 +73,7 @@
 
     <TextView
         android:id="@+id/tv4"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/GDP"
@@ -84,7 +84,7 @@
 
     <TextView
         android:id="@+id/countryArea"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/tv4"
@@ -93,7 +93,7 @@
 
     <TextView
         android:id="@+id/tv5"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/countryArea"
@@ -104,7 +104,7 @@
 
     <TextView
         android:id="@+id/growth"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/capitalCity"
         android:layout_below="@+id/tv5"
@@ -131,19 +131,62 @@
         android:layout_below="@+id/year"
         android:layout_marginTop="18dp" />
 
-    <Button
-        android:id="@+id/button1"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tv1"
-        android:layout_alignBottom="@+id/tv1"
-        android:layout_alignLeft="@+id/tv1"
-        android:layout_marginLeft="84dp"
-        android:text="i"
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_toRightOf="@+id/tv1"
+        android:layout_alignBottom="@id/tv1"
+        android:layout_marginLeft="5dp"
+        android:adjustViewBounds="true"  
+        android:scaleType="fitXY"
+        android:contentDescription="@string/more_info"
+        android:src="@android:drawable/ic_menu_info_details"
         android:onClick="showDetails"
-        android:tag="SP.POP.TOTL"
-        android:clickable="true"
-         />
+        android:tag="SP.POP.TOTL" />
+    
+    <ImageView
+        android:id="@+id/iv2"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_toRightOf="@+id/tv3"
+        android:layout_alignBottom="@id/tv3"
+        android:layout_marginLeft="5dp"
+        android:adjustViewBounds="true"  
+        android:scaleType="fitXY"
+        android:contentDescription="@string/more_info"
+        android:src="@android:drawable/ic_menu_info_details"
+        android:onClick="showDetails"
+        android:tag="NY.GDP.MKTP.CD" />
+    
+    <ImageView
+        android:id="@+id/iv3"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_toRightOf="@+id/tv4"
+        android:layout_alignBottom="@id/tv4"
+        android:layout_marginLeft="5dp"
+        android:adjustViewBounds="true"  
+        android:scaleType="fitXY"
+        android:contentDescription="@string/more_info"
+        android:src="@android:drawable/ic_menu_info_details"
+        android:onClick="showDetails"
+        android:tag="AG.LND.TOTL.K2" />
+    
+     <ImageView
+        android:id="@+id/iv4"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_toRightOf="@+id/tv5"
+        android:layout_alignBottom="@id/tv5"
+        android:layout_marginLeft="5dp"
+        android:adjustViewBounds="true"  
+        android:scaleType="fitXY"
+        android:contentDescription="@string/more_info"
+        android:src="@android:drawable/ic_menu_info_details"
+        android:onClick="showDetails"
+        android:tag="NY.GDP.MKTP.KD.ZG" />
+     
+
 
 </RelativeLayout>

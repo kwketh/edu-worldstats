@@ -44,5 +44,6 @@
     <string name="capital_city">Capital city</string>
     <string name="area_of_country">Area of Country</string>
     <string name="title_activity_detailed_view">DetailedView</string>
+    <string name="more_info">More info</string>
 
 </resources>
