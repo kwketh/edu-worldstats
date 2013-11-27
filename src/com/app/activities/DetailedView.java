@@ -3,6 +3,7 @@ package com.app.activities;
 import java.util.Observable;
 import java.util.Observer;
 
+import android.view.MenuItem;
 import com.app.R;
 import com.app.worldbankapi.CountryIndicatorResults;
 import com.app.worldbankapi.IndicatorDefinitionResults;
@@ -32,14 +33,26 @@ public class DetailedView extends Activity implements Observer
                 
         IndicatorDefinitionResults results = WorldBankAPI.fetchIndicatorDefinition(indicator);
         results.addObserver(this);
-           
     }
-    
+
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.detailed_view, menu);
-        return true;
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case android.R.id.home:
+                finish();
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
@@ -49,10 +62,6 @@ public class DetailedView extends Activity implements Observer
         IndicatorDefinitionResults results = (IndicatorDefinitionResults)eventSource;
         name.setText(results.getName());
         definition.setText(results.getDefinition());
-    
     }
-    
-    
-    
     
 }
