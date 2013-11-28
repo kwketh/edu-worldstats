@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -103,10 +104,12 @@ public abstract class GenericIndicatorsFragment extends Fragment implements Obse
 
         /* Get information about the intent */
         final Intent intent = getActivity().getIntent();
-        final String countryCode = intent.getStringExtra("countryCode");
+        final String[] countryCodes = intent.getStringExtra("countryCodes").split(";");
 
         /* Set up list of countries to fetch information about */
-        m_fetchCountries.add(new Country(countryCode));
+        m_fetchCountries.clear();
+        for (String countryCode : countryCodes)
+            m_fetchCountries.add(new Country(countryCode));
 
         /* Update phase: fetch all the data required for the fragment  */
         fetchData();
@@ -150,9 +153,14 @@ public abstract class GenericIndicatorsFragment extends Fragment implements Obse
         {
             /* Update the indicator text view state to loading */
             TextView indicatorTextView = getTextViewForIndicator(indicator);
-            indicatorTextView.setTextColor(Color.GRAY);
-            indicatorTextView.setTextSize(18);
-            indicatorTextView.setText("(loading)");
+
+            if (m_fetchCountries.size() < 2) {
+                indicatorTextView.setText(Html.fromHtml("<small><font color='grey'><small>(loading)</small></font></small>&nbsp;"));
+                indicatorTextView.setTextSize(24);
+            } else {
+                indicatorTextView.setText(Html.fromHtml("<font color='grey'>(loading)</font>&nbsp;"));
+                indicatorTextView.setTextSize(18);
+            }
 
             /* If the results for the indicator exist already */
             if (m_indicatorResultsMap.containsKey(indicator))
@@ -259,30 +267,76 @@ public abstract class GenericIndicatorsFragment extends Fragment implements Obse
             indicatorTextView.setText("(network error)");
     }
 
+    String getCountryColorByIndex(int index)
+    {
+        if (m_fetchCountries.size() < 2)
+            return "#000000";
+
+        if (index == 0)
+            return "#0000AA";
+
+        else if (index == 1)
+            return "#AA0000";
+
+        else if (index == 2)
+            return "#00FF00";
+
+        return "";
+    }
+
+
+
+    public String formatValuesToHtml(String[] formattedValues)
+    {
+        String htmlContents = "";
+        for (int i = 0; i < formattedValues.length; i++) {
+            String value = formattedValues[i];
+            if (value.isEmpty()) {
+                if (m_fetchCountries.size() < 2) {
+                    htmlContents += "<small><font color='grey'><small>(no data)</small></font></small>&nbsp;";
+                } else {
+                    htmlContents += "<font color='grey'>(no data)</font>&nbsp;";
+                }
+            } else {
+                String color = getCountryColorByIndex(i);
+                htmlContents += "<font color='" + color + "'> " + value + "</font>&nbsp;";
+            }
+        }
+        return htmlContents;
+    }
+
     private void handleCompleteIndicatorResults(Indicator indicator, CountryIndicatorResults results)
     {
         /* Get a text view responsible for displaying value of the indicator */
         TextView indicatorTextView = getTextViewForIndicator(indicator);
+        String[] countryValues = new String[m_fetchCountries.size()];
 
-        /* Get the data points from results */
-        ArrayList<TimeseriesDataPoint> points = results.getDataPoints();
-        DataPoint point = results.getPointAtYear(getFetchYear());
-
-
-        if (point != null && !point.isNullValue()) {
-            /* Create representation of the indicator value into a 'pretty' formatted string,
-             * this usually depends on the indicator type (to show the unit) and the value
-             * it is representing (to show the right number of digits after the decimal point) */
-            String formattedValue = results.getIndicator().formatValue(point);
-
-            indicatorTextView.setTextColor(Color.BLACK);
+        if (m_fetchCountries.size() < 2) {
             indicatorTextView.setTextSize(24);
-            indicatorTextView.setText(formattedValue);
         } else {
-            indicatorTextView.setTextColor(Color.GRAY);
             indicatorTextView.setTextSize(18);
-            indicatorTextView.setText("(no data)");
         }
 
+        for (int countryIndex = 0; countryIndex < m_fetchCountries.size(); countryIndex++)
+        {
+            /* Get the data points from results */
+            ArrayList<CountryDataPoint> points = results.getDataPoints();
+            points = CountryIndicatorResults.filterByYear(points, getFetchYear());
+            points = CountryIndicatorResults.filterByCountry(points, m_fetchCountries.get(countryIndex));
+
+            CountryDataPoint point = points.get(0);
+
+            if (point != null && !point.isNullValue()) {
+                /* Create representation of the indicator value into a 'pretty' formatted string,
+                 * this usually depends on the indicator type (to show the unit) and the value
+                 * it is representing (to show the right number of digits after the decimal point) */
+                countryValues[countryIndex] = results.getIndicator().formatValue(point);
+            } else {
+                countryValues[countryIndex] = "";
+            }
+        }
+
+        String htmlContents = formatValuesToHtml(countryValues);
+        indicatorTextView.setText(Html.fromHtml(htmlContents));
     }
 }

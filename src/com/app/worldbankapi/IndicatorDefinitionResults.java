@@ -11,32 +11,27 @@ public class IndicatorDefinitionResults extends Results
 {
     String name;
     String definition;
-    
-    IndicatorDefinitionResults() { }
-    
-    
+
     public void fromJSON(JSONArray response) throws JSONException
     {
         super.fromJSON(response);
         
-        JSONArray results = response.getJSONArray(1);        
-        
-            JSONObject indicatorData = results.getJSONObject(0);
-            
-            String nameA = indicatorData.getString("name");            
-            String definitionA = indicatorData.getString("sourceNote");
-            
-            name = nameA;
-            definition = definitionA;
-            
+        JSONArray results = response.getJSONArray(1);
+        JSONObject indicatorData = results.getJSONObject(0);
+
+        name = indicatorData.getString("name");
+        definition = indicatorData.getString("sourceNote");
+
         setChanged();           
     }
     
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
     
-    public String getDefinition() {
+    public String getDefinition()
+    {
         return definition;
     }
 }

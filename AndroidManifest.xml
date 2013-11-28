@@ -67,6 +67,13 @@
                 android:value="com.app.activities.ChooseCountry" />
         </activity>
         <activity
+            android:name="com.app.activities.DisplayActivityComparasion"
+            android:parentActivityName="com.app.activities.CompareCountries" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.activities.CompareCountries" />
+        </activity>
+        <activity
                 android:name="com.app.activities.DetailedView"
                 android:theme="@style/Theme.Transparent"
                 android:parentActivityName="com.app.activities.DisplayActivity" >

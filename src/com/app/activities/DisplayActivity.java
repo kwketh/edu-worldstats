@@ -30,10 +30,10 @@ public class DisplayActivity extends FragmentActivity implements ActionBar.TabLi
     final public static String YEAR_RANGE = YEAR_MIN + ":" + YEAR_MAX;
 
     /* Private members */
-    private ViewPager m_pager;
-    private TabsPagerAdapter m_adapter;
-    private SeekBar m_yearBar;
-    private TextView m_yearBarLabel;
+    protected ViewPager m_pager;
+    protected TabsPagerAdapter m_adapter;
+    protected SeekBar m_yearBar;
+    protected TextView m_yearBarLabel;
     private int m_fetchYear;
 
     /* Tab titles in order */
@@ -55,17 +55,23 @@ public class DisplayActivity extends FragmentActivity implements ActionBar.TabLi
     {
         return m_adapter.getItem(position);
     }
+
+    int getLayoutResourceId()
+    {
+        return R.layout.activity_display;
+    }
     
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         /* Construct view phase */
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display);
+        setContentView(getLayoutResourceId());
 
         /* Find elements phase */
         m_yearBar = (SeekBar)findViewById(R.id.yearBar);
         m_yearBarLabel = (TextView)findViewById(R.id.yearBarLabel);
+        m_pager = (ViewPager)findViewById(R.id.pager);
 
         /* Update phase */
         setFetchYear(YEAR_DEFAULT, false);
@@ -81,7 +87,6 @@ public class DisplayActivity extends FragmentActivity implements ActionBar.TabLi
 
         /* Construct tabs pager adapter */
         m_adapter = new TabsPagerAdapter(getSupportFragmentManager());
-        m_pager = (ViewPager)findViewById(R.id.pager);
         m_pager.setAdapter(m_adapter);
 
         /* Add all tabs to the action bar */

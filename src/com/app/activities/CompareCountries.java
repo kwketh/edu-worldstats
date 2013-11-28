@@ -3,6 +3,7 @@ package com.app.activities;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
@@ -104,10 +105,16 @@ public class CompareCountries extends Activity
             return;
         }
 
-        m_progressDialog = new ProgressDialog(this);
-        m_progressDialog.setCancelable(false);
-        m_progressDialog.setTitle("Loading");
-        m_progressDialog.setMessage("Waiting for indicator data");
-        m_progressDialog.show();
+
+        Intent intent = new Intent(this, DisplayActivityComparasion.class);
+
+        // todo: pass the country instance in the intent
+        intent.putExtra("countryCodes", m_firstCountry.getCode() + ";" + m_secondCountry.getCode());
+        intent.putExtra("countryName", m_firstCountry.getName());
+        intent.putExtra("capitalCities", m_firstCountry.getCapitalCity() + ";" + m_secondCountry.getCapitalCity());
+
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
+
 }

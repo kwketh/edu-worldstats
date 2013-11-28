@@ -1,5 +1,6 @@
 package com.app.fragments;
 
+import android.text.Html;
 import com.app.R;
 import com.app.worldbankapi.CountryIndicatorResults;
 import com.app.worldbankapi.CountryList;
@@ -46,10 +47,10 @@ public class BasicInfoFragment extends GenericIndicatorsFragment
         super.onCreateView(inflater, container, savedInstanceState);
 
         final Intent intent = getActivity().getIntent();
-        final String capitalCity = intent.getStringExtra("capitalCity");
+        final String[] capitalCities = intent.getStringExtra("capitalCities").split(";");
 
         capitalCityText = (TextView)getRootView().findViewById(R.id.capitalCity);
-        capitalCityText.setText(capitalCity);
+        capitalCityText.setText(Html.fromHtml(formatValuesToHtml(capitalCities)));
 
         return getRootView();
     }

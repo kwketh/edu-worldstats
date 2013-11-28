@@ -29,32 +29,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09a095a6-63dc-43e1-aee3-cc39345d2194" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/CountryDataPoint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/app/activities/DisplayActivityComparasion.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/app/frames/FragmentFrame.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_display_compare.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java" afterPath="$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" afterPath="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/activities/CompareCountries.java" afterPath="$PROJECT_DIR$/src/com/app/activities/CompareCountries.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/loaders/CountryListLoader.java" afterPath="$PROJECT_DIR$/src/com/app/loaders/CountryListLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/activities/DetailedView.java" afterPath="$PROJECT_DIR$/src/com/app/activities/DetailedView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_compare_countries.xml" afterPath="$PROJECT_DIR$/res/layout/activity_compare_countries.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_detailed_view.xml" afterPath="$PROJECT_DIR$/res/layout/activity_detailed_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java" afterPath="$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java" afterPath="$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/IndicatorDefinitionResults.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/IndicatorDefinitionResults.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/basic_info_fragment.xml" afterPath="$PROJECT_DIR$/res/layout/basic_info_fragment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="edu-worldstats.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385592315016" ignored="false" />
-    <file path="/CompareCountryWith.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385476390568" ignored="false" />
+    <file path="/Dummy.txt" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385623885663" ignored="false" />
+    <file path="/CompareCountryWith.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385623528624" ignored="false" />
     <file path="/fragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385579673301" ignored="false" />
-    <file path="/ChooseCountry.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385581275556" ignored="false" />
+    <file path="/ChooseCountry.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385622426589" ignored="false" />
     <file path="/EducationFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385547305564" ignored="false" />
-    <file path="/BasicInfoFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385540608271" ignored="false" />
-    <file path="/CountryIndicatorResults.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385552529399" ignored="false" />
+    <file path="/BasicInfoFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385628322641" ignored="false" />
+    <file path="/CountryIndicatorResults.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385626246369" ignored="false" />
     <file path="/WorldBankAPI.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385506520234" ignored="false" />
     <file path="/Indicator.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385554833110" ignored="false" />
     <file path="/DataPoint.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385488898604" ignored="false" />
     <file path="/IndicatorsFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385511894918" ignored="false" />
-    <file path="/GenericIndicatorsFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385560116744" ignored="false" />
+    <file path="/GenericIndicatorsFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385629467102" ignored="false" />
     <file path="/activity_display.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385537553535" ignored="false" />
-    <file path="/DisplayActivity.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385600817711" ignored="false" />
+    <file path="/DisplayActivity.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385624968371" ignored="false" />
     <file path="/TabsPagerAdapter.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385545647727" ignored="false" />
     <file path="/SocialDevelopmentFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385547361767" ignored="false" />
     <file path="/IndustryFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385547313155" ignored="false" />
@@ -69,12 +74,18 @@
     <file path="/WorldBankClient.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385564138472" ignored="false" />
     <file path="/activity_detailed_view.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385565332890" ignored="false" />
     <file path="$PROJECT_DIR$/res/color/colors.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385567527764" ignored="false" />
-    <file path="/CountryListAdapter.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385578183415" ignored="false" />
+    <file path="/CountryListAdapter.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385622659113" ignored="false" />
     <file path="/Country.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385581650262" ignored="false" />
-    <file path="/CompareCountries.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385601185777" ignored="false" />
-    <file path="/CountryListLoader.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385580913999" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385597867568" ignored="false" />
+    <file path="/CompareCountries.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385628439347" ignored="false" />
+    <file path="/CountryListLoader.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385622844985" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385624034390" ignored="false" />
     <file path="/activity_compare_countries.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385598406835" ignored="false" />
+    <file path="/FragmentFrame.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385623426566" ignored="false" />
+    <file path="/DisplayActivityComparasion.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385624764533" ignored="false" />
+    <file path="/activity_display_compare.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385623905136" ignored="false" />
+    <file path="/a.dummy" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385624303189" ignored="false" />
+    <file path="/IndicatorDataPoint.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385625977634" ignored="false" />
+    <file path="/IndicatorDefinitionResults.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385625676015" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +100,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -127,6 +137,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -136,53 +147,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CompareCountries.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CompareCountries.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/app/activities/CompareCountries.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="4" selection-start="756" selection-end="756" vertical-scroll-proportion="-1.0743406">
-              <folding>
-                <element signature="e#1604#1892#0" expanded="true" />
-                <element signature="e#1881#1882#0" expanded="true" />
-                <element signature="e#1949#2238#0" expanded="true" />
-                <element signature="e#2227#2228#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CountryPopulationExample.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/examples/CountryPopulationExample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+            <state line="16" column="13" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountryListLoader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/loaders/CountryListLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="0" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.0">
+      <file leaf-file-name="basic_info_fragment.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/basic_info_fragment.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DetailedView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/activities/DetailedView.java">
+      <file leaf-file-name="ChooseCountry.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="6" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0">
+            <state line="84" column="42" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1783#1973#0" expanded="true" />
-                <element signature="e#1962#1963#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchCountry.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/activities/SearchCountry.java">
+      <file leaf-file-name="BasicInfoFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="13" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompareCountryWith.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/app/activities/CompareCountryWith.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
               <folding />
@@ -190,46 +197,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DisplayActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java">
+      <file leaf-file-name="CountryIndicatorResults.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="205" column="28" selection-start="6324" selection-end="6324" vertical-scroll-proportion="0.0">
+            <state line="21" column="45" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#819#837#0" expanded="true" />
+                <element signature="e#1324#1342#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndustryFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/app/fragments/IndustryFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="13" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RSSActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/activities/RSSActivity.java">
+      <file leaf-file-name="GenericIndicatorsFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+            <state line="295" column="37" selection-start="10768" selection-end="10775" vertical-scroll-proportion="0.21822542">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="education_fragment.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/education_fragment.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/activities/MainActivity.java">
+      <file leaf-file-name="Html.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platforms/android-18/android.jar!/android/text/Html.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilterableAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/adapters/FilterableAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="22" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TabsPagerAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/adapters/TabsPagerAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="9" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0">
+            <state line="6" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -253,29 +268,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/src/com/app/MainApp.java" />
-        <option value="$PROJECT_DIR$/src/com/app/activities/CountryListLoader.java" />
-        <option value="$PROJECT_DIR$/src/com/app/activities/loaders/CountryListLoader.java" />
-        <option value="$PROJECT_DIR$/src/com/app/adapters/CountryListAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/Country.java" />
-        <option value="$PROJECT_DIR$/src/com/app/activities/RSSActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/app/loaders/CountryListLoader.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_detailed_view.xml" />
-        <option value="$PROJECT_DIR$/src/com/app/activities/DetailedView.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_compare_countries.xml" />
-        <option value="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_display_compare.xml" />
+        <option value="$PROJECT_DIR$/src/com/app/activities/DisplayActivityComparasion.java" />
         <option value="$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/IndicatorDataPoint.java" />
+        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/IndicatorDefinitionResults.java" />
+        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/CountryDataPoint.java" />
+        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/TimeseriesDataPoint.java" />
+        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankClient.java" />
+        <option value="$PROJECT_DIR$/src/com/app/activities/DetailedView.java" />
+        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java" />
+        <option value="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" />
+        <option value="$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java" />
         <option value="$PROJECT_DIR$/src/com/app/activities/CompareCountries.java" />
+        <option value="$PROJECT_DIR$/res/layout/basic_info_fragment.xml" />
+        <option value="$PROJECT_DIR$/res/layout/education_fragment.xml" />
+        <option value="$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="1" />
     <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="812" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -305,6 +321,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -382,6 +400,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="loaders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu-worldstats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu-worldstats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frames" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -575,21 +615,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/android-support-v4.jar!/" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/android-support-v4.jar!/" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="edu-worldstats" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -653,6 +691,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -679,19 +730,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -819,37 +857,37 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="812" extended-state="6" />
+    <frame x="1" y="22" width="1440" height="810" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1779053" sideWeight="0.9869942" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32352942" sideWeight="0.9869942" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1779053" sideWeight="0.9884058" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32611832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.981241" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.77633476" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4132948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2898135" sideWeight="0.28695652" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289855" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3236994" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40462428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32471263" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.981241" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28909612" sideWeight="0.6763006" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.01300578" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28909612" sideWeight="0.9884058" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.011594203" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32137734" sideWeight="0.9884058" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.981241" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.77633476" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289855" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4132948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2898135" sideWeight="0.28695652" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32173914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40462428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.981241" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289855" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -918,131 +956,131 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platforms/android-18/android.jar!/android/app/AlertDialog.class">
+    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryDataPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platforms/android-18/android.jar!/java/lang/reflect/Method.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platforms/android-18/android.jar!/android/view/View.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1152" column="0" selection-start="52033" selection-end="52033" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/basic_info_compare_fragment.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/basic_info_fragment.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="37" selection-start="4498" selection-end="4498" vertical-scroll-proportion="0.0">
+        <state line="7" column="29" selection-start="128" selection-end="144" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/adapters/FilterableAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/app/frames/FragmentFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="22" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/adapters/TabsPagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="9" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/activities/DisplayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="205" column="28" selection-start="6324" selection-end="6324" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="7" column="13" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/app/activities/DetailedView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="6" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0">
+        <state line="48" column="15" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/TimeseriesDataPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/IndicatorDefinitionResults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="28" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/fragments/IndustryFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="45" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1783#1973#0" expanded="true" />
-            <element signature="e#1962#1963#0" expanded="true" />
+            <element signature="e#819#837#0" expanded="true" />
+            <element signature="e#1324#1342#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/activities/SearchCountry.java">
+    <entry file="jar://$USER_HOME$/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platforms/android-18/android.jar!/android/text/Html.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+        <state line="6" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/activities/RSSActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="84" column="42" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/activities/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/res/layout/basic_info_fragment.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/loaders/CountryListLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="0" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/examples/CountryPopulationExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/app/activities/CompareCountries.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="4" selection-start="756" selection-end="756" vertical-scroll-proportion="-1.0743406">
+        <state line="16" column="13" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/activities/CompareCountryWith.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/education_fragment.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="295" column="37" selection-start="10768" selection-end="10775" vertical-scroll-proportion="0.21822542">
           <folding>
-            <element signature="e#1604#1892#0" expanded="true" />
-            <element signature="e#1881#1882#0" expanded="true" />
-            <element signature="e#1949#2238#0" expanded="true" />
-            <element signature="e#2227#2228#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

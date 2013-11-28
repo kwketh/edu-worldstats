@@ -84,9 +84,9 @@ public class ChooseCountry extends Activity
                 Intent intent = new Intent(context, DisplayActivity.class);
 
                 // todo: pass the country instance in the intent
-                intent.putExtra("countryCode", country.getCode());
+                intent.putExtra("countryCodes", country.getCode());
                 intent.putExtra("countryName", country.getName());
-                intent.putExtra("capitalCity", country.getCapitalCity());
+                intent.putExtra("capitalCities", country.getCapitalCity());
 
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);

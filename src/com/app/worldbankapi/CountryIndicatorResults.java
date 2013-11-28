@@ -6,19 +6,20 @@ import java.util.Calendar;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+
 public class CountryIndicatorResults extends Results
 {    
-    ArrayList<TimeseriesDataPoint> m_dataPoints;
+    ArrayList<CountryDataPoint> m_dataPoints;
     Indicator m_indicator;
 
     public CountryIndicatorResults(Indicator indicator)
     {
         /* Default values */
-        m_dataPoints = new ArrayList<TimeseriesDataPoint>();
+        m_dataPoints = new ArrayList<CountryDataPoint>();
         m_indicator = indicator;
     }
 
-    public final ArrayList<TimeseriesDataPoint> getDataPoints()
+    public final ArrayList<CountryDataPoint> getDataPoints()
     {
         return m_dataPoints;
     }
@@ -28,17 +29,28 @@ public class CountryIndicatorResults extends Results
         return m_indicator;
     }
 
-    public TimeseriesDataPoint getPointAtYear(int year)
+    public static ArrayList<CountryDataPoint> filterByYear(ArrayList<CountryDataPoint> dataPoints, int year)
     {
-        for (TimeseriesDataPoint point : m_dataPoints)
+        ArrayList<CountryDataPoint> ret = new ArrayList<CountryDataPoint>();
+        for (CountryDataPoint point : dataPoints)
         {
             final Calendar dateInstance = Calendar.getInstance();
             dateInstance.setTime(point.getDate());
             if (dateInstance.get(Calendar.YEAR) == year)
-                return point;
+                ret.add(point);
         }
+        return ret;
+    }
 
-        return null;
+    public static ArrayList<CountryDataPoint> filterByCountry(ArrayList<CountryDataPoint> dataPoints, Country country)
+    {
+        ArrayList<CountryDataPoint> ret = new ArrayList<CountryDataPoint>();
+        for (CountryDataPoint point : dataPoints)
+        {
+            if (point.getCountryCode().equals(country.getCode()))
+                ret.add(point);
+        }
+        return ret;
     }
     
     public void fromJSON(JSONArray response) throws JSONException
@@ -52,7 +64,7 @@ public class CountryIndicatorResults extends Results
         {
             for (int i = 0; i < dataPoints.length(); i++) 
             {
-                TimeseriesDataPoint dataPoint = new TimeseriesDataPoint();
+                CountryDataPoint dataPoint = new CountryDataPoint();
                 dataPoint.fromJSON(dataPoints.getJSONObject(i));
                 m_dataPoints.add(dataPoint);
             }
