@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -20,10 +21,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
 
-public class DetailedView extends Activity implements Observer
+import android.view.GestureDetector.OnGestureListener;
+import android.view.GestureDetector;
+
+public class DetailedView extends Activity implements Observer, OnGestureListener
 {
+    private IndicatorDefinitionResults m_results;
     private TextView name;
     private TextView definition;
+    private GestureDetector geastureDetector;
 
     ProgressDialog progressDialog = null;
     
@@ -32,15 +38,17 @@ public class DetailedView extends Activity implements Observer
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed_view);
-                
+
+        geastureDetector = new GestureDetector(this, this);
+
         name = (TextView) findViewById(R.id.indicatorName);
         definition = (TextView) findViewById(R.id.indicatorDefinition);
 
         Intent intent = getIntent();
         String indicator = intent.getStringExtra("indicator");
                 
-        IndicatorDefinitionResults results = WorldBankAPI.fetchIndicatorDefinition(indicator);
-        results.addObserver(this);
+        m_results = WorldBankAPI.fetchIndicatorDefinition(indicator);
+        m_results.addObserver(this);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading indicator details");
@@ -56,6 +64,7 @@ public class DetailedView extends Activity implements Observer
 
         fadeOutLabels();
     }
+
 
     private void fadeOutLabels()
     {
@@ -100,22 +109,54 @@ public class DetailedView extends Activity implements Observer
     @Override
     public void update(Observable eventSource, Object eventName) 
     {
-        IndicatorDefinitionResults results = (IndicatorDefinitionResults)eventSource;
-
-        if (progressDialog != null) {
-            progressDialog.dismiss();
-            progressDialog = null;
-        }
+        progressDialog.dismiss();
 
         if (eventName.equals("fetchComplete"))
         {
-            name.setText(results.getName());
-            definition.setText(results.getDefinition());
+            name.setText(m_results.getName());
+            definition.setText(m_results.getDefinition());
             fadeInLabels();
         } else
         {
             close();
         }
     }
-    
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event)
+    {
+        this.geastureDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
+    @Override
+    public boolean onDown(MotionEvent motionEvent) {
+        return false;
+    }
+
+    @Override
+    public void onShowPress(MotionEvent motionEvent) {}
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent motionEvent)
+    {
+        if (m_results.areLoaded())
+        {
+            close();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent2, float v, float v2) {
+        return false;
+    }
+
+    @Override
+    public void onLongPress(MotionEvent motionEvent) {}
+
+    @Override
+    public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent2, float v, float v2) {
+        return false;
+    }
 }
