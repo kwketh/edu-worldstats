@@ -56,6 +56,8 @@ public class ChooseCountry extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_country);
 
+        final Context context = this.getApplicationContext();
+
         /* Get ListView object from the XML layouts */
         listView = (ListView)findViewById(R.id.country_list);                
         textSearchCountry = (EditText)findViewById(R.id.textSearchCountry);
@@ -69,7 +71,7 @@ public class ChooseCountry extends Activity
 
         /* Assign the loader adapter to ListView */
         listView.setAdapter(countryListLoader.getAdapter());
-                
+
         /* ListView item click event */
         listView.setOnItemClickListener(new OnItemClickListener()
         {
@@ -79,7 +81,7 @@ public class ChooseCountry extends Activity
                 // ListView Clicked item value
                 Country country = (Country)listView.getItemAtPosition(position);
 
-                Intent intent = new Intent(getApplicationContext(), DisplayActivity.class);
+                Intent intent = new Intent(context, DisplayActivity.class);
 
                 // todo: pass the country instance in the intent
                 intent.putExtra("countryCode", country.getCode());

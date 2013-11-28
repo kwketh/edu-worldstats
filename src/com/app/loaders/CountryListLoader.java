@@ -35,20 +35,17 @@ public class CountryListLoader implements Observer
 
     public void load()
     {
-        MainApp app = (MainApp)m_context.getApplicationContext();
+        final MainApp app = (MainApp)m_context.getApplicationContext();
 
-        if (!app.hasData("countries"))
-        {
+        /* Cache the results in the application context */
+        if (!app.hasData("countries")) {
             m_results = WorldBankAPI.fetchCountryList();
             app.storeData("countries", m_results);
-        }
-        else
-        {
+        } else {
             m_results = (CountryListResults)app.getData("countries");
         }
 
-        m_adapter = new CountryListAdapter(m_context, android.R.layout.simple_list_item_1, android.R.id.text1, m_results.getCountries());
-
+        /* Observe any events in the results */
         m_results.addObserver(this);
 
         if (!m_results.areLoaded())
@@ -59,10 +56,17 @@ public class CountryListLoader implements Observer
             m_progressDialog.setMessage("Waiting for country list");
             m_progressDialog.show();
         }
+
+        /* Construct the adapter */
+        m_adapter = new CountryListAdapter(m_context, android.R.layout.simple_list_item_1, android.R.id.text1, m_results.getCountries());
     }
 
     public CountryListAdapter getAdapter()
     {
+        if (m_results == null)
+        {
+            throw new Error("You must call load() before calling getAdapter()");
+        }
         return m_adapter;
     }
 

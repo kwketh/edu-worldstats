@@ -1,11 +1,9 @@
 package com.app.adapters;
 
-import java.lang.reflect.Field;
 import java.util.Arrays;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,14 +17,12 @@ import com.app.worldbankapi.CountryList;
 
 public class CountryListAdapter extends FilterableAdapter<Country, String> 
 {
-    Context context;
-    CountryList countries;
+    Context m_context;
     
     public CountryListAdapter(Context context, int resource,
             int textViewResourceId, CountryList countries) {
         super(context, resource, textViewResourceId, countries);
-        this.context = context;
-        this.countries = countries;
+        this.m_context = context;
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -35,13 +31,13 @@ public class CountryListAdapter extends FilterableAdapter<Country, String>
         ImageView itemImage = null;
         
         if (view == null) {
-            LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);            
+            LayoutInflater mInflater = (LayoutInflater)m_context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
             view = mInflater.inflate(R.layout.country_list_item, null);                       
         }
         
         Country country = getItem(position);
 
-        int flagImageResourceId = MainApp.getResourceById(country.getFlagResourceName(), context, R.drawable.class);
+        int flagImageResourceId = MainApp.getResourceById(country.getFlagResourceName(), m_context, R.drawable.class);
 
         itemHeading = (TextView)view.findViewById(R.id.itemCountryName);
         itemHeading.setText(country.getName());
