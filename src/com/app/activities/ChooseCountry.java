@@ -1,19 +1,12 @@
 package com.app.activities;
 
-import java.util.Observable;
-import java.util.Observer;
-
-import com.app.MainApp;
 import com.app.R;
-import com.app.adapters.CountryListAdapter;
 import com.app.loaders.CountryListLoader;
 import com.app.worldbankapi.Country;
-import com.app.worldbankapi.CountryListResults;
-import com.app.worldbankapi.WorldBankAPI;
+import com.app.worldbankapi.CountryList;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -81,12 +74,11 @@ public class ChooseCountry extends Activity
                 // ListView Clicked item value
                 Country country = (Country)listView.getItemAtPosition(position);
 
-                Intent intent = new Intent(context, DisplayActivity.class);
+                CountryList countryList = new CountryList();
+                countryList.add(country);
 
-                // todo: pass the country instance in the intent
-                intent.putExtra("countryCodes", country.getCode());
-                intent.putExtra("countryName", country.getName());
-                intent.putExtra("capitalCities", country.getCapitalCity());
+                Intent intent = new Intent(context, CountryDetails.class);
+                intent.putExtra("countries", countryList);
 
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);

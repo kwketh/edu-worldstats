@@ -2,10 +2,7 @@ package com.app.fragments;
 
 import android.text.Html;
 import com.app.R;
-import com.app.worldbankapi.CountryIndicatorResults;
-import com.app.worldbankapi.CountryList;
-import com.app.worldbankapi.Indicator;
-import com.app.worldbankapi.WorldBankAPI;
+import com.app.worldbankapi.*;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -47,7 +44,12 @@ public class BasicInfoFragment extends GenericIndicatorsFragment
         super.onCreateView(inflater, container, savedInstanceState);
 
         final Intent intent = getActivity().getIntent();
-        final String[] capitalCities = intent.getStringExtra("capitalCities").split(";");
+        ArrayList<Country> countryList = intent.getParcelableArrayListExtra("countries");
+
+        String[] capitalCities = new String[countryList.size()];
+
+        for (int i = 0; i < countryList.size(); i++)
+            capitalCities[i] = countryList.get(i).getCapitalCity();
 
         capitalCityText = (TextView)getRootView().findViewById(R.id.capitalCity);
         capitalCityText.setText(Html.fromHtml(formatValuesToHtml(capitalCities)));

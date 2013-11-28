@@ -24,7 +24,7 @@ import android.widget.TextView;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.GestureDetector;
 
-public class DetailedView extends Activity implements Observer, OnGestureListener
+public class IndicatorDetails extends Activity implements Observer, OnGestureListener
 {
     private IndicatorDefinitionResults m_results;
     private TextView name;

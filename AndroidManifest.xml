@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.app.activities.MainActivity"
+            android:name=".activities.WelcomeScreen"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,52 +44,20 @@
                 android:value="com.app.activities.MainActivity" />
         </activity>
         <activity
-            android:name="com.app.activities.SearchCountry"
-            android:label="@string/title_activity_search_country"
-            android:parentActivityName="com.app.activities.MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.activities.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.app.activities.CompareCountryWith"
-            android:label="@string/title_activity_compare_country_with"
-            android:parentActivityName="com.app.activities.MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.activities.MainActivity" />
-        </activity>
-        <activity 
-            android:name="com.app.activities.DisplayActivity"
+            android:name=".activities.CountryDetails"
             android:parentActivityName="com.app.activities.ChooseCountry" >            
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.activities.ChooseCountry" />
         </activity>
         <activity
-            android:name="com.app.activities.DisplayActivityComparasion"
-            android:parentActivityName="com.app.activities.CompareCountries" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.activities.CompareCountries" />
-        </activity>
-        <activity
-                android:name="com.app.activities.DetailedView"
+                android:name=".activities.IndicatorDetails"
                 android:theme="@style/Theme.Transparent"
                 android:parentActivityName="com.app.activities.DisplayActivity" >
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.app.activities.DisplayActivity" />
         </activity>
-        <activity
-            android:name="com.app.activities.RSSActivity"
-            android:label="@string/title_activity_rss"
-            android:parentActivityName="com.app.activities.MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.activities.MainActivity" />
-        </activity>
-        <service android:name=".RssService" />
     </application>
 
 </manifest>
