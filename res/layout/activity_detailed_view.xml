@@ -8,7 +8,7 @@
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" android:gravity="center_vertical|center_horizontal"
-            android:padding="20dp">
+            android:padding="40dp">
         <TextView
             android:id="@+id/indicatorName"
             android:layout_width="match_parent"
@@ -16,6 +16,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:gravity="fill_horizontal|top"
+            android:duplicateParentState="true"
             android:textStyle="bold" android:layout_gravity="center" android:layout_marginBottom="5dp"
             android:textColor="#ffcccccc" android:textSize="24dp" android:textAlignment="center"/>
         <TextView
@@ -24,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/indicatorName"
+            android:duplicateParentState="true"
             android:layout_gravity="center_horizontal|top" android:layout_marginTop="5dp"
             android:textColor="#ffcccccc" android:textAlignment="center"/>
     </LinearLayout>
