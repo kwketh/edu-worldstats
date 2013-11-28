@@ -1,8 +1,5 @@
 package com.app.worldbankapi;
 
-import java.util.ArrayList;
-import java.util.Observable;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,6 +8,7 @@ public class IndicatorDefinitionResults extends Results
 {
     String name;
     String definition;
+    String source;
     
     IndicatorDefinitionResults() { }
     
@@ -25,7 +23,9 @@ public class IndicatorDefinitionResults extends Results
             
             String nameA = indicatorData.getString("name");            
             String definitionA = indicatorData.getString("sourceNote");
+            String sourceA = indicatorData.getString("sourceOrganization");
             
+            source = sourceA;
             name = nameA;
             definition = definitionA;
             

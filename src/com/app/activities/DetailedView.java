@@ -4,7 +4,6 @@ import java.util.Observable;
 import java.util.Observer;
 
 import com.app.R;
-import com.app.worldbankapi.CountryIndicatorResults;
 import com.app.worldbankapi.IndicatorDefinitionResults;
 import com.app.worldbankapi.WorldBankAPI;
 

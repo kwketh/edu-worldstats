@@ -81,6 +81,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.activities.MainActivity" />
         </activity>
+        <service android:name=".RssService" />
     </application>
 
 </manifest>

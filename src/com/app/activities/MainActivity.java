@@ -13,6 +13,7 @@ public class MainActivity extends Activity
 {    
     Button btnChooseCountry;
     Button btnCompareCountries;
+    Button btnRssReader;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,8 @@ public class MainActivity extends Activity
         getWindow().setFormat(PixelFormat.RGBA_8888); 
         
         btnChooseCountry = (Button) findViewById(R.id.btn_choose_a_country);
-        btnCompareCountries = (Button) findViewById(R.id.btn_compare_countries);           
+        btnCompareCountries = (Button) findViewById(R.id.btn_compare_countries); 
+        btnRssReader = (Button) findViewById(R.id.btn_rss_reader);
     }
 
 
@@ -43,6 +45,11 @@ public class MainActivity extends Activity
     /** Called when the user clicks the Compare Countries button */
     public void showCompareCountries(View view){
         Intent intent = new Intent(this, CompareCountries.class);
+        startActivity(intent);
+    }
+    
+    public void showRSSReader(View view){
+        Intent intent = new Intent(this, RSSActivity.class);
         startActivity(intent);
     }
 }
