@@ -1,57 +1,71 @@
 package com.app.activities;
 
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import com.app.R;
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.annotation.TargetApi;
-import android.os.Build;
 import com.app.loaders.CountryListLoader;
+import com.app.worldbankapi.Country;
 
 public class CompareCountries extends Activity
 {
-    private CountryListLoader countryListLoader;
+    private AutoCompleteTextView textViewFirstCountry, textViewSecondCountry;
+
+    private CountryListLoader m_countryListLoader;
+    private ProgressDialog m_progressDialog;
+    private Country m_firstCountry;
+    private Country m_secondCountry;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compare_countries);
-        setupActionBar();
 
-        AutoCompleteTextView firstCountry = (AutoCompleteTextView)findViewById(R.id.autoCompleteCountryOne);
-        AutoCompleteTextView secondCountry = (AutoCompleteTextView)findViewById(R.id.autoCompleteCountryTwo);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
+        /* Find elements in the view */
+        textViewFirstCountry = (AutoCompleteTextView)findViewById(R.id.autoCompleteCountryOne);
+        textViewSecondCountry = (AutoCompleteTextView)findViewById(R.id.autoCompleteCountryTwo);
 
         /* Construct the loader and retrieve list of all countries */
-        countryListLoader = new CountryListLoader(this);
-        countryListLoader.load();
+        m_countryListLoader = new CountryListLoader(this);
+        m_countryListLoader.load();
 
         /* Assign the loader adapter to ListView */
-        firstCountry.setAdapter(countryListLoader.getAdapter());
-        secondCountry.setAdapter(countryListLoader.getAdapter());
-    }
+        textViewFirstCountry.setAdapter(m_countryListLoader.getAdapter());
+        textViewSecondCountry.setAdapter(m_countryListLoader.getAdapter());
 
-    /**
-     * Set up the {@link android.app.ActionBar}, if the API is available.
-     */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    private void setupActionBar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            getActionBar().setDisplayHomeAsUpEnabled(true);
-        }
+        /* Setup events */
+        textViewFirstCountry.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id)
+            {
+                m_firstCountry = (Country)adapterView.getItemAtPosition(position);
+            }
+        });
+
+        textViewSecondCountry.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id)
+            {
+                m_secondCountry = (Country)adapterView.getItemAtPosition(position);
+            }
+        });
+
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.compare_countries, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         switch (item.getItemId()) {
         case android.R.id.home:
             finish();
@@ -60,4 +74,40 @@ public class CompareCountries extends Activity
         return super.onOptionsItemSelected(item);
     }
 
+    public void onCompareClicked(View view)
+    {
+        if (m_firstCountry == null)
+        {
+            AlertDialog.Builder alert  = new AlertDialog.Builder(this);
+            alert.setTitle("Invalid country");
+            alert.setMessage("Please enter a valid country name by choose it from the suggestions.");
+            alert.setPositiveButton("OK", null);
+            alert.show();
+
+            textViewFirstCountry.requestFocus();
+            textViewFirstCountry.selectAll();
+
+            return;
+        }
+
+        if (m_secondCountry == null)
+        {
+            AlertDialog.Builder alert  = new AlertDialog.Builder(this);
+            alert.setTitle("Invalid country");
+            alert.setMessage("Please enter a valid country name by choose it from the suggestions.");
+            alert.setPositiveButton("OK", null);
+            alert.show();
+
+            textViewSecondCountry.requestFocus();
+            textViewSecondCountry.selectAll();
+
+            return;
+        }
+
+        m_progressDialog = new ProgressDialog(this);
+        m_progressDialog.setCancelable(false);
+        m_progressDialog.setTitle("Loading");
+        m_progressDialog.setMessage("Waiting for indicator data");
+        m_progressDialog.show();
+    }
 }

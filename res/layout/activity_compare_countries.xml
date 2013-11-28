@@ -13,51 +13,51 @@
         android:id="@+id/txtSelectFirstCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="34dp"
-        android:text="@string/select_country"
+        android:text="Enter first country"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true" android:layout_marginLeft="15dp" android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"/>
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteCountryOne"
-        android:layout_width="wrap_content"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtSelectFirstCountry"
-        android:layout_below="@+id/txtSelectFirstCountry"
-        android:layout_marginTop="27dp"
         android:ems="10"
-        android:hint="@string/country_name" />
+        android:hint="Search country" android:layout_alignLeft="@+id/txtSelectFirstCountry"
+        android:layout_below="@+id/txtSelectFirstCountry" android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        android:completionThreshold="1"
+        android:autoText="false"/>
 
     <TextView
         android:id="@+id/txtSelectSecondCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/autoCompleteCountryTwo"
-        android:layout_below="@+id/autoCompleteCountryOne"
-        android:layout_marginTop="44dp"
-        android:text="@string/select_another_country"
+        android:text="Enter second country"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold" android:layout_alignLeft="@+id/txtSelectFirstCountry"
+        android:layout_below="@+id/autoCompleteCountryOne" android:layout_marginTop="30dp"/>
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteCountryTwo"
-        android:layout_width="wrap_content"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/autoCompleteCountryOne"
-        android:layout_below="@+id/txtSelectSecondCountry"
-        android:layout_marginTop="35dp"
         android:ems="10"
-        android:hint="@string/country_name" />
+        android:hint="Search country"
+        android:imeOptions="actionDone"
+        android:layout_alignLeft="@+id/txtSelectFirstCountry" android:layout_below="@+id/txtSelectSecondCountry"
+        android:completionThreshold="1"
+        android:layout_marginTop="5dp" android:singleLine="true"/>
 
     <Button
         android:id="@+id/btnCompare"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/autoCompleteCountryTwo"
-        android:layout_marginTop="46dp"
-        android:text="@string/compare" />
+        android:text="Compare"
+        android:layout_alignLeft="@+id/txtSelectFirstCountry" android:layout_below="@+id/autoCompleteCountryTwo"
+        android:layout_marginTop="20dp"
+        android:onClick="onCompareClicked"/>
 
 </RelativeLayout>

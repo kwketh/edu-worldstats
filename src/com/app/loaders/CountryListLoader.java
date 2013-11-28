@@ -61,12 +61,10 @@ public class CountryListLoader implements Observer
         }
     }
 
-
     public CountryListAdapter getAdapter()
     {
         return m_adapter;
     }
-
 
     /**
      * This method is called whenever the observed object has changed.

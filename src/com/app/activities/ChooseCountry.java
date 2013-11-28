@@ -79,9 +79,6 @@ public class ChooseCountry extends Activity
                 // ListView Clicked item value
                 Country country = (Country)listView.getItemAtPosition(position);
 
-                // Show Alert
-                // Toast.makeText(getApplicationContext(), "You have selected country " + country.getName(), Toast.LENGTH_LONG).show();
-
                 Intent intent = new Intent(getApplicationContext(), DisplayActivity.class);
 
                 // todo: pass the country instance in the intent

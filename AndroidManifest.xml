@@ -37,7 +37,8 @@
         <activity
             android:name="com.app.activities.CompareCountries"
             android:label="@string/title_activity_compare_countries"
-            android:parentActivityName="com.app.activities.MainActivity" >
+            android:parentActivityName="com.app.activities.MainActivity"
+            android:windowSoftInputMode="stateAlwaysVisible">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.activities.MainActivity" />
@@ -72,10 +73,6 @@
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.app.activities.DisplayActivity" />
-        </activity>
-        <activity
-            android:name="com.app.DetailedView"
-            android:label="@string/title_activity_detailed_view" >
         </activity>
         <activity
             android:name="com.app.activities.RSSActivity"
