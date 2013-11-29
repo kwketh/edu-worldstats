@@ -33,7 +33,7 @@ public class CountryListAdapter extends FilterableAdapter<Country, String>
         
         if (view == null) {
             LayoutInflater mInflater = (LayoutInflater)m_context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-            view = mInflater.inflate(R.layout.country_list_item, null);                       
+            view = mInflater.inflate(R.layout.listitem_country, null);
         }
         
         Country country = getItem(position);

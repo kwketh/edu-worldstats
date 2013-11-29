@@ -4,13 +4,10 @@ import java.util.Observable;
 import java.util.Observer;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import com.app.R;
 import com.app.worldbankapi.IndicatorDefinitionResults;
 import com.app.worldbankapi.WorldBankAPI;
@@ -18,7 +15,6 @@ import com.app.worldbankapi.WorldBankAPI;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.widget.TextView;
 
 import android.view.GestureDetector.OnGestureListener;
@@ -37,7 +33,7 @@ public class IndicatorDetails extends Activity implements Observer, OnGestureLis
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detailed_view);
+        setContentView(R.layout.activity_indicator_details);
 
         geastureDetector = new GestureDetector(this, this);
 

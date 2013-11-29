@@ -26,7 +26,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
-public class ChooseCountry extends Activity
+public class    ChooseCountry extends Activity
 {
     /**
      * The loader used to load the country list and create an adapter.

@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SeekBar;
-import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,7 +27,7 @@ public class BasicInfoFragment extends GenericIndicatorsFragment
     @Override
     public Integer getFragmentId()
     {
-        return R.layout.basic_info_fragment;
+        return R.layout.fragment_country_basicinfo;
     }
 
     @Override

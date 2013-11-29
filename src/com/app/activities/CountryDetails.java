@@ -57,7 +57,7 @@ public class CountryDetails extends FragmentActivity implements ActionBar.TabLis
 
     int getLayoutResourceId()
     {
-        return R.layout.activity_display;
+        return R.layout.activity_country_details;
     }
     
     @Override

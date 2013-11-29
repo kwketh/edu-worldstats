@@ -19,7 +19,7 @@ public class WelcomeScreen extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_welcomescreen);
         
         getWindow().setFormat(PixelFormat.RGBA_8888); 
         
