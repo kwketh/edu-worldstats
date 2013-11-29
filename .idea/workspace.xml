@@ -24,43 +24,18 @@
       </GlobalState>
     </option>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="09a095a6-63dc-43e1-aee3-cc39345d2194" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java" afterPath="$PROJECT_DIR$/src/com/app/fragments/BasicInfoFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" afterPath="$PROJECT_DIR$/src/com/app/activities/ChooseCountry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/adapters/CountryListAdapter.java" afterPath="$PROJECT_DIR$/src/com/app/adapters/CountryListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/examples/CountryListExample.java" afterPath="$PROJECT_DIR$/src/com/app/examples/CountryListExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/CountryListResults.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/CountryListResults.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/examples/CountryPopulationExample.java" afterPath="$PROJECT_DIR$/src/com/app/examples/CountryPopulationExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/DataPoint.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/DataPoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/fragments/EducationFragment.java" afterPath="$PROJECT_DIR$/src/com/app/fragments/EducationFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java" afterPath="$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/Indicator.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/Indicator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/IndicatorDefinitionResults.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/IndicatorDefinitionResults.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/activities/IndicatorDetails.java" afterPath="$PROJECT_DIR$/src/com/app/activities/IndicatorDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/fragments/IndustryFragment.java" afterPath="$PROJECT_DIR$/src/com/app/fragments/IndustryFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/Results.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/Results.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/fragments/SocialDevelopmentFragment.java" afterPath="$PROJECT_DIR$/src/com/app/fragments/SocialDevelopmentFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/adapters/TabsPagerAdapter.java" afterPath="$PROJECT_DIR$/src/com/app/adapters/TabsPagerAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/TimeseriesDataPoint.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/TimeseriesDataPoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/activities/WelcomeScreen.java" afterPath="$PROJECT_DIR$/src/com/app/activities/WelcomeScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankAPI.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankAPI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankClient.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankResponseHandler.java" afterPath="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankResponseHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_welcomescreen.xml" afterPath="$PROJECT_DIR$/res/layout/activity_welcomescreen.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/fragment_education.xml" afterPath="$PROJECT_DIR$/res/layout/fragment_education.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-fr/strings.xml" afterPath="$PROJECT_DIR$/res/values-fr/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/fragment_industry.xml" afterPath="$PROJECT_DIR$/res/layout/fragment_industry.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/fragment_socialdevelopment.xml" afterPath="$PROJECT_DIR$/res/layout/fragment_socialdevelopment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="edu-worldstats.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385680042148" ignored="false" />
+    <file path="/Dummy.txt" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385748986777" ignored="false" />
     <file path="/CompareCountryWith.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385623528624" ignored="false" />
-    <file path="/fragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385747298921" ignored="false" />
+    <file path="/fragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385751608491" ignored="false" />
     <file path="/ChooseCountry.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385680262179" ignored="false" />
     <file path="/EducationFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385547305564" ignored="false" />
     <file path="/BasicInfoFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385681461062" ignored="false" />
@@ -90,7 +65,7 @@
     <file path="/Country.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385678734507" ignored="false" />
     <file path="/CompareCountries.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385681604606" ignored="false" />
     <file path="/CountryListLoader.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385622844985" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385624034390" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385750414490" ignored="false" />
     <file path="/activity_compare_countries.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385598406835" ignored="false" />
     <file path="/FragmentFrame.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385623426566" ignored="false" />
     <file path="/DisplayActivityComparasion.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385682086641" ignored="false" />
@@ -105,6 +80,12 @@
     <file path="/CountryListExample.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385748091521" ignored="false" />
     <file path="/TimeseriesDataPoint.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385746857596" ignored="false" />
     <file path="/CountryPopulationExample.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385748096125" ignored="false" />
+    <file path="/RSSService.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385749894314" ignored="false" />
+    <file path="/RSSFragment.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385751619190" ignored="false" />
+    <file path="/RSSParser.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385752124771" ignored="false" />
+    <file path="/RSSItem.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385752417878" ignored="false" />
+    <file path="/NewsArticles.java" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385752468827" ignored="false" />
+    <file path="/activity_welcomescreen.xml" changelist="09a095a6-63dc-43e1-aee3-cc39345d2194" time="1385753659197" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,66 +147,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DataPoint.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/DataPoint.java">
+      <file leaf-file-name="choose_country.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/choose_country.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountryListResults.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryListResults.java">
+      <file leaf-file-name="detailed_view.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/detailed_view.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndicatorDefinitionResults.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/IndicatorDefinitionResults.java">
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Indicator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/Indicator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="4" selection-start="3628" selection-end="3628" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CountryList.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CountryIndicatorResults.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1324#1342#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_education.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="fragment_education.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/fragment_education.xml">
           <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -234,31 +186,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_country_basicinfo.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/fragment_country_basicinfo.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+      <file leaf-file-name="fragment_socialdevelopment.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/fragment_socialdevelopment.xml">
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer">
+          <provider selected="true" editor-type-id="android-designer">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeseriesDataPoint.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/TimeseriesDataPoint.java">
+      <file leaf-file-name="fragment_industry.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/fragment_industry.xml">
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_country_basicinfo.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/fragment_country_basicinfo.xml">
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_welcomescreen.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/activity_welcomescreen.xml">
+          <provider editor-type-id="text-editor">
+            <state line="82" column="16" selection-start="3937" selection-end="3937" vertical-scroll-proportion="-19.56">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainApp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/app/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+            <state line="9" column="13" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Results.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/Results.java">
+      <file leaf-file-name="search_country.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/search_country.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -282,22 +270,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/app/activities/WelcomeScreen.java" />
-        <option value="$PROJECT_DIR$/src/com/app/fragments/EducationFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/app/fragments/SocialDevelopmentFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/app/fragments/IndustryFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/DataPoint.java" />
-        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/TimeseriesDataPoint.java" />
-        <option value="$PROJECT_DIR$/src/com/app/adapters/CountryListAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/app/adapters/TabsPagerAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/app/examples/CountryListExample.java" />
-        <option value="$PROJECT_DIR$/src/com/app/examples/CountryPopulationExample.java" />
-        <option value="$PROJECT_DIR$/src/com/app/fragments/GenericIndicatorsFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankResponseHandler.java" />
         <option value="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankClient.java" />
         <option value="$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankAPI.java" />
         <option value="$PROJECT_DIR$/src/com/app/worldbankapi/Indicator.java" />
+        <option value="$PROJECT_DIR$/src/com/app/rssreader/RSSService.java" />
+        <option value="$PROJECT_DIR$/src/com/app/fragments/RSSFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/app/rssreader/RSSParser.java" />
+        <option value="$PROJECT_DIR$/src/com/app/rssreader/RSSItem.java" />
+        <option value="$PROJECT_DIR$/src/com/app/activities/RSSActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/app/activities/RSSFeed.java" />
+        <option value="$PROJECT_DIR$/src/com/app/activities/NewsArticles.java" />
+        <option value="$PROJECT_DIR$/res/layout/rss_item.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_welcomescreen.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_industry.xml" />
         <option value="$PROJECT_DIR$/res/layout/fragment_education.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_socialdevelopment.xml" />
       </list>
     </option>
   </component>
@@ -319,7 +307,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -390,6 +378,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="worldbankapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu-worldstats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu-worldstats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rssreader" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -611,14 +621,14 @@
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/android-support-v4.jar!/" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/android-support-v4.jar!/" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="edu-worldstats" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -682,6 +692,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -708,19 +731,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -849,9 +859,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="810" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1779053" sideWeight="0.9884058" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17718795" sideWeight="0.9884058" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32611832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -860,16 +870,16 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289855" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32471263" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32463768" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2895115" sideWeight="0.9884058" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29053086" sideWeight="0.9884058" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.011594203" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31994262" sideWeight="0.9884058" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31707317" sideWeight="0.9884058" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.981241" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.77633476" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289855" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4132948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41304347" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2898135" sideWeight="0.28695652" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.060869563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40434784" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -947,100 +957,44 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/Country.java">
+    <entry file="file://$PROJECT_DIR$/src/com/app/rssreader/RSSService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+        <state line="31" column="0" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryDataPoint.java">
+    <entry file="file://$PROJECT_DIR$/src/com/app/rssreader/RSSParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+        <state line="35" column="35" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/com/app/rssreader/RSSItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="8" column="12" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankResponseHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/com/app/activities/NewsArticles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="33" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+        <state line="19" column="49" selection-start="600" selection-end="600" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankClient.java">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="24" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
+        <state line="26" column="19" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/WorldBankAPI.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/listitem_rss.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="21" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/TimeseriesDataPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/Results.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/IndicatorDefinitionResults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/Indicator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="4" selection-start="3628" selection-end="3628" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/DataPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryListResults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_country_basicinfo.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="5" column="42" selection-start="250" selection-end="250" vertical-scroll-proportion="-1.4423077">
           <folding />
         </state>
       </provider>
@@ -1048,16 +1002,82 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/worldbankapi/CountryIndicatorResults.java">
+    <entry file="file://$PROJECT_DIR$/res/menu/choose_country.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1324#1342#0" expanded="true" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_welcomescreen.xml">
+      <provider editor-type-id="text-editor">
+        <state line="82" column="16" selection-start="3937" selection-end="3937" vertical-scroll-proportion="-19.56">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/search_country.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/detailed_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fragment_education.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_socialdevelopment.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_industry.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_country_basicinfo.xml">
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
