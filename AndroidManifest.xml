@@ -89,7 +89,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.activities.MainActivity" />
         </activity>
-        <service android:name=".RssService" />
+        <service android:name="com.app.rssreader.RSSService" /> 
     </application>
 
 </manifest>

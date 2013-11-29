@@ -25,7 +25,7 @@ public class MainActivity extends Activity
         
         btnChooseCountry = (Button) findViewById(R.id.btn_choose_a_country);
         btnCompareCountries = (Button) findViewById(R.id.btn_compare_countries); 
-        // btnRssReader = (Button) findViewById(R.id.btn_rss_reader);
+         btnRssReader = (Button) findViewById(R.id.btn_rss_reader);
     }
 
 
