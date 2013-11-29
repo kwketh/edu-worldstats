@@ -28,36 +28,44 @@
         <activity
             android:name="com.app.activities.ChooseCountry"
             android:label="@string/select_country"
-            android:parentActivityName="com.app.activities.MainActivity" 
+            android:parentActivityName="com.app.activities.WelcomeScreen"
             android:windowSoftInputMode="adjustPan" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.activities.MainActivity" />
+                android:value="com.app.activities.WelcomeScreen" />
         </activity>
         <activity
             android:name="com.app.activities.CompareCountries"
             android:label="@string/title_activity_compare_countries"
-            android:parentActivityName="com.app.activities.MainActivity"
-            android:windowSoftInputMode="stateAlwaysVisible">
+            android:parentActivityName="com.app.activities.WelcomeScreen"
+            android:windowSoftInputMode="stateAlwaysVisible" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.activities.MainActivity" />
+                android:value="com.app.activities.WelcomeScreen" />
         </activity>
         <activity
             android:name=".activities.CountryDetails"
-            android:parentActivityName="com.app.activities.ChooseCountry" >            
+            android:parentActivityName="com.app.activities.ChooseCountry" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.activities.ChooseCountry" />
         </activity>
         <activity
-                android:name=".activities.IndicatorDetails"
-                android:theme="@style/Theme.Transparent"
-                android:parentActivityName="com.app.activities.DisplayActivity" >
+            android:name=".activities.IndicatorDetails"
+            android:parentActivityName="com.app.activities.DisplayActivity"
+            android:theme="@style/Theme.Transparent" >
             <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.app.activities.DisplayActivity" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.activities.DisplayActivity" />
         </activity>
+        <activity
+            android:name=".activities.NewsArticles"
+            android:parentActivityName="com.app.activities.WelcomeScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.activities.WelcomeScreen" />
+        </activity>
+        <service android:name="com.app.rssreader.RSSService" />
     </application>
 
 </manifest>

@@ -1,16 +1,15 @@
 package com.app.adapters;
 
-import com.app.fragments.BasicInfoFragment;
-import com.app.fragments.EducationFragment;
-import com.app.fragments.IndustryFragment;
-import com.app.fragments.SocialDevelopmentFragment;
+import java.util.HashMap;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import com.app.fragments.BasicInfoFragment;
+import com.app.fragments.EducationFragment;
+import com.app.fragments.IndustryFragment;
+import com.app.fragments.SocialDevelopmentFragment;
 
 /**
  * TabsPagerAdapter class.

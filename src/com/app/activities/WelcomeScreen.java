@@ -23,8 +23,9 @@ public class WelcomeScreen extends Activity
         
         getWindow().setFormat(PixelFormat.RGBA_8888); 
         
-        btnChooseCountry = (Button)findViewById(R.id.btn_choose_a_country);
-        btnCompareCountries = (Button)findViewById(R.id.btn_compare_countries);
+        btnChooseCountry = (Button) findViewById(R.id.btn_choose_a_country);
+        btnCompareCountries = (Button) findViewById(R.id.btn_compare_countries); 
+        btnRssReader = (Button) findViewById(R.id.btn_rss_reader);
     }
 
 
@@ -42,6 +43,12 @@ public class WelcomeScreen extends Activity
     
     public void showCompareCountries(View view){
         Intent intent = new Intent(this, CompareCountries.class);
+        startActivity(intent);
+    }
+    
+    /** Called when the user clicks the News Articles button */
+    public void showRSSReader(View view){
+        Intent intent = new Intent(this, NewsArticles.class);
         startActivity(intent);
     }
 

@@ -1,16 +1,17 @@
 package com.app.activities;
 
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
+
 import com.app.R;
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.MenuItem;
 import com.app.loaders.CountryListLoader;
 import com.app.worldbankapi.Country;
 import com.app.worldbankapi.CountryList;
