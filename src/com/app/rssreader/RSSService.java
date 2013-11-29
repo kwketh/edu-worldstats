@@ -28,6 +28,7 @@ public class RSSService extends IntentService {
 
         @Override
         protected void onHandleIntent(Intent intent) {
+            // getting the xml parser from RSSParser
                 Log.d("RSSService", "Service started");
                 List<RSSItem> rssItems = null;
                 try {
@@ -45,6 +46,7 @@ public class RSSService extends IntentService {
         }
 
         public InputStream getInputStream(String link) {
+            // getting the input stream from the URL
                 try {
                         URL url = new URL(link);
                         return url.openConnection().getInputStream();

@@ -25,7 +25,7 @@ public class WelcomeScreen extends Activity
         
         btnChooseCountry = (Button) findViewById(R.id.btn_choose_a_country);
         btnCompareCountries = (Button) findViewById(R.id.btn_compare_countries); 
-         btnRssReader = (Button) findViewById(R.id.btn_rss_reader);
+        btnRssReader = (Button) findViewById(R.id.btn_rss_reader);
     }
 
 
@@ -45,6 +45,12 @@ public class WelcomeScreen extends Activity
     /** Called when the user clicks the Compare Countries button */
     public void showCompareCountries(View view){
         Intent intent = new Intent(this, CompareCountries.class);
+        startActivity(intent);
+    }
+    
+    /** Called when the user clicks the News Articles button */
+    public void showRSSReader(View view){
+        Intent intent = new Intent(this, RSSActivity.class);
         startActivity(intent);
     }
 
