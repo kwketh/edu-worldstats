@@ -9,7 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends Activity 
+public class WelcomeScreen extends Activity
 {    
     Button btnChooseCountry;
     Button btnCompareCountries;
@@ -47,9 +47,5 @@ public class MainActivity extends Activity
         Intent intent = new Intent(this, CompareCountries.class);
         startActivity(intent);
     }
-    
-    public void showRSSReader(View view){
-        Intent intent = new Intent(this, RSSActivity.class);
-        startActivity(intent);
-    }
+
 }

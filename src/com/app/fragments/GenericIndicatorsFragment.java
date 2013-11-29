@@ -1,7 +1,6 @@
 package com.app.fragments;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +13,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.view.View;
 import com.app.R;
-import com.app.activities.DisplayActivity;
+import com.app.activities.CountryDetails;
 import com.app.worldbankapi.*;
 
 import java.util.*;
@@ -82,7 +81,7 @@ public abstract class GenericIndicatorsFragment extends Fragment implements Obse
         m_context = null;
         m_indicatorResultsMap = new HashMap<Indicator, CountryIndicatorResults>();
         m_fetchCountries = new CountryList();
-        setFetchYear(DisplayActivity.YEAR_DEFAULT);
+        setFetchYear(CountryDetails.YEAR_DEFAULT);
     }
 
     public int getFetchYear()
@@ -104,12 +103,13 @@ public abstract class GenericIndicatorsFragment extends Fragment implements Obse
 
         /* Get information about the intent */
         final Intent intent = getActivity().getIntent();
-        final String[] countryCodes = intent.getStringExtra("countryCodes").split(";");
+
+        ArrayList<Country> countryList = intent.getParcelableArrayListExtra("countries");
 
         /* Set up list of countries to fetch information about */
         m_fetchCountries.clear();
-        for (String countryCode : countryCodes)
-            m_fetchCountries.add(new Country(countryCode));
+        for (Country country: countryList)
+            m_fetchCountries.add(country);
 
         /* Update phase: fetch all the data required for the fragment  */
         fetchData();
@@ -171,7 +171,7 @@ public abstract class GenericIndicatorsFragment extends Fragment implements Obse
             } else
             {
                 /* Create new results for the indicator */
-                CountryIndicatorResults results = WorldBankAPI.fetchCountriesIndicatorResults(m_fetchCountries, indicator, DisplayActivity.YEAR_RANGE);
+                CountryIndicatorResults results = WorldBankAPI.fetchCountriesIndicatorResults(m_fetchCountries, indicator, CountryDetails.YEAR_RANGE);
 
                 /* Store the results in our HashMap data structure */
                 m_indicatorResultsMap.put(indicator, results);

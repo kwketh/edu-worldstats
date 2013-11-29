@@ -6,24 +6,24 @@ import org.json.JSONObject;
 
 public class CountryListResults extends Results
 {
-    public CountryList countries;
+    private CountryList m_countries;
     
     public CountryListResults()
     {
-        countries = new CountryList();
+        m_countries = new CountryList();
     }
     
     public CountryList getCountries()
     {
-        return countries;
+        return m_countries;
     }
     
     public void fromJSON(JSONArray response) throws JSONException
     {
         super.fromJSON(response);
         
-        JSONArray results = response.getJSONArray(1);        
-        countries.clear();
+        JSONArray results = response.getJSONArray(1);
+        m_countries.clear();
         
         for (int i = 0; i < results.length(); i++) 
         {            
@@ -44,8 +44,8 @@ public class CountryListResults extends Results
                 country.setName(name);
                 country.setCapitalCity(capitalCity);
                 country.setCoordinates(longitude, latitude);
-                
-                countries.add(country);
+
+                m_countries.add(country);
             }
         }
 

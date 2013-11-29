@@ -1,6 +1,10 @@
 package com.app.worldbankapi;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /** 
  * CountryList class.
@@ -8,8 +12,8 @@ import java.util.ArrayList;
  * Used to create an object representing a single country
  * or multiple countries.
  */
-public class CountryList extends ArrayList<Country> 
-{    
+public class CountryList extends ArrayList<Country>
+{
     /**
      * Used to specify a class version used to ensure serializing and
      * deserializing is compatible.
@@ -21,30 +25,34 @@ public class CountryList extends ArrayList<Country>
     /**
      * Constructor to initialize an empty list.
      */
-    public CountryList() {
+    public CountryList()
+    {
         super();
-    }   
+    }
     
     /**
-     * Constructor to initialize with a single country.
+     * Constructor to initialize with a single country (using country code).
      *  
      * @param countryCode
      *   the country code as string
      */
-    public CountryList(String countryCode) {
+    public CountryList(String countryCode)
+    {
         super();
         add(new Country(countryCode));
     }
-    
+
     /**
      * Constructor to initialize with multiple countries. 
      *
      * @param countryCodes
      *   an array of country codes
      */
-    public CountryList(String[] countryCodes) {
+    public CountryList(String[] countryCodes)
+    {
         super();
-        for (String countryCode : countryCodes) {
+        for (String countryCode : countryCodes)
+        {
             add(new Country(countryCode));
         }
     }
@@ -63,4 +71,5 @@ public class CountryList extends ArrayList<Country>
         }
         return countryCodes;
     }
+
 }

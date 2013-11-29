@@ -12,10 +12,11 @@ import android.widget.TextView;
 
 import com.app.MainApp;
 import com.app.R;
+import com.app.adapters.libs.FilterableAdapter;
 import com.app.worldbankapi.Country;
 import com.app.worldbankapi.CountryList;
 
-public class CountryListAdapter extends FilterableAdapter<Country, String> 
+public class CountryListAdapter extends FilterableAdapter<Country, String>
 {
     Context m_context;
     

@@ -1,8 +1,6 @@
 package com.app.activities;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -11,16 +9,17 @@ import com.app.R;
 
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
 import com.app.fragments.GenericIndicatorsFragment;
+import com.app.worldbankapi.Country;
 
-public class DisplayActivity extends FragmentActivity implements ActionBar.TabListener
+import java.util.ArrayList;
+
+public class CountryDetails extends FragmentActivity implements ActionBar.TabListener
 {
     /* Static members */
     final public static int YEAR_DEFAULT = 2010;
@@ -77,11 +76,19 @@ public class DisplayActivity extends FragmentActivity implements ActionBar.TabLi
         setFetchYear(YEAR_DEFAULT, false);
 
         /* Gather information about the intent and view */
-        final String countryName = getIntent().getStringExtra("countryName");
+
+        ArrayList<Country> countryList = getIntent().getParcelableArrayListExtra("countries");
+
+        String countryNames = "";
+        for (Country country : countryList)
+            countryNames += country.getName() + " | ";
+
+        countryNames = countryNames.substring(0, countryNames.length() - 3);
+
         final ActionBar actionBar = getActionBar();
 
         /* Setup action bar */
-        actionBar.setTitle(countryName);
+        actionBar.setTitle(countryNames);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -210,7 +217,7 @@ public class DisplayActivity extends FragmentActivity implements ActionBar.TabLi
     public void showDetails(View view)
     {
         String indicator = (String)view.getTag();
-        Intent intent = new Intent(this, DetailedView.class);
+        Intent intent = new Intent(this, IndicatorDetails.class);
         intent.putExtra("indicator", indicator);
         startActivity(intent);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);

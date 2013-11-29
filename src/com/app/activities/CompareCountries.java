@@ -13,6 +13,7 @@ import android.app.Activity;
 import android.view.MenuItem;
 import com.app.loaders.CountryListLoader;
 import com.app.worldbankapi.Country;
+import com.app.worldbankapi.CountryList;
 
 public class CompareCountries extends Activity
 {
@@ -105,13 +106,12 @@ public class CompareCountries extends Activity
             return;
         }
 
+        CountryList countryList = new CountryList();
+        countryList.add(m_firstCountry);
+        countryList.add(m_secondCountry);
 
-        Intent intent = new Intent(this, DisplayActivityComparasion.class);
-
-        // todo: pass the country instance in the intent
-        intent.putExtra("countryCodes", m_firstCountry.getCode() + ";" + m_secondCountry.getCode());
-        intent.putExtra("countryName", m_firstCountry.getName());
-        intent.putExtra("capitalCities", m_firstCountry.getCapitalCity() + ";" + m_secondCountry.getCapitalCity());
+        Intent intent = new Intent(this, CountryDetails.class);
+        intent.putExtra("countries", countryList);
 
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
