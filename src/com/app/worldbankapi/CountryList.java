@@ -1,10 +1,6 @@
 package com.app.worldbankapi;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /** 
  * CountryList class.

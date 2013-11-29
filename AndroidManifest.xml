@@ -28,20 +28,20 @@
         <activity
             android:name="com.app.activities.ChooseCountry"
             android:label="@string/select_country"
-            android:parentActivityName="com.app.activities.MainActivity"
+            android:parentActivityName="com.app.activities.WelcomeScreen"
             android:windowSoftInputMode="adjustPan" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.activities.MainActivity" />
+                android:value="com.app.activities.WelcomeScreen" />
         </activity>
         <activity
             android:name="com.app.activities.CompareCountries"
             android:label="@string/title_activity_compare_countries"
-            android:parentActivityName="com.app.activities.MainActivity"
+            android:parentActivityName="com.app.activities.WelcomeScreen"
             android:windowSoftInputMode="stateAlwaysVisible" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.activities.MainActivity" />
+                android:value="com.app.activities.WelcomeScreen" />
         </activity>
         <activity
             android:name=".activities.CountryDetails"
@@ -59,10 +59,11 @@
                 android:value="com.app.activities.DisplayActivity" />
         </activity>
         <activity
-            android:name="com.app.activities.RSSActivity" >
+            android:name="com.app.activities.RSSActivity" 
+            android:parentActivityName="com.app.activities.WelcomeScreen" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.activities.MainActivity" />
+                android:value="com.app.activities.WelcomeScreen" />
         </activity>
 
         <service android:name="com.app.rssreader.RSSService" />
