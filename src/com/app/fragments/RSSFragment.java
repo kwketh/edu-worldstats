@@ -2,12 +2,6 @@ package com.app.fragments;
 
 import java.util.List;
 
-import com.app.R;
-import com.app.activities.RSSActivity;
-import com.app.adapters.RSSAdapter;
-import com.app.rssreader.RSSItem;
-import com.app.rssreader.RSSService;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -23,6 +17,11 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.app.R;
+import com.app.adapters.RSSAdapter;
+import com.app.rssreader.RSSItem;
+import com.app.rssreader.RSSService;
 
 //RSS Reader made with help from a tutorial on androidresearch.wordpress.com 
 

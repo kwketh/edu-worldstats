@@ -24,7 +24,7 @@ public class RSSActivity extends FragmentActivity
     }
 
     private void addRssFragment() {
-        //
+        // adding fragment to screen
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         RSSFragment fragment = new RSSFragment();

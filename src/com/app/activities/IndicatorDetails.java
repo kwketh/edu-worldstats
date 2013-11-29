@@ -3,26 +3,21 @@ package com.app.activities;
 import java.util.Observable;
 import java.util.Observer;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.GestureDetector.OnGestureListener;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
+import android.widget.TextView;
+
 import com.app.R;
 import com.app.worldbankapi.IndicatorDefinitionResults;
 import com.app.worldbankapi.WorldBankAPI;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.widget.TextView;
-
-import android.view.GestureDetector.OnGestureListener;
-import android.view.GestureDetector;
 
 public class IndicatorDetails extends Activity implements Observer, OnGestureListener
 {
