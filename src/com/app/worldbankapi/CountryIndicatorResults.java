@@ -69,7 +69,5 @@ public class CountryIndicatorResults extends Results
                 m_dataPoints.add(dataPoint);
             }
         }
-
-        setChanged();           
     }
 }

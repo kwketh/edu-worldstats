@@ -159,7 +159,7 @@
         android:src="@android:drawable/ic_menu_info_details"
         android:onClick="showDetails"
         android:tag="SE.ENR.TERT.FM.ZS" />
-       
+
         <ImageView
         android:id="@+id/iv4"
         android:layout_width="25dp"
@@ -168,13 +168,13 @@
         android:layout_alignBottom="@id/tv6"
         android:layout_marginLeft="5dp"
         android:layout_marginBottom="-4dp"
-        android:adjustViewBounds="true"  
+        android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:contentDescription="@string/more_info"
         android:src="@android:drawable/ic_menu_info_details"
         android:onClick="showDetails"
         android:tag="SE.ADT.LITR.MA.ZS" />
-        
+
          <ImageView
         android:id="@+id/iv5"
         android:layout_width="25dp"

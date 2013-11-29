@@ -15,7 +15,8 @@ import java.util.ArrayList;
 
 public class BasicInfoFragment extends GenericIndicatorsFragment
 {
-    private Indicator[] m_activeIndicators = {
+    private Indicator[] m_activeIndicators =
+    {
         Indicator.POPULATION,
         Indicator.GDP,
         Indicator.AREA_OF_COUNTRY,

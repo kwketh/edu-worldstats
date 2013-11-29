@@ -48,7 +48,5 @@ public class CountryListResults extends Results
                 m_countries.add(country);
             }
         }
-
-        setChanged();           
     }
 }

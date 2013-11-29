@@ -1,7 +1,7 @@
 package com.app.worldbankapi;
 
-public enum Indicator {
-
+public enum Indicator
+{
     /* Basic */
 
     // Total Population
@@ -63,12 +63,13 @@ public enum Indicator {
 
     private String m_id;
 
-    Indicator(String indicatorId) {
+    Indicator(String indicatorId)
+    {
         m_id = indicatorId;
     }
 
-    public String formatValue(DataPoint dataPoint) {
-
+    public String formatValue(DataPoint dataPoint)
+    {
         if (dataPoint == null || dataPoint.isNullValue())
             return "";
 
@@ -102,7 +103,8 @@ public enum Indicator {
         return dataPoint.getFormattedValue();
     }
 
-    public String getId() {
+    public String getId()
+    {
         return m_id;
     }
 }

@@ -19,7 +19,7 @@ import com.app.worldbankapi.*;
 import java.util.*;
 
 /**
- * GenericIndicatorsFragment.
+ * GenericIndicatorsFragment class.
  *
  * The class provides additional functionality for a regular fragment.
  *

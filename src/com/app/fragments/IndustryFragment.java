@@ -7,7 +7,8 @@ import android.widget.TextView;
 
 public class IndustryFragment extends GenericIndicatorsFragment
 {
-    private Indicator[] m_activeIndicators = {
+    private Indicator[] m_activeIndicators =
+    {
         Indicator.MALE_UNEMPLOYMENT,
         Indicator.FEMALE_UNEMPLOYMENT,
         Indicator.LABOUR_PARTICIPATION_MALE,
@@ -17,8 +18,6 @@ public class IndustryFragment extends GenericIndicatorsFragment
         Indicator.SELF_EMPLOYED_MALE,
         Indicator.SELF_EMPLOYED_FEMALE,
     };
-
-    TextView capitalCityText;
 
     @Override
     public Integer getFragmentId()

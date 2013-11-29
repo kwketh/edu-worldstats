@@ -21,8 +21,6 @@ public class IndicatorDefinitionResults extends Results
 
         name = indicatorData.getString("name");
         definition = indicatorData.getString("sourceNote");
-
-        setChanged();           
     }
     
     public String getName()

@@ -8,8 +8,19 @@ import com.app.worldbankapi.CountryList;
 import com.app.worldbankapi.Indicator;
 import com.app.worldbankapi.WorldBankAPI;
 
+/**
+ * CountryPopulationExample class.
+ *
+ * This is our API example to test and to show other group
+ * members how to fetch data using our own API, so they can
+ * create features of their own.
+ */
+
 public class CountryPopulationExample implements Observer
 {
+    /**
+     * Runs the demo by fetching the results.
+     */
     public void run()
     {
         /* Construct the results with a country code and indicator */

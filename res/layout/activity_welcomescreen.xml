@@ -18,7 +18,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/btn_compare_countries"
         android:layout_marginTop="156dp"
-        android:onClick="showChooseACountry"
+        android:onClick="showChooseCountry"
         android:padding="20dp"
         android:text="@string/select_country"
         android:textSize="20sp" />

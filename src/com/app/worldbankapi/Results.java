@@ -26,8 +26,6 @@ public class Results extends Observable
         m_totalCount = pagingData.getInt("total");
         m_pagesCount = pagingData.getInt("pages");
         m_pageNo = pagingData.getInt("page");
-                
-        setChanged();
     }
     
     public boolean areLoaded()

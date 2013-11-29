@@ -6,9 +6,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class DataPoint
-{    
-    static DecimalFormat prettyDateFormat = new DecimalFormat("#.##");
-    static DecimalFormat prettyValueFormat;
+{
+    static DecimalFormat prettyValueFormat = new DecimalFormat("#,###");
         
     protected Double m_value = 0.0;
     private int m_decimals = 0;
@@ -31,10 +30,6 @@ public class DataPoint
     
     public String getFormattedValue()
     {
-        String format = "#,###";
-        if (m_decimals > 0) format += ".";
-        for (int i = 0; i < m_decimals; i++) format += "#";
-        prettyValueFormat = new DecimalFormat(format);        
         return prettyValueFormat.format(getValue());
     }
     
@@ -45,15 +40,28 @@ public class DataPoint
         
     public String toString()
     {
-        return "[DataPoint value=" + prettyDateFormat.format(m_value) + "]";
+        return "[DataPoint value=" + prettyValueFormat.format(m_value) + "]";
     }
     
     public void fromJSON(JSONObject json) throws JSONException
     {
         m_isNull = json.isNull("value");
-        if (!m_isNull) {
+        if (!m_isNull)
+        {
             m_value = json.getDouble("value");
             m_decimals = json.optInt("decimal");
+
+            /* Update the way the value is being formatted
+             * by using a new DecimalFormat based on
+             * json response */
+
+             String format = "#,###";
+
+            if (m_decimals > 0)
+                format += ".";
+
+            for (int i = 0; i < m_decimals; i++) format += "#";
+            prettyValueFormat = new DecimalFormat(format);
         }
     }    
 }

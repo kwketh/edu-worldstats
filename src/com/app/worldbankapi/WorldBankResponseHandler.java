@@ -8,6 +8,13 @@ import org.json.JSONObject;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 
+/**
+ * WorldBankResponseHandler class.
+ *
+ * The class is responsible for handling any response coming from the
+ * World Bank client, updating the results object and informing any
+ * observers about that change.
+ */
 public class WorldBankResponseHandler extends JsonHttpResponseHandler
 {
     Results m_results;
@@ -24,18 +31,22 @@ public class WorldBankResponseHandler extends JsonHttpResponseHandler
         {
             m_results.fromJSON(response);
             m_results.setLoaded(true);
+
+            m_results.setChanged();
             m_results.notifyObservers("fetchComplete");
         } 
         catch (Exception e) 
-        {                       
+        {
             m_results.setChanged();
             e.printStackTrace();
-            if (e instanceof JSONException) {
+            if (e instanceof JSONException)
+            {
                 System.out.println("fromJSON failed with response:");
                 System.out.println(response);
                 m_results.notifyObservers("errorParse");
             } else
-            if (e instanceof SocketTimeoutException) {
+            if (e instanceof SocketTimeoutException)
+            {
                 m_results.notifyObservers("errorTimeout");
             }
         }
@@ -46,6 +57,5 @@ public class WorldBankResponseHandler extends JsonHttpResponseHandler
     {
         m_results.setChanged();
         m_results.notifyObservers("errorNetwork");
-    }       
-  
+    }
 }

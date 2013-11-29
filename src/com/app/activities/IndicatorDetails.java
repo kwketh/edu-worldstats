@@ -23,9 +23,9 @@ import android.view.GestureDetector;
 public class IndicatorDetails extends Activity implements Observer, OnGestureListener
 {
     private IndicatorDefinitionResults m_results;
-    private TextView name;
-    private TextView definition;
-    private GestureDetector geastureDetector;
+    private TextView m_name;
+    private TextView m_definition;
+    private GestureDetector m_geastureDetector;
 
     ProgressDialog progressDialog = null;
     
@@ -35,10 +35,10 @@ public class IndicatorDetails extends Activity implements Observer, OnGestureLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indicator_details);
 
-        geastureDetector = new GestureDetector(this, this);
+        m_geastureDetector = new GestureDetector(this, this);
 
-        name = (TextView) findViewById(R.id.indicatorName);
-        definition = (TextView) findViewById(R.id.indicatorDefinition);
+        m_name = (TextView) findViewById(R.id.indicatorName);
+        m_definition = (TextView) findViewById(R.id.indicatorDefinition);
 
         Intent intent = getIntent();
         String indicator = intent.getStringExtra("indicator");
@@ -61,21 +61,20 @@ public class IndicatorDetails extends Activity implements Observer, OnGestureLis
         fadeOutLabels();
     }
 
-
     private void fadeOutLabels()
     {
         AlphaAnimation fadeOut = new AlphaAnimation(0.0f, 0.0f);
         fadeOut.setDuration(0);
-        name.startAnimation(fadeOut);
-        definition.startAnimation(fadeOut);
+        m_name.startAnimation(fadeOut);
+        m_definition.startAnimation(fadeOut);
     }
 
     private void fadeInLabels()
     {
         AlphaAnimation fadeIn = new AlphaAnimation(0.0f, 1.0f);
         fadeIn.setDuration(350);
-        name.startAnimation(fadeIn);
-        definition.startAnimation(fadeIn);
+        m_name.startAnimation(fadeIn);
+        m_definition.startAnimation(fadeIn);
     }
 
     @Override
@@ -109,8 +108,8 @@ public class IndicatorDetails extends Activity implements Observer, OnGestureLis
 
         if (eventName.equals("fetchComplete"))
         {
-            name.setText(m_results.getName());
-            definition.setText(m_results.getDefinition());
+            m_name.setText(m_results.getName());
+            m_definition.setText(m_results.getDefinition());
             fadeInLabels();
         } else
         {
@@ -121,7 +120,7 @@ public class IndicatorDetails extends Activity implements Observer, OnGestureLis
     @Override
     public boolean onTouchEvent(MotionEvent event)
     {
-        this.geastureDetector.onTouchEvent(event);
+        this.m_geastureDetector.onTouchEvent(event);
         return super.onTouchEvent(event);
     }
 

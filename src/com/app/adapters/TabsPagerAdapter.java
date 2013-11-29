@@ -12,6 +12,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * TabsPagerAdapter class.
+ *
+ * An adapter responsible for creating and displaying the fragments
+ * accordingly.
+ */
 public class TabsPagerAdapter extends FragmentPagerAdapter
 {
     private HashMap<Integer, Fragment> m_fragmentsMap;
