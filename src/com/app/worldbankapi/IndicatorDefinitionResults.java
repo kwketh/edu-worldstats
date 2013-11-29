@@ -1,5 +1,8 @@
 package com.app.worldbankapi;
 
+import java.util.ArrayList;
+import java.util.Observable;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,7 +14,6 @@ public class IndicatorDefinitionResults extends Results
 
     public void fromJSON(JSONArray response) throws JSONException
     {
-        // fetches JSON results and takes the indicator name and definition from them
         super.fromJSON(response);
         
         JSONArray results = response.getJSONArray(1);

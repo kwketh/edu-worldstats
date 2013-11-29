@@ -1,18 +1,19 @@
 package com.app.fragments;
 
-import java.util.ArrayList;
+import android.text.Html;
+import com.app.R;
+import com.app.worldbankapi.*;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-import com.app.R;
-import com.app.worldbankapi.Country;
-import com.app.worldbankapi.Indicator;
+import java.util.ArrayList;
 
 public class BasicInfoFragment extends GenericIndicatorsFragment
 {
