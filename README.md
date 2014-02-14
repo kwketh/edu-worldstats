@@ -19,4 +19,4 @@ Android Asynchronous Http Client (1.4.4) http://loopj.com/android-async-http (ja
 
 ---
 
- > 5CCS2SEG Module (SOFTWARE ENGINEERING GROUP) - Group W
+ > 5CCS2SEG (Software Engineering Group) Module - Project 1 - Group W
